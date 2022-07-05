@@ -164,7 +164,7 @@
 			
 			this._props = {};
 		}
-		
+
 		onCustomWidgetBeforeUpdate(changedProperties) {
 			this._props = { ...this._props, ...changedProperties };
 		}
@@ -180,5 +180,5 @@
 		
 	}
 	
-	customElements.define("com-demo-gauge", Box);
+	customElements.define("com-demo-chart", Box);
 })();

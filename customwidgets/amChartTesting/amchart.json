@@ -11,15 +11,8 @@
 	"webcomponents": [
 		{
 			"kind": "main",
-			"tag": "com-demo-gauge",
+			"tag": "com-demo-chart",
 			"url": "https://napoleonsecond.github.io/customwidgets/amChartTesting/amchart.js",
-			"integrity": "",
-			"ignoreIntegrity": true
-		},
-		{
-			"kind": "builder",
-			"tag": "com-demo-box-bps",
-			"url": "https://napoleonsecond.github.io/customwidgets/amChartTesting/box_bps.js",
 			"integrity": "",
 			"ignoreIntegrity": true
 		}
