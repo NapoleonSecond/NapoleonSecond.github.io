@@ -10,6 +10,12 @@
 	</style>
 	
 	<!-- Resources -->
+	<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+	<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+	<script src="https://cdn.amcharts.com/lib/4/themes/material.js"></script>
+	<script src="https://cdn.amcharts.com/lib/4/lang/de_DE.js"></script>
+	<script src="https://cdn.amcharts.com/lib/4/geodata/germanyLow.js"></script>
+	<script src="https://cdn.amcharts.com/lib/4/fonts/notosans-sc.js"></script>
 	<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
 	<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
 	<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
