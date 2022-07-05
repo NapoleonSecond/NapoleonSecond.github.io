@@ -1,0 +1,87 @@
+{
+	"id": "com.testing.rotationalChart",
+	"version": "1.0.0",
+	"name": "AmChart Rotational Testing",
+	"description": "A demo of AmCharts",
+	"newInstancePrefix": "AmCharts",
+	"icon": "https://napoleonsecond.github.io/customwidgets/amChartTesting/icon.png",
+	"vendor": "Demo",
+	"eula": "EULA",
+	"license": "1.0",
+	"webcomponents": [
+		{
+			"kind": "main",
+			"tag": "com-demo-gauge",
+			"url": "https://napoleonsecond.github.io/customwidgets/amChartTesting/amchart.js",
+			"integrity": "",
+			"ignoreIntegrity": true
+		},
+		{
+			"kind": "builder",
+			"tag": "com-demo-box-bps",
+			"url": "https://napoleonsecond.github.io/customwidgets/amChartTesting/box_bps.js",
+			"integrity": "",
+			"ignoreIntegrity": true
+		}
+	],
+	"properties": {
+		"value": {
+			"type": "number",
+			"description": "Gauge value",
+			"default": 0
+		},
+		"info": {
+			"type": "string",
+			"description": "Gauge info",
+			"default": ""
+		},
+		"color": {
+			"type": "string",
+			"description": "Text Color info",
+			"default": "#3498db"
+		},
+		"width": {
+			"type": "integer",
+			"default": 100
+		},
+		"height": {
+			"type": "integer",
+			"default": 100
+		}
+	},
+	"methods": {
+		"setValue": {
+			"description": "Sets the Gauge value.",
+			"parameters": [
+				{
+					"name": "newValue",
+					"type": "number",
+					"description": "Gauge value"
+				},
+				{
+					"name": "newInfo",
+					"type": "string",
+					"description": "Gauge info"
+				},
+				{
+					"name": "newColor",
+					"type": "string",
+					"description": "Text Color info"
+				}
+			],
+			"body": "this.value = newValue; this.info = newInfo; this.color = newColor;"
+		},
+		"getValue": {
+			"returnType": "number",
+			"description": "Returns the Gauge value.",
+			"body": "return this.value;"
+		}
+	},
+	"events": {
+		"onClick": {
+			"description": "Called when the user clicks the Box."
+		}
+	}
+}
+
+ 
