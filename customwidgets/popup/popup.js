@@ -104,6 +104,6 @@
       }
       
       // Define the new element
-      customElements.define('popup-info', PopUpInfo);
+      customElements.define('com-demo-popup', PopUpInfo);
 
 })();
