@@ -19,57 +19,8 @@
 		
 	],
 	"properties": {
-		"value": {
-			"type": "number",
-			"description": "Gauge value",
-			"default": 0
-		},
-		"info": {
-			"type": "string",
-			"description": "Gauge info",
-			"default": ""
-		},
-		"color": {
-			"type": "string",
-			"description": "Text Color info",
-			"default": "#3498db"
-		},
-		"width": {
-			"type": "integer",
-			"default": 100
-		},
-		"height": {
-			"type": "integer",
-			"default": 100
-		}
 	},
 	"methods": {
-		"setValue": {
-			"description": "Sets the Gauge value.",
-			"parameters": [
-				{
-					"name": "newValue",
-					"type": "number",
-					"description": "Gauge value"
-				},
-				{
-					"name": "newInfo",
-					"type": "string",
-					"description": "Gauge info"
-				},
-				{
-					"name": "newColor",
-					"type": "string",
-					"description": "Text Color info"
-				}
-			],
-			"body": "this.value = newValue; this.info = newInfo; this.color = newColor;"
-		},
-		"getValue": {
-			"returnType": "number",
-			"description": "Returns the Gauge value.",
-			"body": "return this.value;"
-		}
 	},
 	"events": {
 		"onClick": {
