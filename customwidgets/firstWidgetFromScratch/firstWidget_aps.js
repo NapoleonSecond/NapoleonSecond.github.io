@@ -1,4 +1,4 @@
-function() {
+(function() {
 	let template = document.createElement("template");
 	template.innerHTML = `
 		<form id="form">
