@@ -15,9 +15,22 @@
             "url":"https://napoleonsecond.github.io/customwidgets/firstWidgetFromScratch/firstWidget.js",
             "integrity":"",
             "ignoreIntegrity":true
+        },
+        
+        {
+            "kind": "styling",
+            "tag": "com-sap-sample-helloworld3-aps",
+            "url": "https://napoleonsecond.github.io/customwidgets/firstWidgetFromScratch/firstWidget_aps.js",
+            "integrity": "",
+            "ignoreIntegrity" : true
         }
     ],
 	"properties": {
+        "widgetText": {
+            "type": "string",
+            "description": "The text to be displayed in the widget",
+            "default" : "Hello World"
+        }
 	},
 	"methods": {
 	},

@@ -31,12 +31,19 @@
 		onCustomWidgetBeforeUpdate(oChangedProperties) {
 
 		}
-
+        
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(oChangedProperties) {
-            if (this._firstConnection){
-                this.redraw();
-            }
+            
+            this.redraw();
+            
+        }
+        get widgetText() {
+            return this._tagType;
+        }
+        
+        set widgetText(value) {
+            this._tagText = value;
         }
         
         //When the custom widget is removed from the canvas or the analytic application is closed
