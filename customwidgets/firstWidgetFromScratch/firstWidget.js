@@ -35,7 +35,9 @@
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             
-            this.redraw();
+            if (this._firstConnection){
+                this.redraw();
+            }
             
         }
         get widgetText() {

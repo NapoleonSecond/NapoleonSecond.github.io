@@ -19,7 +19,7 @@
         
         {
             "kind": "styling",
-            "tag": "com-sap-sample-helloworld3-aps",
+            "tag": "com-sap-sample-helloworld1-aps",
             "url": "https://napoleonsecond.github.io/customwidgets/firstWidgetFromScratch/firstWidget_aps.js",
             "integrity": "",
             "ignoreIntegrity" : true
