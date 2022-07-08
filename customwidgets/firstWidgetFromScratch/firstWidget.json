@@ -30,9 +30,42 @@
             "type": "string",
             "description": "The text to be displayed in the widget",
             "default" : "Hello World"
-        }
+        },
+        "headingType": {
+            "type": "string",
+            "description": "The heading level of the widget; h1-h3. Default is h1.",
+            "default" : "h1"
+        }   
 	},
 	"methods": {
+        "setH1": {
+            "description": "Update the hX tag of the KPI field to h1",
+            "body": "this.headingType = 'h1';"
+        },
+        "setH2": {
+            "description": "Update the hX tag of the KPI field to h2",
+            "body": "this.headingType = 'h2';"
+        },
+        "setH3": {
+            "description": "Update the hX tag of the KPI field to h3",
+            "body": "this.headingType = 'h3';"
+        },
+        "getH": {
+            "description": "Get the hX tag of the KPI field",
+            "body": "return this.headingType;",
+            "returnType": "string"
+        },
+        "setText": {
+            "description": "Set the text value of the widget",
+            "parameters": [
+                {
+                    "name": "newTextValue",
+                    "type": "string",
+                    "description": "The displayed angle of the gauge"
+                }
+            ],
+            "body": "this.widgetText = newTextValue;"
+        }
 	},
 	"events": {
 	}
