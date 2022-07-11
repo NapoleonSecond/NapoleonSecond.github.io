@@ -1,0 +1,33 @@
+{
+    "eula": "",
+    "vendor": "SAP",
+    "license": "",
+    "id": "com.sap.sac.sample.echarts.prepared",
+    "version": "1.0.0",
+    "name": "ECharts Prepared",
+    "newInstancePrefix": "EChartPrepared",
+    "description": "A sample custom widget wrapped EChart Prepared",
+    "webcomponents": [
+      {
+        "kind": "main",
+        "tag": "com-sap-sample-echarts-prepared",
+        "url": "https://napoleonsecond.github.io/customwidgets/EChartsTesting/main.js",
+        "integrity": "",
+        "ignoreIntegrity": true
+      }
+    ],
+    "properties": {
+          "width": {
+              "type": "integer",
+              "default": 600
+          },
+          "height": {
+              "type": "integer",
+              "default": 420
+          }
+    },
+    "methods": {
+    },
+    "events": {
+    }
+  }
