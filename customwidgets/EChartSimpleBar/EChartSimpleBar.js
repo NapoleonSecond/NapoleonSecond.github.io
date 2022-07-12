@@ -65,6 +65,10 @@ var getScriptPromisify = (src) => {
         console.log(this.myDataBinding.data[0]);
         console.log(this.myDataBinding.data[0]["dimensions_0"]);
         console.log(this.myDataBinding.data[0]["measures_0"]);
+
+        this.myDataBinding.data.array.forEach(element => {
+            console.log(element);
+        });
       }
     }
   
