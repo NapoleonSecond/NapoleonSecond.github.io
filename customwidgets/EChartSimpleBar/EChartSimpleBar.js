@@ -63,6 +63,8 @@ var getScriptPromisify = (src) => {
         console.log("This is the data fed back in");
         console.log(this.myDataBinding.data); //For checking data bindings
         console.log(this.myDataBinding.data[0]);
+        console.log(this.myDataBinding.data[0]["dimensions_0"]);
+        console.log(this.myDataBinding.data[0]["measures_0"]);
       }
     }
   
