@@ -34,6 +34,8 @@ var getScriptPromisify = (src) => {
         await getScriptPromisify('https://cdn.bootcdn.net/ajax/libs/echarts/5.0.0/echarts.min.js')
   
         const chart = echarts.init(this._root)
+
+        
         const option = {
           // https://echarts.apache.org/examples/zh/index.html
           xAxis: {
