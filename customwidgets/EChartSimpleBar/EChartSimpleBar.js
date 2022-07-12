@@ -62,14 +62,16 @@ var getScriptPromisify = (src) => {
     
           xAxis: {
             type: 'category',
-            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+            //data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+            data : value
           },
           yAxis: {
             type: 'value'
           },
           series: [
             {
-              data: [120, 200, 150, 80, 70, 110, 130],
+              //data: [120, 200, 150, 80, 70, 110, 130],
+              data: dimension,
               type: 'bar',
               showBackground: true,
               backgroundStyle: {
