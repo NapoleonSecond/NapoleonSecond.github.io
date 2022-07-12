@@ -57,6 +57,7 @@ var getScriptPromisify = (src) => {
           ]
         }
         chart.setOption(option)
+        console.log(this.myDataBinding.data); //For checking data bindings
       }
     }
   
