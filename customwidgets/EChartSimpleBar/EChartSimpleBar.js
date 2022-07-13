@@ -60,7 +60,7 @@ var getScriptPromisify = (src) => {
             chart.dispatchAction({
                 type: 'dataZoom',
                 startValue: dimension[Math.max(params.dataIndex - zoomSize / 2, 0)],
-                endValue: dimension[Math.min(params.dataIndex + zoomSize / 2, data.length - 1)]
+                endValue: dimension[Math.min(params.dataIndex + zoomSize / 2, value.length - 1)]
         });
     });
         const option = {
