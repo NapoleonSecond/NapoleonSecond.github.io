@@ -62,6 +62,7 @@ var getScriptPromisify = (src) => {
                 startValue: dimension[Math.max(params.dataIndex - zoomSize / 2, 0)],
                 endValue: dimension[Math.min(params.dataIndex + zoomSize / 2, value.length - 1)]
         });
+        console.log("finished zooming");
     });
         const option = {
           // https://echarts.apache.org/examples/zh/index.html
