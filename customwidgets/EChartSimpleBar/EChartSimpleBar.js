@@ -82,6 +82,11 @@ var getScriptPromisify = (src) => {
           yAxis: {
             type: 'value'
           },
+          dataZoom: [
+            {
+              type: 'inside'
+            }
+          ],
           series: [
             {
               //data: [120, 200, 150, 80, 70, 110, 130],
