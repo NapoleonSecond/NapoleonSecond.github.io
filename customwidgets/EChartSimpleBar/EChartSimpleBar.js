@@ -62,9 +62,10 @@ var getScriptPromisify = (src) => {
     
           xAxis: {
             type: 'category',
+            axisLabel: { interval: 0, rotate: 45 },
             //data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
             data : dimension
-          },
+          },    
           yAxis: {
             type: 'value'
           },
