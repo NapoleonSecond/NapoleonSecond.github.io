@@ -56,12 +56,11 @@ var getScriptPromisify = (src) => {
 
         const zoomSize = 6;
         chart.on('click', function (params) {
-        console.log(dataAxis[Math.max(params.dataIndex - zoomSize / 2, 0)]);
-        chart.dispatchAction({
-        type: 'dataZoom',
-        startValue: dataAxis[Math.max(params.dataIndex - zoomSize / 2, 0)],
-        endValue:
-        dataAxis[Math.min(params.dataIndex + zoomSize / 2, data.length - 1)]
+            console.log(dimension[Math.max(params.dataIndex - zoomSize / 2, 0)]);
+            chart.dispatchAction({
+                type: 'dataZoom',
+                startValue: dimension[Math.max(params.dataIndex - zoomSize / 2, 0)],
+                endValue: dimension[Math.min(params.dataIndex + zoomSize / 2, data.length - 1)]
         });
     });
         const option = {
