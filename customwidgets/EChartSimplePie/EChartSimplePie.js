@@ -40,34 +40,18 @@ var getScriptPromisify = (src) => {
         console.log(this.myDataBinding.data[0]);
         console.log(this.myDataBinding.data[0]["dimensions_0"]);
         console.log(this.myDataBinding.data[0]["measures_0"]);
-        const dimension = [];
-        const value = [];
+        const data = [];
 
         this.myDataBinding.data.forEach(element => {
-            dimension.push(element["dimensions_0"]["id"]);
-            value.push(element["measures_0"]["raw"]);
+            //dimension.push(element["dimensions_0"]["id"]);
+            //value.push(element["measures_0"]["raw"]);
+            
             console.log(element);
         });
         
         console.log("arr values");
-        console.log(dimension);
-        console.log(value);
-        
+        console.log(data);
 
-        const zoomSize = 6;
-        chart.on('click', function (params) {
-            console.log(dimension[Math.max(params.dataIndex - zoomSize / 2, 0)]);
-            chart.dispatchAction({
-                type: 'dataZoom',
-                startValue: dimension[Math.max(params.dataIndex - zoomSize / 2, 0)],
-                endValue: dimension[Math.min(params.dataIndex + zoomSize / 2, value.length - 1)]
-        });
-        console.log("finished zooming");
-        console.log(Math.max(params.dataIndex - zoomSize / 2, 0));
-        console.log(Math.min(params.dataIndex + zoomSize / 2, value.length - 1));
-        console.log(dimension[Math.max(params.dataIndex - zoomSize / 2, 0)]);
-        console.log(dimension[Math.min(params.dataIndex + zoomSize / 2, value.length - 1)]);
-    });
         const option = {
           // https://echarts.apache.org/examples/zh/index.html
 
@@ -81,11 +65,6 @@ var getScriptPromisify = (src) => {
           yAxis: {
             type: 'value'
           },
-          dataZoom: [
-            {
-              type: 'inside'
-            }
-          ],
           series: [
             {
               //data: [120, 200, 150, 80, 70, 110, 130],
