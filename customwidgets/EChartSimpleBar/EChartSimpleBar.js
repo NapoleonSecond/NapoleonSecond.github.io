@@ -12,7 +12,7 @@ var getScriptPromisify = (src) => {
         <div id="root" style="width: 100%; height: 100%;">
         </div>
       `
-    class SamplePrepared extends HTMLElement {
+    class simplePie extends HTMLElement {
       constructor () {
         super()
   
@@ -104,5 +104,5 @@ var getScriptPromisify = (src) => {
       }
     }
   
-    customElements.define('com-sap-sample-echarts-prepared', SamplePrepared)
+    customElements.define('com-sap-sample-echarts-simple-pie', simplePie)
   })()
