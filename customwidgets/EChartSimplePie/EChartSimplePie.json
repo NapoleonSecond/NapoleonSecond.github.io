@@ -2,10 +2,10 @@
     "eula": "",
     "vendor": "SAP",
     "license": "",
-    "id": "com.sap.sac.sample.echarts.prepared",
+    "id": "com.sap.sac.sample.echarts.simple.pie",
     "version": "1.0.0",
-    "name": "ECharts Prepared",
-    "newInstancePrefix": "EChartPrepared",
+    "name": "ECharts Simple Pie",
+    "newInstancePrefix": "EChartPie",
     "description": "A sample custom widget wrapped EChart Prepared",
     "webcomponents": [
       {
