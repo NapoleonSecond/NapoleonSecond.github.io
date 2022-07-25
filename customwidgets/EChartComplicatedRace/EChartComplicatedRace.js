@@ -39,26 +39,12 @@ var getScriptPromisify = (src) => {
 
         console.log("This is the data fed back in");
         console.log(this.myDataBinding.data); //For checking data bindings
-        console.log(this.myDataBinding.data[0]);
-        console.log(this.myDataBinding.data[0]["dimensions_0"]);
-        console.log(this.myDataBinding.data[0]["measures_0"]);
-        const dimension = [];
-        const value = [];
 
-        this.myDataBinding.data.forEach(element => {
-            dimension.push(element["dimensions_0"]["id"]);
-            value.push(element["measures_0"]["raw"]);
-            console.log(element);
-        });
-        
-        console.log("arr values");
-        console.log(dimension);
-        console.log(value);
-        
         $.get(
             "https://napoleonsecond.github.io/customwidgets/EChartComplicatedRace/EChartComplicatedRace.js",
             function (_rawData) {
-              run(_rawData);
+                console.log("running raw data");
+                run(_rawData);
             }
           );
         function run(_rawData) {
@@ -75,6 +61,10 @@ var getScriptPromisify = (src) => {
             ];
             const datasetWithFilters = [];
             const seriesList = [];
+
+            console.log("Before each loops");
+
+
             echarts.util.each(countries, function (country) {
               var datasetId = 'dataset_' + country;
               datasetWithFilters.push({
@@ -90,6 +80,10 @@ var getScriptPromisify = (src) => {
                   }
                 }
               });
+
+              console.log("After each for loop");
+
+
               seriesList.push({
                 type: 'line',
                 datasetId: datasetId,
@@ -116,6 +110,8 @@ var getScriptPromisify = (src) => {
                 }
               });
             });
+
+            
         const option = {
           // https://echarts.apache.org/examples/zh/index.html
 
