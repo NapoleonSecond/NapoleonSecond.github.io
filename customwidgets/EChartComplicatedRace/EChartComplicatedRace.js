@@ -81,7 +81,7 @@ var getScriptPromisify = (src) => {
                 }
               });
 
-              console.log("After each for loop");
+              console.log("After each for loop with country",country);
 
 
               seriesList.push({
@@ -111,39 +111,44 @@ var getScriptPromisify = (src) => {
               });
             });
 
-            
-        const option = {
+            console.log("after all the for loops");
+            const option = {
           // https://echarts.apache.org/examples/zh/index.html
 
         
-          animationDuration: 10000,
-          dataset: [
-            {
-              id: 'dataset_raw',
-              source: _rawData
-            },
-            ...datasetWithFilters
-          ],
-          title: {
-            text: 'Income of Germany and France since 1950'
-          },
-          tooltip: {
-            order: 'valueDesc',
-            trigger: 'axis'
-          },
-          xAxis: {
-            type: 'category',
-            nameLocation: 'middle'
-          },
-          yAxis: {
-            name: 'Income'
-          },
-          grid: {
-            right: 140
-          },
-          series: seriesList
-        };
-        chart.setOption(option);
+                animationDuration: 10000,
+                dataset: [
+                {
+                    id: 'dataset_raw',
+                    source: _rawData
+                },
+                ...datasetWithFilters
+                ],
+
+                title: {
+                    text: 'Income of Germany and France since 1950'
+                },
+
+                tooltip: {
+                    order: 'valueDesc',
+                    trigger: 'axis'
+                },
+                
+                xAxis: {
+                    type: 'category',
+                    nameLocation: 'middle'
+                },
+                
+                yAxis: {
+                    name: 'Income'
+                },
+                
+                grid: {
+                    right: 140
+                },
+                series: seriesList
+                };
+            chart.setOption(option);
         
       }
     }
