@@ -1,9 +1,3 @@
-$.get(
-    "https://napoleonsecond.github.io/customwidgets/EChartComplicatedRace/EChartComplicatedRace.js",
-    function (_rawData) {
-      run(_rawData);
-    }
-  );
 
 
 var getScriptPromisify = (src) => {
@@ -62,7 +56,7 @@ var getScriptPromisify = (src) => {
         console.log(value);
         
         $.get(
-            ROOT_PATH + '/data/asset/data/life-expectancy-table.json',
+            "https://napoleonsecond.github.io/customwidgets/EChartComplicatedRace/EChartComplicatedRace.js",
             function (_rawData) {
               run(_rawData);
             }
