@@ -82,6 +82,8 @@ var getScriptPromisify = (src) => {
               });
 
               console.log("After each for loop with country",country);
+              console.log("Below are the dataset With Filters")
+              console.log(datasetWithFilters);
 
 
               seriesList.push({
