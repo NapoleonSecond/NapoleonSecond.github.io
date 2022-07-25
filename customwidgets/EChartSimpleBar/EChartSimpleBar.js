@@ -35,24 +35,16 @@ var getScriptPromisify = (src) => {
   
         const chart = echarts.init(this._root)
 
-        console.log("This is the data fed back in");
-        console.log(this.myDataBinding.data); //For checking data bindings
-        console.log(this.myDataBinding.data[0]);
-        console.log(this.myDataBinding.data[0]["dimensions_0"]);
-        console.log(this.myDataBinding.data[0]["measures_0"]);
+      
         const dimension = [];
         const value = [];
 
         this.myDataBinding.data.forEach(element => {
             dimension.push(element["dimensions_0"]["id"]);
             value.push(element["measures_0"]["raw"]);
-            console.log(element);
         });
         
-        console.log("arr values");
-        console.log(dimension);
-        console.log(value);
-        
+     
 
         const zoomSize = 6;
         chart.on('click', function (params) {

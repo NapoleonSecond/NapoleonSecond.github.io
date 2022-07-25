@@ -44,13 +44,6 @@ var getScriptPromisify = (src) => {
   
         const chart = echarts.init(this._root)
 
-        console.log("This is the data fed back in");
-
-        console.log(this.myDataBinding.data); //For checking data bindings
-        console.log(this.myDataBinding.data[0]);
-        console.log(this.myDataBinding.data[0]["dimensions_0"]);
-        console.log(this.myDataBinding.data[0]["measures_0"]);
-
         const legendData = [];
         const seriesData = [];
 
@@ -62,9 +55,6 @@ var getScriptPromisify = (src) => {
         });
         const data = formatData(legendData,seriesData);
         
-        console.log("arr values");
-        console.log(data);
-
         const option = {
           // https://echarts.apache.org/examples/zh/index.html
 
