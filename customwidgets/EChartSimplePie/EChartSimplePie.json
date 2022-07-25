@@ -6,12 +6,12 @@
     "version": "1.0.0",
     "name": "ECharts Simple Pie",
     "newInstancePrefix": "EChartPie",
-    "description": "A sample custom widget wrapped EChart Prepared",
+    "description": "A sample Pie chart",
     "webcomponents": [
       {
         "kind": "main",
         "tag": "com-sap-sample-echarts-simple-pie",
-        "url": "https://napoleonsecond.github.io/customwidgets/EChartSimpleBar/EChartSimplePie.js",
+        "url": "https://napoleonsecond.github.io/customwidgets/EChartSimplePie/EChartSimplePie.js",
         "integrity": "",
         "ignoreIntegrity": true
       }
