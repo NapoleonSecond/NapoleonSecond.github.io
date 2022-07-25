@@ -147,7 +147,7 @@ var getScriptPromisify = (src) => {
           },
           series: seriesList
         };
-        myChart.setOption(option);
+        chart.setOption(option);
         
       }
     }
