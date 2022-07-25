@@ -1,0 +1,49 @@
+{
+    "eula": "",
+    "vendor": "SAP",
+    "license": "",
+    "id": "com.sap.sac.sample.echarts.race",
+    "version": "1.0.0",
+    "name": "ECharts Racing",
+    "newInstancePrefix": "EChartRace",
+    "description": "A race",
+    "webcomponents": [
+      {
+        "kind": "main",
+        "tag": "com-sap-sample-echarts-race",
+        "url": "https://napoleonsecond.github.io/customwidgets/EChartComplicatedRace/EChartComplicatedRace.js",
+        "integrity": "",
+        "ignoreIntegrity": true
+      }
+    ],
+    "properties": {
+          "width": {
+              "type": "integer",
+              "default": 600
+          },
+          "height": {
+              "type": "integer",
+              "default": 420
+          }
+    },
+    "methods": {
+    },
+    "events": {
+    },
+    "dataBindings": {
+		"myDataBinding": {
+		  "feeds": [
+			{
+			  "id": "dimensions",
+			  "description": "Dimensions",
+			  "type": "dimension"
+			},
+			{
+			  "id": "measures",
+			  "description": "Measures",
+			  "type": "mainStructureMember"
+			}
+		  ]
+		}
+	  }
+  }
