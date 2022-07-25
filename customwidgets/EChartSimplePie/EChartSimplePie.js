@@ -29,6 +29,13 @@ function genData(count) {
       return name.join('');
     }
   }
+
+function formatData(arr1,arr2){
+  return {
+    legendData:arr1,
+    seriesData:arr2
+  }
+}
   
 var getScriptPromisify = (src) => {
     return new Promise(resolve => {
@@ -73,7 +80,17 @@ var getScriptPromisify = (src) => {
         console.log(this.myDataBinding.data[0]);
         console.log(this.myDataBinding.data[0]["dimensions_0"]);
         console.log(this.myDataBinding.data[0]["measures_0"]);
-        const data = genData(50);
+
+        const legendData = [];
+        const seriesData = [];
+
+        this.myDataBinding.data.forEach(element => {
+          legendData.push(element["dimensions_0"]["id"]);
+          seriesData.push({
+            name: element["dimensions_0"]["id"],
+            value: element["measures_0"]["raw"]});
+        });
+        const data = formatData(legendData,seriesData);
         
         console.log("arr values");
         console.log(data);
