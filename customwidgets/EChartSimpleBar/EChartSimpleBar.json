@@ -2,11 +2,11 @@
     "eula": "",
     "vendor": "SAP",
     "license": "",
-    "id": "com.sap.sac.sample.echarts.prepared",
+    "id": "com.sap.sac.sample.echarts.bar",
     "version": "1.0.0",
-    "name": "ECharts Prepared",
-    "newInstancePrefix": "EChartPrepared",
-    "description": "A sample custom widget wrapped EChart Prepared",
+    "name": "ECharts SimpleBar",
+    "newInstancePrefix": "EChartSimpleBar",
+    "description": "A simple bar graph",
     "webcomponents": [
       {
         "kind": "main",
