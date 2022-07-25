@@ -10,7 +10,7 @@
     "webcomponents": [
       {
         "kind": "main",
-        "tag": "com-sap-sample-echarts-prepared",
+        "tag": "com-sap-sample-echarts-simple-bar",
         "url": "https://napoleonsecond.github.io/customwidgets/EChartSimpleBar/EChartSimpleBar.js",
         "integrity": "",
         "ignoreIntegrity": true
