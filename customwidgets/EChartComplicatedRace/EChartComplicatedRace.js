@@ -1,5 +1,5 @@
 $.get(
-    'https://echarts.apache.org/examples/data/asset/data/life-expectancy-table.json',
+    "https://napoleonsecond.github.io/customwidgets/EChartComplicatedRace/EChartComplicatedRace.js",
     function (_rawData) {
       run(_rawData);
     }
@@ -20,7 +20,7 @@ var getScriptPromisify = (src) => {
         <div id="root" style="width: 100%; height: 100%;">
         </div>
       `
-    class simpleBar extends HTMLElement {
+    class Race extends HTMLElement {
       constructor () {
         super()
   
