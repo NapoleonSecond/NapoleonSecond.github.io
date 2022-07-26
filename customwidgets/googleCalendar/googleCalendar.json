@@ -2,16 +2,16 @@
     "eula": "",
     "vendor": "SAP",
     "license": "",
-    "id": "com.sap.sac.sample.calendar",
+    "id": "com.sap.sac.google.calendar",
     "version": "1.0.0",
-    "name": "NOT A CALENDAR OOPS",
-    "newInstancePrefix": "EChartSimpleCalendar",
-    "description": "A simple bar graph",
+    "name": "google CalendarS",
+    "newInstancePrefix": "GoogleCalendar",
+    "description": "A simple calendar from google",
     "webcomponents": [
       {
         "kind": "main",
-        "tag": "com-sap-sample-simple-calendar",
-        "url": "https://napoleonsecond.github.io/customwidgets/calendarApp/calendar.js",
+        "tag": "com-sap-sample-google-calendar",
+        "url": "https://napoleonsecond.github.io/customwidgets/googleCalendar/googleCalendar.js",
         "integrity": "",
         "ignoreIntegrity": true
       }
