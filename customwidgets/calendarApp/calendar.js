@@ -45,7 +45,7 @@ var getScriptPromisify = (src) => {
         
       }
 
-      drawVisualization() {
+      drawVisualization = () => {
         console.log(this.test);
         console.log(this._test);
         // Some raw data (not necessarily accurate)
