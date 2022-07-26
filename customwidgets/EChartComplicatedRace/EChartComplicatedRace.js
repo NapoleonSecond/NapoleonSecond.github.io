@@ -153,6 +153,7 @@ var getScriptPromisify = (src) => {
             chart.setOption(option);
         
       }
+      console.log("all function should be executed correctly within the code");
     }
   
     
