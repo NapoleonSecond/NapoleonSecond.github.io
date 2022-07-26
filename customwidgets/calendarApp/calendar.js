@@ -38,7 +38,7 @@ var getScriptPromisify = (src) => {
         await getScriptPromisify('https://www.gstatic.com/charts/loader.js')
   
         google.charts.load('current', {'packages':['corechart']});
-        google.charts.setOnLoadCallback(drawVisualization);
+        google.charts.setOnLoadCallback(this.drawVisualization);
         
         
       }
