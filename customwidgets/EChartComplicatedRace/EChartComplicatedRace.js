@@ -113,7 +113,7 @@ var getScriptPromisify = (src) => {
               });
             });
 
-            console.log("after all the for loops");
+            console.log("after all the for loops v2");
             const option = {
           // https://echarts.apache.org/examples/zh/index.html
 
@@ -153,7 +153,7 @@ var getScriptPromisify = (src) => {
             chart.setOption(option);
         
       }
-      console.log("all function should be executed correctly within the code");
+      console.log("all function should be executed correctly within the code");     
     }
   
     
