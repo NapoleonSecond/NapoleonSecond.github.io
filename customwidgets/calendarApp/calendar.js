@@ -15,17 +15,20 @@ var getScriptPromisify = (src) => {
       `
     class calendar extends HTMLElement {
       constructor () {
-        super()
+        super();
+        this.test = "just a testing string";
+        this._test = "just another testing stirng";
+
+        this._shadowRoot = this.attachShadow({ mode: 'open' });
+
+        this._shadowRoot.appendChild(prepared.content.cloneNode(true));
   
-        this._shadowRoot = this.attachShadow({ mode: 'open' })
-        this._shadowRoot.appendChild(prepared.content.cloneNode(true))
+        this._root = this._shadowRoot.getElementById('root');
+        this._chart = this._shadowRoot.getElementById('chart_div');
   
-        this._root = this._shadowRoot.getElementById('root')
-        this._chart = this._shadowRoot.getElementById('chart_div')
+        this._props = {};
   
-        this._props = {}
-  
-        this.render()
+        this.render();
       }
 
   
@@ -43,6 +46,8 @@ var getScriptPromisify = (src) => {
       }
 
       drawVisualization() {
+        console.log(this.test);
+        console.log(this._test);
         // Some raw data (not necessarily accurate)
         var data = google.visualization.arrayToDataTable([
           ['Month', 'Bolivia', 'Ecuador', 'Madagascar', 'Papua New Guinea', 'Rwanda', 'Average'],
@@ -60,6 +65,7 @@ var getScriptPromisify = (src) => {
           seriesType: 'bars',
           series: {5: {type: 'line'}}
         };
+        
         var chart = new google.visualization.ComboChart(this._chart);
         chart.draw(data, options);
       }
