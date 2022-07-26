@@ -1,5 +1,3 @@
-
-
 var getScriptPromisify = (src) => {
     return new Promise(resolve => {
       $.getScript(src, resolve)
@@ -23,6 +21,7 @@ var getScriptPromisify = (src) => {
         this._shadowRoot.appendChild(prepared.content.cloneNode(true))
   
         this._root = this._shadowRoot.getElementById('root')
+        this._chart = this._shadowRoot.getElementById('chart_div')
   
         this._props = {}
   
@@ -42,6 +41,7 @@ var getScriptPromisify = (src) => {
         
         
       }
+
       drawVisualization() {
         // Some raw data (not necessarily accurate)
         var data = google.visualization.arrayToDataTable([
@@ -60,7 +60,7 @@ var getScriptPromisify = (src) => {
           seriesType: 'bars',
           series: {5: {type: 'line'}}
         };
-        var chart = new google.visualization.ComboChart(this._shadowRoot.getElementById('chart_div'));
+        var chart = new google.visualization.ComboChart(this._chart);
         chart.draw(data, options);
       }
     }
