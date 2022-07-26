@@ -60,7 +60,7 @@ var getScriptPromisify = (src) => {
           seriesType: 'bars',
           series: {5: {type: 'line'}}
         };
-        var chart = new google.visualization.ComboChart(this.shadowRoot.getElementById('chart_div'));
+        var chart = new google.visualization.ComboChart(this._shadowRoot.getElementById('chart_div'));
         chart.draw(data, options);
       }
     }
