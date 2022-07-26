@@ -71,5 +71,5 @@ var getScriptPromisify = (src) => {
       }
     }
   
-    customElements.define('com-sap-sample-calendar', calendar)
+    customElements.define('com-sap-sample-simple-calendar', calendar)
   })()
