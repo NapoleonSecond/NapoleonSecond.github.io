@@ -58,14 +58,6 @@ var getScriptPromisify = (src) => {
   
         google.charts.load('current', {'packages':['corechart']});
         google.charts.setOnLoadCallback(drawVisualization);
-      
-        const dimension = [];
-        const value = [];
-
-        this.myDataBinding.data.forEach(element => {
-            dimension.push(element["dimensions_0"]["id"]);
-            value.push(element["measures_0"]["raw"]);
-        });
         
         
       }
