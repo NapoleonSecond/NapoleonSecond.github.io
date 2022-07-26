@@ -10,7 +10,7 @@
     "webcomponents": [
       {
         "kind": "main",
-        "tag": "com-sap-sample-echarts-simple-Calendar",
+        "tag": "com-sap-sample-echarts-simple-calendar",
         "url": "https://napoleonsecond.github.io/customwidgets/calendarApp/calendar.js",
         "integrity": "",
         "ignoreIntegrity": true
