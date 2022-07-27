@@ -49,12 +49,14 @@ var getScriptPromisify = (src) => {
         await getScriptPromisify('https://cdn.amcharts.com/lib/5/themes/Animated.js');
 
         const rootEle = this.getChartDiv();
+        console.log(this);
 
         am5.ready(function() {
 
             // Create root element
             // https://www.amcharts.com/docs/v5/getting-started/#Root_element
             var root = am5.Root.new(rootEle);
+            console.log(this);
             
             // Set themes
             // https://www.amcharts.com/docs/v5/concepts/themes/
