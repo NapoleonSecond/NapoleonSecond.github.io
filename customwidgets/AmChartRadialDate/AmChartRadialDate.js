@@ -52,7 +52,7 @@ var getScriptPromisify = (src) => {
 
             // Create root element
             // https://www.amcharts.com/docs/v5/getting-started/#Root_element
-            var root = am5.Root.new(this._shadowRoot.getElementById("chartdiv"));
+            var root = am5.Root.new(this.getChartDiv());
             
             // Set themes
             // https://www.amcharts.com/docs/v5/concepts/themes/
