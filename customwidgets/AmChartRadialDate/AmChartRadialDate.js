@@ -31,6 +31,10 @@ var getScriptPromisify = (src) => {
   
         this.render()
       }
+
+      getChartDiv = () => {
+        return this._shadowRoot.getElementById("chartdiv");
+      }
   
       onCustomWidgetResize (width, height) {
         this.render()
@@ -48,7 +52,7 @@ var getScriptPromisify = (src) => {
 
             // Create root element
             // https://www.amcharts.com/docs/v5/getting-started/#Root_element
-            var root = am5.Root.new("chartdiv");
+            var root = am5.Root.new(this._shadowRoot.getElementById("chartdiv"));
             
             // Set themes
             // https://www.amcharts.com/docs/v5/concepts/themes/
