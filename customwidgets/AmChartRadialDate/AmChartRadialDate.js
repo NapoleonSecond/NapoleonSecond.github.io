@@ -42,7 +42,7 @@ var getScriptPromisify = (src) => {
 
         await getScriptPromisify('https://cdn.amcharts.com/lib/5/radar.js');
 
-        await getScriptPromisify('https://cdn.amcharts.com/lib/5/Animated.js');
+        await getScriptPromisify('https://cdn.amcharts.com/lib/5/themes/Animated.js');
 
         am5.ready(function() {
 
