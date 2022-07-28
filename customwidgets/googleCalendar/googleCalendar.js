@@ -38,10 +38,16 @@ var getScriptPromisify = (src) => {
   
       async render () {
         await getScriptPromisify('https://www.gstatic.com/charts/loader.js')
+        
+        this.myDataBinding.data.forEach(element => {
+          console.log(element);
+      });
+        
 
         google.charts.load("current", {packages:["calendar"]});
         google.charts.setOnLoadCallback(this.drawChart);
-        
+
+     
         
       }
 
