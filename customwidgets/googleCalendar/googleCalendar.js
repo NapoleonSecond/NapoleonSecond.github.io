@@ -38,7 +38,7 @@ var getScriptPromisify = (src) => {
   
       async render () {
         await getScriptPromisify('https://www.gstatic.com/charts/loader.js')
-        
+        console.log("This is google Calendar");
         this.myDataBinding.data.forEach(element => {
           console.log(element);
       });
