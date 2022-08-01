@@ -17,7 +17,6 @@ var getScriptPromisify = (src) => {
       constructor () {
         super();
         this.test = "just a testing string";
-        this._test = "just another testing stirng";
 
         this._shadowRoot = this.attachShadow({ mode: 'open' });
 
