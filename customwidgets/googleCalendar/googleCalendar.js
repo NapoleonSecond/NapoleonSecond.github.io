@@ -16,7 +16,7 @@ var getScriptPromisify = (src) => {
     class Googlecalendar extends HTMLElement {
       constructor () {
         super();
-        this.test = "just a testing string";
+        this.test = "just a testing string for google calendar";
 
         this._shadowRoot = this.attachShadow({ mode: 'open' });
 
