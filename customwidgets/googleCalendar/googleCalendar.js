@@ -43,6 +43,7 @@ var getScriptPromisify = (src) => {
         await getScriptPromisify('https://www.gstatic.com/charts/loader.js')
         console.log("This is google Calendar");
         this.processDateData(this.myDataBinding.data);
+        console.log(this.myDataBinding.data);
         google.charts.load("current", {packages:["calendar"]});
         google.charts.setOnLoadCallback(this.drawChart);
       }
