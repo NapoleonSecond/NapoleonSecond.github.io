@@ -66,7 +66,7 @@ var getScriptPromisify = (src) => {
            [ new Date(2013, 9, 30), 38447 ]
          ]);
  
-        var chart = new google.visualization.Calendar(document.getElementById('calendar_basic'));
+        var chart = new google.visualization.Calendar(this._chart);
  
         var options = {
           title: "Red Sox Attendance",
