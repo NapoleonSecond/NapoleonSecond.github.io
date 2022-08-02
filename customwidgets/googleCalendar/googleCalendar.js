@@ -42,7 +42,10 @@ var getScriptPromisify = (src) => {
       processDateData = (theData) => {
         console.log(theData);
         if(theData !== undefined){
-          console.log(theData[0]["dimensions_0"]["id"]);
+          for (let index = 0; index < theData.length; index++) {
+            const element = array[index];
+            console.log(theData[index]["dimensions_0"]["id"]);
+          }
           const prelimArr = theData[0]["dimensions_0"]["id"].split(".");
           var theDateString = prelimArr[2].substr(2).substr(0,10);
           const theDateArray= theDateString.split("-");
