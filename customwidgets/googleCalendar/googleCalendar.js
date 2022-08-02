@@ -43,7 +43,6 @@ var getScriptPromisify = (src) => {
         console.log(theData);
         if(theData !== undefined){
           for (let index = 0; index < theData.length; index++) {
-            const element = array[index];
             console.log(theData[index]["dimensions_0"]["id"]);
           }
           const prelimArr = theData[0]["dimensions_0"]["id"].split(".");
