@@ -61,8 +61,8 @@ var getScriptPromisify = (src) => {
       async render () {
         await getScriptPromisify('https://www.gstatic.com/charts/loader.js')
         console.log("This is google Calendar");
-        const dateArray = [];
-        const valueArray =[];
+        var dateArray = [];
+        var valueArray =[];
 
         dateArray,valueArray = this.processDateData(this.myDataBinding.data);
         google.charts.load("current", {packages:["calendar"]});
