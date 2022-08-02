@@ -37,7 +37,7 @@ var getScriptPromisify = (src) => {
 
       convertDimensionDateToDate(theDate){
         console.log(theDate);
-        const prelimArr = theDate;
+        const prelimArr = theDate.split(".");
         var theDateString = prelimArr[2].substr(2).substr(0,10);
         const theDateArray= theDateString.split("-");
         return theDateArray;
