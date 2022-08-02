@@ -39,9 +39,11 @@ var getScriptPromisify = (src) => {
         const prelimArr = theDate;
         var theDateString = prelimArr[2].substr(2).substr(0,10);
         const theDateArray= theDateString.split("-");
-        return theDateArray
+        console.log(theDateArray);
+        return theDateArray;
+        
       }
-      
+
       processDateData = (theData) => {
         console.log(theData);
         if(theData !== undefined){
