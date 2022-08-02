@@ -41,11 +41,12 @@ var getScriptPromisify = (src) => {
         const theDateArray= theDateString.split("-");
         return theDateArray
       }
+      
       processDateData = (theData) => {
         console.log(theData);
         if(theData !== undefined){
           for (let index = 0; index < theData.length; index++) {
-            console.log(convertDimensionDateToDate(theData[index]["dimensions_0"]["id"]));
+            console.log(this.convertDimensionDateToDate(theData[index]["dimensions_0"]["id"]));
           }
         }
         
