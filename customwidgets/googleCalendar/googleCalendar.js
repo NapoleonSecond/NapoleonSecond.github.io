@@ -38,7 +38,7 @@ var getScriptPromisify = (src) => {
       processDateData(theData){
         console.log(theData);
         if(theData !== undefined){
-          console.log(theData["dimensions_0"]);
+          console.log(theData[0]["dimensions_0"]["id"]);
         }
         
       }
