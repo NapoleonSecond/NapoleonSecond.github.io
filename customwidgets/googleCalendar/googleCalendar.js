@@ -61,15 +61,16 @@ var getScriptPromisify = (src) => {
       async render () {
         await getScriptPromisify('https://www.gstatic.com/charts/loader.js')
         console.log("This is google Calendar");
-        var dateArray = [];
-        var valueArray =[];
-
-        dateArray,valueArray = this.processDateData(this.myDataBinding.data);
+        
         google.charts.load("current", {packages:["calendar"]});
         google.charts.setOnLoadCallback(this.drawChart);
       }
 
       drawChart = ()=> {
+        var dateArray = [];
+        var valueArray =[];
+
+        dateArray,valueArray = this.processDateData(this.myDataBinding.data);
         var dataTable = new google.visualization.DataTable();
         dataTable.addColumn({ type: 'date', id: 'Date' });
         dataTable.addColumn({ type: 'number', id: 'Won/Loss' });
