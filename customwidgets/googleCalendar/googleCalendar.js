@@ -54,7 +54,7 @@ var getScriptPromisify = (src) => {
           }
           console.log("this is dates");
           console.log(dates);
-          return (dates,value);
+          return [dates,value];
         }
         
       }
@@ -72,7 +72,9 @@ var getScriptPromisify = (src) => {
         var valueArray =[];*/
         var targetRows = [];
 
-        let { dateArray, valueArray } = this.processDateData(this.myDataBinding.data);
+        const theResult = this.processDateData(this.myDataBinding.data);
+        const dateArray = theResult[0];
+        const valueArray = theResult[1];
         var dataTable = new google.visualization.DataTable();
         dataTable.addColumn({ type: 'date', id: 'Date' });
         dataTable.addColumn({ type: 'number', id: 'Won/Loss' });
