@@ -68,11 +68,11 @@ var getScriptPromisify = (src) => {
       }
 
       drawChart = ()=> {
-        var dateArray = [];
-        var valueArray =[];
+        /*var dateArray = [];
+        var valueArray =[];*/
         var targetRows = [];
 
-        (dateArray,valueArray) = this.processDateData(this.myDataBinding.data);
+        let { dateArray, valueArray } = this.processDateData(this.myDataBinding.data);
         var dataTable = new google.visualization.DataTable();
         dataTable.addColumn({ type: 'date', id: 'Date' });
         dataTable.addColumn({ type: 'number', id: 'Won/Loss' });
