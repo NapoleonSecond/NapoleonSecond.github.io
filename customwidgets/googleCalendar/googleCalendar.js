@@ -72,7 +72,7 @@ var getScriptPromisify = (src) => {
         var valueArray =[];
         var targetRows = [];
 
-        dateArray,valueArray = this.processDateData(this.myDataBinding.data);
+        (dateArray,valueArray) = this.processDateData(this.myDataBinding.data);
         var dataTable = new google.visualization.DataTable();
         dataTable.addColumn({ type: 'date', id: 'Date' });
         dataTable.addColumn({ type: 'number', id: 'Won/Loss' });
