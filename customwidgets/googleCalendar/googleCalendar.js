@@ -39,6 +39,8 @@ var getScriptPromisify = (src) => {
         console.log(theData);
         if(theData !== undefined){
           console.log(theData[0]["dimensions_0"]["id"]);
+          const prelimArr = theData[0]["dimensions_0"]["id"].split(".");
+          console.log(prelimArr);
         }
         
       }
