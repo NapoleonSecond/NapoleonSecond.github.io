@@ -35,12 +35,16 @@ var getScriptPromisify = (src) => {
         this.render()
       }
 
-      processDateData(theData){
+      /*convertDimensionDateToDate(theDate){
+        
+
+      }*/
+      processDateData = (theData) => {
         console.log(theData);
         if(theData !== undefined){
           console.log(theData[0]["dimensions_0"]["id"]);
           const prelimArr = theData[0]["dimensions_0"]["id"].split(".");
-          console.log(prelimArr);
+          console.log(prelimArr[2].substring(2,-1));
         }
         
       }
