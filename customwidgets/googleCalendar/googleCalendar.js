@@ -36,10 +36,10 @@ var getScriptPromisify = (src) => {
       }
 
       convertDimensionDateToDate(theDate){
+        console.log(theDate);
         const prelimArr = theDate;
         var theDateString = prelimArr[2].substr(2).substr(0,10);
         const theDateArray= theDateString.split("-");
-        console.log(theDateArray);
         return theDateArray;
         
       }
