@@ -37,7 +37,10 @@ var getScriptPromisify = (src) => {
 
       processDateData(theData){
         console.log(theData);
-        console.log(theData["dimensions_0"]["id"]);
+        if(theData !== undefined){
+          console.log(theData["dimensions_0"]["id"]);
+        }
+        
       }
   
       async render () {
@@ -47,6 +50,7 @@ var getScriptPromisify = (src) => {
         google.charts.load("current", {packages:["calendar"]});
         google.charts.setOnLoadCallback(this.drawChart);
       }
+
       drawChart = ()=> {
         console.log(this.test);
         var dataTable = new google.visualization.DataTable();
