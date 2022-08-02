@@ -69,12 +69,19 @@ var getScriptPromisify = (src) => {
       drawChart = ()=> {
         var dateArray = [];
         var valueArray =[];
+        var targetRows = [];
 
         dateArray,valueArray = this.processDateData(this.myDataBinding.data);
         var dataTable = new google.visualization.DataTable();
         dataTable.addColumn({ type: 'date', id: 'Date' });
         dataTable.addColumn({ type: 'number', id: 'Won/Loss' });
-        dataTable.addRows([
+        for (let index = 0; index < valueArray.length; index++) {
+          targetRows.push(
+            [new Date(dateArray[index][0],dateArray[index][1],dateArray[index][2]), valueArray[index]]
+          )
+          
+        }
+        /*dataTable.addRows([
            [ new Date(2012, 3, 13), 37032 ],
            [ new Date(2012, 3, 14), 38024 ],
            [ new Date(2012, 3, 15), 38024 ],
@@ -89,7 +96,8 @@ var getScriptPromisify = (src) => {
            [ new Date(2013, 9, 23), 38345 ],
            [ new Date(2013, 9, 24), 38436 ],
            [ new Date(2013, 9, 30), 38447 ]
-         ]);
+         ]);*/
+         dataTable.addRows(targetRows);
  
         var chart = new google.visualization.Calendar(this._chart);
  
