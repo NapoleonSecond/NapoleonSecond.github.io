@@ -50,9 +50,10 @@ var getScriptPromisify = (src) => {
         if(theData !== undefined){
           for (let index = 0; index < theData.length; index++) {
             dates.push(this.convertDimensionDateToDate(theData[index]["dimensions_0"]["id"]));
+            value.push(theData[index]["measures_0"]["raw"]);
           }
           console.log(dates);
-          return dates;
+          return (dates,value);
         }
         
       }
@@ -60,7 +61,10 @@ var getScriptPromisify = (src) => {
       async render () {
         await getScriptPromisify('https://www.gstatic.com/charts/loader.js')
         console.log("This is google Calendar");
-        this.processDateData(this.myDataBinding.data);
+        const dateArray = [];
+        const valueArray =[];
+
+        dateArray,valueArray = this.processDateData(this.myDataBinding.data);
         google.charts.load("current", {packages:["calendar"]});
         google.charts.setOnLoadCallback(this.drawChart);
       }
