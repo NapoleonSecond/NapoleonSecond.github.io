@@ -52,6 +52,7 @@ var getScriptPromisify = (src) => {
             dates.push(this.convertDimensionDateToDate(theData[index]["dimensions_0"]["id"]));
             value.push(theData[index]["measures_0"]["raw"]);
           }
+          console.log("this is dates");
           console.log(dates);
           return (dates,value);
         }
@@ -75,6 +76,7 @@ var getScriptPromisify = (src) => {
         var dataTable = new google.visualization.DataTable();
         dataTable.addColumn({ type: 'date', id: 'Date' });
         dataTable.addColumn({ type: 'number', id: 'Won/Loss' });
+        console.log("This is first date and then value array");
         console.log(dateArray);
         console.log(valueArray);
         for (let index = 0; index < valueArray.length; index++) {
