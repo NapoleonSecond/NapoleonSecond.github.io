@@ -35,20 +35,18 @@ var getScriptPromisify = (src) => {
         this.render()
       }
 
-      /*convertDimensionDateToDate(theDate){
-        
-
-      }*/
+      convertDimensionDateToDate(theDate){
+        const prelimArr = theDate;
+        var theDateString = prelimArr[2].substr(2).substr(0,10);
+        const theDateArray= theDateString.split("-");
+        return theDateArray
+      }
       processDateData = (theData) => {
         console.log(theData);
         if(theData !== undefined){
           for (let index = 0; index < theData.length; index++) {
-            console.log(theData[index]["dimensions_0"]["id"]);
+            console.log(convertDimensionDateToDate(theData[index]["dimensions_0"]["id"]));
           }
-          const prelimArr = theData[0]["dimensions_0"]["id"].split(".");
-          var theDateString = prelimArr[2].substr(2).substr(0,10);
-          const theDateArray= theDateString.split("-");
-          console.log(theDateArray);
         }
         
       }
@@ -62,7 +60,6 @@ var getScriptPromisify = (src) => {
       }
 
       drawChart = ()=> {
-        console.log(this.test);
         var dataTable = new google.visualization.DataTable();
         dataTable.addColumn({ type: 'date', id: 'Date' });
         dataTable.addColumn({ type: 'number', id: 'Won/Loss' });
