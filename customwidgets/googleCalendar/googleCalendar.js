@@ -44,13 +44,15 @@ var getScriptPromisify = (src) => {
       }
 
       processDateData = (theData) => {
-        var arrOfData = [];
+        console.log(theData);
+        var dates = [];
+        var value = [];
         if(theData !== undefined){
           for (let index = 0; index < theData.length; index++) {
-            arrOfData.push(this.convertDimensionDateToDate(theData[index]["dimensions_0"]["id"]));
+            dates.push(this.convertDimensionDateToDate(theData[index]["dimensions_0"]["id"]));
           }
-          console.log(arrOfData);
-          return arrOfData;
+          console.log(dates);
+          return dates;
         }
         
       }
