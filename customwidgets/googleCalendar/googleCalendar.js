@@ -76,6 +76,7 @@ var getScriptPromisify = (src) => {
         dataTable.addColumn({ type: 'date', id: 'Date' });
         dataTable.addColumn({ type: 'number', id: 'Won/Loss' });
         console.log(dateArray);
+        console.log(valueArray);
         for (let index = 0; index < valueArray.length; index++) {
           targetRows.push(
             [new Date(dateArray[index][0],dateArray[index][1],dateArray[index][2]), valueArray[index]]
