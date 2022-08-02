@@ -36,7 +36,6 @@ var getScriptPromisify = (src) => {
       }
 
       convertDimensionDateToDate(theDate){
-        console.log(theDate);
         const prelimArr = theDate.split(".");
         var theDateString = prelimArr[2].substr(2).substr(0,10);
         const theDateArray= theDateString.split("-");
@@ -45,11 +44,13 @@ var getScriptPromisify = (src) => {
       }
 
       processDateData = (theData) => {
-        console.log(theData);
+        var arrOfData = [];
         if(theData !== undefined){
           for (let index = 0; index < theData.length; index++) {
-            console.log(this.convertDimensionDateToDate(theData[index]["dimensions_0"]["id"]));
+            arrOfData.push(this.convertDimensionDateToDate(theData[index]["dimensions_0"]["id"]));
           }
+          console.log(arrOfData);
+          return arrOfData;
         }
         
       }
