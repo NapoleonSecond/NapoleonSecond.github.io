@@ -37,13 +37,13 @@ var getScriptPromisify = (src) => {
 
       processDateData(theData){
         console.log(theData);
+        console.log(theData["dimensions_0"]["id"]);
       }
   
       async render () {
         await getScriptPromisify('https://www.gstatic.com/charts/loader.js')
         console.log("This is google Calendar");
         this.processDateData(this.myDataBinding.data);
-        console.log(this.myDataBinding.data);
         google.charts.load("current", {packages:["calendar"]});
         google.charts.setOnLoadCallback(this.drawChart);
       }
