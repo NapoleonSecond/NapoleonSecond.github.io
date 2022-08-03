@@ -32,10 +32,10 @@
     },
     "methods": {
       "setValue": {
-        "description": "Sets the Gauge value.",
+        "description": "Sets the name value.",
         "parameters": [
           {
-            "name": "newValue",
+            "name": "newName",
             "type": "string",
             "description": "Name for the chart"
           }
