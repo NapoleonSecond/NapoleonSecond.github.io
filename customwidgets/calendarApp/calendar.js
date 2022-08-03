@@ -59,7 +59,7 @@ var getScriptPromisify = (src) => {
         ]);
       
         var options = {
-          title : 'Monthly Coffee Production by Country',
+          title : this.name,
           vAxis: {title: 'Cups'},
           hAxis: {title: 'Month'},
           seriesType: 'bars',

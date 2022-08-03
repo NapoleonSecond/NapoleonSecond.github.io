@@ -24,9 +24,14 @@
           "height": {
               "type": "integer",
               "default": 420
+          },
+          "name":{
+              "type":"string",
+              "default":"Hello World"
           }
     },
     "methods": {
+
     },
     "events": {
     },
@@ -46,4 +51,5 @@
 		  ]
 		}
 	  }
+
   }
