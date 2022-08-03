@@ -31,7 +31,17 @@
           }
     },
     "methods": {
-
+      "setValue": {
+        "description": "Sets the Gauge value.",
+        "parameters": [
+          {
+            "name": "newValue",
+            "type": "string",
+            "description": "Name for the chart"
+          }
+        ],
+        "body": "this.name = newName;"
+      }
     },
     "events": {
     },

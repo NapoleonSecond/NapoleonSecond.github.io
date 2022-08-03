@@ -35,6 +35,17 @@ var getScriptPromisify = (src) => {
       onCustomWidgetResize (width, height) {
         this.render()
       }
+      onCustomWidgetBeforeUpdate(changedProperties) {
+        this._props = { ...this._props, ...changedProperties };
+      }
+
+      onCustomWidgetAfterUpdate(changedProperties) {
+        if ("name" in changedProperties) {
+          this.name = changedProperties["name"];
+        }
+        
+        this.render();
+      }
   
       async render () {
         await getScriptPromisify('https://www.gstatic.com/charts/loader.js')
