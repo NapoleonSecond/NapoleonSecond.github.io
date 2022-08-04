@@ -58,6 +58,17 @@ var getScriptPromisify = (src) => {
         }
         
       }
+      onCustomWidgetBeforeUpdate(changedProperties) {
+        this._props = { ...this._props, ...changedProperties };
+      }
+
+      onCustomWidgetAfterUpdate(changedProperties) {
+        if ("name" in changedProperties) {
+          this.name = changedProperties["name"];
+        }
+        
+        this.render();
+      }
   
       async render () {
         await getScriptPromisify('https://www.gstatic.com/charts/loader.js')
@@ -87,28 +98,12 @@ var getScriptPromisify = (src) => {
           )
           
         }
-        /*dataTable.addRows([
-           [ new Date(2012, 3, 13), 37032 ],
-           [ new Date(2012, 3, 14), 38024 ],
-           [ new Date(2012, 3, 15), 38024 ],
-           [ new Date(2012, 3, 16), 38108 ],
-           [ new Date(2012, 3, 17), 38229 ],
-           // Many rows omitted for brevity.
-           [ new Date(2013, 9, 4), 38177 ],
-           [ new Date(2013, 9, 5), 38705 ],
-           [ new Date(2013, 9, 12), 38210 ],
-           [ new Date(2013, 9, 13), 38029 ],
-           [ new Date(2013, 9, 19), 38823 ],
-           [ new Date(2013, 9, 23), 38345 ],
-           [ new Date(2013, 9, 24), 38436 ],
-           [ new Date(2013, 9, 30), 38447 ]
-         ]);*/
          dataTable.addRows(targetRows);
  
         var chart = new google.visualization.Calendar(this._chart);
  
         var options = {
-          title: "Red Sox Attendance",
+          title: this.name,
           height: 350,
         };
  
