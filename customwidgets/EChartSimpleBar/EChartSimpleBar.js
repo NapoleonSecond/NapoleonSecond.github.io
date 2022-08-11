@@ -43,9 +43,6 @@ var getScriptPromisify = (src) => {
             dimension.push(element["dimensions_0"]["id"]);
             value.push(element["measures_0"]["raw"]);
         });
-        
-     
-
         const zoomSize = 6;
         chart.on('click', function (params) {
             console.log(dimension[Math.max(params.dataIndex - zoomSize / 2, 0)]);
