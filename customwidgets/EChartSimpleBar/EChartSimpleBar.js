@@ -1,5 +1,8 @@
 var getScriptPromisify = (src) => {
+    console.log("This is the source variable");
+    console.log(src);
     return new Promise(resolve => {
+      console.log(src);
       $.getScript(src, resolve)
     })
   }
