@@ -81,8 +81,21 @@ var getScriptPromisify = (src) => {
       drawChart = ()=> {
         /*var dateArray = [];
         var valueArray =[];*/
-        var targetRows = [];
+        var data = new google.visualization.DataTable();
 
+        data.addColumn("date","Start Date");
+        data.addColumn("String","BW");
+        data.addColumn("String","Business Category");
+        data.addColumn("String","Process Chai");
+        data.addColumn("String","Process Chain Descriptor");
+        data.addColumn("String","Status");
+        data.addColumn("timeofday","Start Time");
+        data.addColumn("timeofday","End Time");
+        data.addColumn("timeofday","Exp End Time");
+        data.addColumn("String","Delay");
+        data.addColumn("String","Duration of time");
+
+        
         const theResult = this.processDateData(this.myDataBinding.data);
         const dateArray = theResult[0];
         const valueArray = theResult[1];
