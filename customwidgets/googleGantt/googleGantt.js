@@ -30,6 +30,14 @@ var getScriptPromisify = (src) => {
         this.render();
       }
 
+      daysToMilliseconds(days) {
+        return days * 24 * 60 * 60 * 1000;
+      }
+
+      minutesToMilliSeconds(minute){
+        return minute * 60 * 1000;
+    }
+
   
       onCustomWidgetResize (width, height) {
         this.render()
@@ -82,45 +90,46 @@ var getScriptPromisify = (src) => {
         /*var dateArray = [];
         var valueArray =[];*/
         var data = new google.visualization.DataTable();
+        /*
+        Different columns:
+    
+        */
+        data.addColumn('string', 'Business Categories');
+        data.addColumn("string","Descriptor");
+        data.addColumn('date', 'Start Date');
+        data.addColumn('date', 'End Date');
+        data.addColumn('number', 'Duration of Hours');
+        data.addColumn('number', 'Percent complete')
+        data.addColumn('string', 'Dependencies');
 
-        data.addColumn("date","Start Date");
-        data.addColumn("String","BW");
-        data.addColumn("String","Business Category");
-        data.addColumn("String","Process Chai");
-        data.addColumn("String","Process Chain Descriptor");
-        data.addColumn("String","Status");
-        data.addColumn("timeofday","Start Time");
-        data.addColumn("timeofday","End Time");
-        data.addColumn("timeofday","Exp End Time");
-        data.addColumn("String","Delay");
-        data.addColumn("String","Duration of time");
+        data.addRows([
+          ["1",
+          "Human Capital Management",
+          new Date(2022, 9, 31, 16, 19),
+          new Date(2022, 9, 31, 16, 48), 
+          minutesToMilliSeconds(48-19),
+          100, 
+          null],
+          ["2",
+          "INEED",
+          new Date(2022, 9, 31, 16, 15),
+          new Date(2022, 9, 31, 16, 28), 
+          minutesToMilliSeconds(28-15),
+          100, 
+          null]
+        ]);
 
-        
-        const theResult = this.processDateData(this.myDataBinding.data);
-        const dateArray = theResult[0];
-        const valueArray = theResult[1];
-        var dataTable = new google.visualization.DataTable();
-        dataTable.addColumn({ type: 'date', id: 'Date' });
-        dataTable.addColumn({ type: 'number', id: 'Won/Loss' });
-        console.log("This is first date and then value array");
-        console.log(dateArray);
-        console.log(valueArray);
-        for (let index = 0; index < valueArray.length; index++) {
-          targetRows.push(
-            [new Date(dateArray[index][0],dateArray[index][1],dateArray[index][2]), valueArray[index]]
-          )
-          
-        }
-         dataTable.addRows(targetRows);
- 
-        var chart = new google.visualization.Calendar(this._chart);
- 
         var options = {
-          title: this.name,
-          height: 350,
+        height: 275,
+        gantt: {
+          defaultStartDate: new Date(2022, 9, 31),
+
+        },
         };
- 
-        chart.draw(dataTable, options);
+
+        var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
+
+        chart.draw(data, options);
     }
 
     
