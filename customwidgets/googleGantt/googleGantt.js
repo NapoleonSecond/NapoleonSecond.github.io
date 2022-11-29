@@ -82,6 +82,7 @@ var getScriptPromisify = (src) => {
         await getScriptPromisify('https://www.gstatic.com/charts/loader.js')
         console.log("This is google Calendar");
         
+        console.log(this.myDataBinding.data);
         google.charts.load("current", {packages:["gantt"]});
         google.charts.setOnLoadCallback(this.drawChart);
       }
@@ -94,6 +95,7 @@ var getScriptPromisify = (src) => {
         Different columns:
     
         */
+        
         data.addColumn('string', 'Business Categories');
         data.addColumn("string","Descriptor");
         data.addColumn('date', 'Start Date');
