@@ -30,11 +30,11 @@ var getScriptPromisify = (src) => {
         this.render();
       }
 
-      daysToMilliseconds(days) {
+      daysToMilliseconds = (days) => {
         return days * 24 * 60 * 60 * 1000;
       }
 
-      minutesToMilliSeconds(minute){
+      minutesToMilliSeconds = (minute) => {
         return minute * 60 * 1000;
     }
 
