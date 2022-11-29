@@ -127,7 +127,7 @@ var getScriptPromisify = (src) => {
         },
         };
 
-        var chart = new google.visualization.Gantt(this.chart);
+        var chart = new google.visualization.Gantt(this._chart);
 
         chart.draw(data, options);
     }
