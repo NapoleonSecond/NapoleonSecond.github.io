@@ -13,7 +13,7 @@ var getScriptPromisify = (src) => {
         <div id="chart_div" style="width: 900px; height: 500px;"></div>
         </div>
       `
-    class Googlecalendar extends HTMLElement {
+    class Googlgantt extends HTMLElement {
       constructor () {
         super();
         this.test = "just a testing string for google calendar";
@@ -136,5 +136,5 @@ var getScriptPromisify = (src) => {
 
     }
   
-    customElements.define('com-sap-sample-google-calendar', Googlecalendar)
+    customElements.define('com-sap-sample-google-gantt', Googlgantt)
   })()
