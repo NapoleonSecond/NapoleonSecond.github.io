@@ -82,7 +82,7 @@ var getScriptPromisify = (src) => {
         await getScriptPromisify('https://www.gstatic.com/charts/loader.js')
         console.log("This is google Calendar");
         
-        google.charts.load("current", {packages:["calendar"]});
+        google.charts.load("current", {packages:["gantt"]});
         google.charts.setOnLoadCallback(this.drawChart);
       }
 
@@ -118,7 +118,8 @@ var getScriptPromisify = (src) => {
           100, 
           null]
         ]);
-
+        
+        var chart = new google.visualization.Gantt(this._chart);
         var options = {
         height: 275,
         gantt: {
@@ -127,7 +128,7 @@ var getScriptPromisify = (src) => {
         },
         };
 
-        var chart = new google.visualization.Gantt(this._chart);
+        
 
         chart.draw(data, options);
     }
