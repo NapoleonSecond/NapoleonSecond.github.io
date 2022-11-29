@@ -107,14 +107,14 @@ var getScriptPromisify = (src) => {
           "Human Capital Management",
           new Date(2022, 9, 31, 16, 19),
           new Date(2022, 9, 31, 16, 48), 
-          minutesToMilliSeconds(48-19),
+          this.minutesToMilliSeconds(48-19),
           100, 
           null],
           ["2",
           "INEED",
           new Date(2022, 9, 31, 16, 15),
           new Date(2022, 9, 31, 16, 28), 
-          minutesToMilliSeconds(28-15),
+          this.minutesToMilliSeconds(28-15),
           100, 
           null]
         ]);
