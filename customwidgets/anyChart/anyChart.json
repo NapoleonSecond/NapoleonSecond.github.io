@@ -3,7 +3,7 @@
     "vendor": "SAP",
     "license": "",
     "id": "com.sap.sac.anyChart.gantt",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "name": "anyChart Gantt",
     "newInstancePrefix": "anyChartGantt",
     "description": "A simple Gantt from AnyChart",

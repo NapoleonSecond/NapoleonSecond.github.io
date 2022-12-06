@@ -132,9 +132,9 @@ var getScriptPromisify = (src) => {
             // set the data
             chart.data(treeData);
             // configure the scale
-            chart.getTimeline().scale().maximum(Date.UTC(2018, 06, 30));
+            //chart.getTimeline().scale().maximum(Date.UTC(2018, 06, 30));
             // set the container id
-            chart.container("container");
+            chart.container(this.rootEle);
             // initiate drawing the chart
             chart.draw();
             chart.fitAll();
