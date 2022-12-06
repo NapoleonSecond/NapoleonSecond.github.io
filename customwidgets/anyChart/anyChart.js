@@ -57,13 +57,13 @@ var getScriptPromisify = (src) => {
             var data = [{
                 id: "1",
                 name: "Development Life Cycle",
-                actualStart: Date.UTC(2018, 01, 02),
-                actualEnd: Date.UTC(2018, 06, 15),
+                actualStart: Date(2018, 01, 02),
+                actualEnd: Date(2018, 06, 15),
                 children: [{
                         id: "1_1",
                         name: "Planning",
-                        actualStart: Date.UTC(2018, 01, 02),
-                        actualEnd: Date.UTC(2018, 01, 22),
+                        actualStart: Date(2018, 01, 02),
+                        actualEnd: Date(2018, 01, 22),
                         connectTo: "1_2",
                         connectorType: "finish-start",
                         progressValue: "75%"
@@ -71,8 +71,8 @@ var getScriptPromisify = (src) => {
                     {
                         id: "1_2",
                         name: "Design and Prototyping",
-                        actualStart: Date.UTC(2018, 01, 23),
-                        actualEnd: Date.UTC(2018, 02, 20),
+                        actualStart: Date(2018, 01, 23),
+                        actualEnd: Date(2018, 02, 20),
                         connectTo: "1_3",
                         connectorType: "start-start",
                         progressValue: "60%"
@@ -80,8 +80,8 @@ var getScriptPromisify = (src) => {
                     {
                         id: "1_3",
                         name: "Evaluation Meeting",
-                        actualStart: Date.UTC(2018, 02, 23),
-                        actualEnd: Date.UTC(2018, 02, 23),
+                        actualStart: Date(2018, 02, 23),
+                        actualEnd: Date(2018, 02, 23),
                         connectTo: "1_4",
                         connectorType: "start-start",
                         progressValue: "80%"
@@ -89,8 +89,8 @@ var getScriptPromisify = (src) => {
                     {
                         id: "1_4",
                         name: "Application Development",
-                        actualStart: Date.UTC(2018, 02, 26),
-                        actualEnd: Date.UTC(2018, 04, 26),
+                        actualStart: Date(2018, 02, 26),
+                        actualEnd: Date(2018, 04, 26),
                         connectTo: "1_5",
                         connectorType: "finish-finish",
                         progressValue: "90%"
@@ -98,8 +98,8 @@ var getScriptPromisify = (src) => {
                     {
                         id: "1_5",
                         name: "Testing",
-                        actualStart: Date.UTC(2018, 04, 29),
-                        actualEnd: Date.UTC(2018, 05, 15),
+                        actualStart: Date(2018, 04, 29),
+                        actualEnd: Date(2018, 05, 15),
                         connectTo: "1_6",
                         connectorType: "start-finish",
                         progressValue: "60%"
@@ -107,8 +107,8 @@ var getScriptPromisify = (src) => {
                     {
                         id: "1_6",
                         name: "Deployment",
-                        actualStart: Date.UTC(2018, 05, 20),
-                        actualEnd: Date.UTC(2018, 05, 27),
+                        actualStart: Date(2018, 05, 20),
+                        actualEnd: Date(2018, 05, 27),
                         connectTo: "1_7",
                         connectorType: "start-finish",
                         progressValue: "100%"
@@ -116,8 +116,8 @@ var getScriptPromisify = (src) => {
                     {
                         id: "1_7",
                         name: "Maintenance",
-                        actualStart: Date.UTC(2018, 05, 30),
-                        actualEnd: Date.UTC(2018, 06, 11),
+                        actualStart: Date(2018, 05, 30),
+                        actualEnd: Date(2018, 06, 11),
                         progressValue: "40%"
                     },
         
@@ -132,7 +132,7 @@ var getScriptPromisify = (src) => {
             // set the data
             chart.data(treeData);
             // configure the scale
-            //chart.getTimeline().scale().maximum(Date.UTC(2018, 06, 30));
+            chart.getTimeline().scale().maximum(Date(2018, 06, 30));
             // set the container id
             chart.container(this.rootEle);
             // initiate drawing the chart
