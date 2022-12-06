@@ -40,7 +40,7 @@ var getScriptPromisify = (src) => {
 
   
       onCustomWidgetResize (width, height) {
-        this.render()
+        this.render();
       }
 
       convertDimensionDateToDate(theDate){
@@ -80,7 +80,6 @@ var getScriptPromisify = (src) => {
   
       async render () {
         await getScriptPromisify('https://www.gstatic.com/charts/loader.js')
-        console.log("This is google Calendar");
         
         //console.log(this.myDataBinding.data);
         google.charts.load("current", {packages:["gantt"]});
@@ -126,7 +125,6 @@ var getScriptPromisify = (src) => {
         height: 275,
         gantt: {
           defaultStartDate: new Date(2022, 9, 31),
-
         },
         };
 
@@ -134,9 +132,6 @@ var getScriptPromisify = (src) => {
 
         chart.draw(data, options);
     }
-
-    
-
     }
   
     customElements.define('com-sap-sample-google-gantt', Googlgantt)

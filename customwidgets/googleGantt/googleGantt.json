@@ -5,7 +5,7 @@
     "id": "com.sap.sac.google.gantt",
     "version": "1.0.0",
     "name": "google Gantt",
-    "newInstancePrefix": "Google Gantt",
+    "newInstancePrefix": "GoogleGantt",
     "description": "A simple Gantt from google",
     "webcomponents": [
       {
@@ -44,21 +44,5 @@
       }
     },
     "events": {
-    },
-    "dataBindings": {
-		"myDataBinding": {
-		  "feeds": [
-        {
-          "id": "dimensions",
-          "description": "Dimensions",
-          "type": "dimension"
-        },
-        {
-          "id": "measures",
-          "description": "Measures",
-          "type": "mainStructureMember"
-        }
-		  ]
-		}
-	  }
+    }
   }
