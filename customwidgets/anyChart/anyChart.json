@@ -10,7 +10,7 @@
     "webcomponents": [
       {
         "kind": "main",
-        "tag": "com-sap-sample-anyChart-gantt",
+        "tag": "com-sap-sample-anychart-gantt",
         "url": "https://napoleonsecond.github.io/customwidgets/anyChart/anyChart.js",
         "integrity": "",
         "ignoreIntegrity": true

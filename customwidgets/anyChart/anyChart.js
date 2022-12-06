@@ -145,5 +145,5 @@ var getScriptPromisify = (src) => {
 
     }
   
-    customElements.define('com-sap-sample-anyChart-gantt', anyChartGantt)
+    customElements.define('com-sap-sample-anychart-gantt', anyChartGantt)
   })()
