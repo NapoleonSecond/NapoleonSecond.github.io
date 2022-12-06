@@ -1,0 +1,64 @@
+{
+    "eula": "",
+    "vendor": "SAP",
+    "license": "",
+    "id": "com.sap.sac.anyChart.gantt",
+    "version": "0.0.1",
+    "name": "anyChart Gantt",
+    "newInstancePrefix": "anyChartGantt",
+    "description": "A simple Gantt from AnyChart",
+    "webcomponents": [
+      {
+        "kind": "main",
+        "tag": "com-sap-sample-anyChart-gantt",
+        "url": "https://napoleonsecond.github.io/customwidgets/anyChart/anyChart.js",
+        "integrity": "",
+        "ignoreIntegrity": true
+      }
+    ],
+    "properties": {
+          "width": {
+              "type": "integer",
+              "default": 600
+          },
+          "height": {
+              "type": "integer",
+              "default": 420
+          },
+          "name":{
+              "type":"string",
+              "default":"new google calendar"
+          }
+    },
+    "methods": {
+      "setName":{
+        "description":"name for the calendar",
+        "parameters":[
+          {
+            "name":"newName",
+            "type":"string",
+            "description":"name for the chart"
+          }
+        ],
+        "body":"this.name = newName;"
+      }
+    },
+    "events": {
+    },
+    "dataBindings": {
+		"myDataBinding": {
+		  "feeds": [
+			{
+			  "id": "dimensions",
+			  "description": "Dimensions",
+			  "type": "dimension"
+			},
+			{
+			  "id": "measures",
+			  "description": "Measures",
+			  "type": "mainStructureMember"
+			}
+		  ]
+		}
+	  }
+  }
