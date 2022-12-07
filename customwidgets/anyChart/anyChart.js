@@ -62,7 +62,7 @@ var getScriptPromisify = (src) => {
                 children: [{
                         id: "1_1",
                         name: "Planning",
-                        actualStart: Date(2018, 01, 02),
+                        actualStart: new Date(2018, 01, 02).getTime(),
                         actualEnd: Date(2018, 01, 22),
                         connectTo: "1_2",
                         connectorType: "finish-start",
