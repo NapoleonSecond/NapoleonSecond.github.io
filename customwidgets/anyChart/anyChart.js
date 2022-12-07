@@ -57,13 +57,13 @@ var getScriptPromisify = (src) => {
             var data = [{
                 id: "1",
                 name: "Development Life Cycle",
-                actualStart: Date("2018-01-02"),
-                actualEnd: Date("2018-06-15"),
+                actualStart: Date.UTC("2018-01-02"),
+                actualEnd: Date.UTC("2018-06-15"),
                 children: [{
                         id: "1_1",
                         name: "Planning",
-                        actualStart: Date("2018-01-02"),
-                        actualEnd: Date("2018-01-22"),
+                        actualStart: Date.UTC("2018-01-02"),
+                        actualEnd: Date.UTC("2018-01-22"),
                         connectTo: "1_2",
                         connectorType: "finish-start",
                         progressValue: "75%"
@@ -71,8 +71,8 @@ var getScriptPromisify = (src) => {
                     {
                         id: "1_2",
                         name: "Design and Prototyping",
-                        actualStart: Date("2018-01-23"),
-                        actualEnd: Date("2018-02-20"),
+                        actualStart: Date.UTC("2018-01-23"),
+                        actualEnd: Date.UTC("2018-02-20"),
                         connectTo: "1_3",
                         connectorType: "start-finish",
                         progressValue: "60%"
@@ -80,8 +80,8 @@ var getScriptPromisify = (src) => {
                     {
                         id: "1_3",
                         name: "Evaluation Meeting",
-                        actualStart: Date("2018-02-23"),
-                        actualEnd: Date("2018-02-28"),
+                        actualStart: Date.UTC("2018-02-23"),
+                        actualEnd: Date.UTC("2018-02-28"),
                         connectorType: "start-finish",
                         progressValue: "80%"
                     },
@@ -97,7 +97,7 @@ var getScriptPromisify = (src) => {
             // set the data
             chart.data(treeData);
             // configure the scale
-            //chart.getTimeline().scale().maximum(Date(2018, 06, 30));
+            chart.getTimeline().scale().maximum(Date.UTC("2018-06-30"));
             // set the container id
             chart.container(rootEle);
             // initiate drawing the chart
