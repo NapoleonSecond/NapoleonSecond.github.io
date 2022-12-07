@@ -57,8 +57,8 @@ var getScriptPromisify = (src) => {
             var data = [{
                 id: "1",
                 name: "Development Life Cycle",
-                actualStart: Date(2018, 01, 02),
-                actualEnd: Date(2018, 06, 15),
+                actualStart: Date("2018-01-02"),
+                actualEnd: Date("2018-06-15"),
                 children: [{
                         id: "1_1",
                         name: "Planning",
