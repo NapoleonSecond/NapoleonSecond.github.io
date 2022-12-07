@@ -62,8 +62,8 @@ var getScriptPromisify = (src) => {
                 children: [{
                         id: "1_1",
                         name: "Planning",
-                        actualStart: new Date(2018, 01, 02).getTime(),
-                        actualEnd: Date(2018, 01, 22),
+                        actualStart: Date("2018-01-02"),
+                        actualEnd: Date("2018-01-22"),
                         connectTo: "1_2",
                         connectorType: "finish-start",
                         progressValue: "75%"
@@ -71,56 +71,21 @@ var getScriptPromisify = (src) => {
                     {
                         id: "1_2",
                         name: "Design and Prototyping",
-                        actualStart: Date(2018, 01, 23),
-                        actualEnd: Date(2018, 02, 20),
+                        actualStart: Date("2018-01-23"),
+                        actualEnd: Date("2018-02-20"),
                         connectTo: "1_3",
-                        connectorType: "start-start",
+                        connectorType: "start-finish",
                         progressValue: "60%"
                     },
                     {
                         id: "1_3",
                         name: "Evaluation Meeting",
-                        actualStart: Date(2018, 02, 23),
-                        actualEnd: Date(2018, 02, 23),
-                        connectTo: "1_4",
-                        connectorType: "start-start",
+                        actualStart: Date("2018-02-23"),
+                        actualEnd: Date("2018-02-28"),
+                        connectorType: "start-finish",
                         progressValue: "80%"
                     },
-                    {
-                        id: "1_4",
-                        name: "Application Development",
-                        actualStart: Date(2018, 02, 26),
-                        actualEnd: Date(2018, 04, 26),
-                        connectTo: "1_5",
-                        connectorType: "finish-finish",
-                        progressValue: "90%"
-                    },
-                    {
-                        id: "1_5",
-                        name: "Testing",
-                        actualStart: Date(2018, 04, 29),
-                        actualEnd: Date(2018, 05, 15),
-                        connectTo: "1_6",
-                        connectorType: "start-finish",
-                        progressValue: "60%"
-                    },
-                    {
-                        id: "1_6",
-                        name: "Deployment",
-                        actualStart: Date(2018, 05, 20),
-                        actualEnd: Date(2018, 05, 27),
-                        connectTo: "1_7",
-                        connectorType: "start-finish",
-                        progressValue: "100%"
-                    },
-                    {
-                        id: "1_7",
-                        name: "Maintenance",
-                        actualStart: Date(2018, 05, 30),
-                        actualEnd: new Date(2018, 06, 11),
-                        progressValue: "40%"
-                    },
-        
+                    
                 ]
             }];
             // create a data tree
