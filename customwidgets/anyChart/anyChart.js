@@ -117,7 +117,7 @@ var getScriptPromisify = (src) => {
                         id: "1_7",
                         name: "Maintenance",
                         actualStart: Date(2018, 05, 30),
-                        actualEnd: Date(2018, 06, 11),
+                        actualEnd: new Date(2018, 06, 11).getUTCDate(),
                         progressValue: "40%"
                     },
         
