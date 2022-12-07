@@ -99,7 +99,7 @@ var getScriptPromisify = (src) => {
             // configure the scale
             //chart.getTimeline().scale().maximum(Date(2018, 06, 30));
             // set the container id
-            chart.container("container");
+            chart.container(rootEle);
             // initiate drawing the chart
             chart.draw();
             chart.fitAll();
