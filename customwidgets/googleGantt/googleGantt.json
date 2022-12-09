@@ -46,19 +46,25 @@
     "events": {
     },  
     "dataBindings": {
-		"myDataBinding": {
+		  "myDataBinding": {
 		  "feeds": [
 			{
 			  "id": "dimensions",
 			  "description": "Dimensions",
 			  "type": "dimension"
 			},
+      {
+        "id": "startTimeDimension",
+        "description" : "Start Time",
+        "type": "dimension"
+
+      },
 			{
 			  "id": "measures",
 			  "description": "Measures",
 			  "type": "mainStructureMember"
 			}
 		  ]
-		}
+		  }
 	  }
   }
