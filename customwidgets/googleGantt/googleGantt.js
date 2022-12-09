@@ -74,14 +74,14 @@ var getScriptPromisify = (src) => {
         if ("name" in changedProperties) {
           this.name = changedProperties["name"];
         }
-        console.log(this.myDataBinding.data);
+        
         this.render();
       }
   
       async render () {
         await getScriptPromisify('https://www.gstatic.com/charts/loader.js')
         
-        //console.log(this.myDataBinding.data);
+        console.log(this.myDataBinding.data);
         google.charts.load("current", {packages:["gantt"]});
         google.charts.setOnLoadCallback(this.drawChart);
       }
