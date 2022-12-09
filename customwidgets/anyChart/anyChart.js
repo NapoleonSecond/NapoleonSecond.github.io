@@ -55,39 +55,54 @@ var getScriptPromisify = (src) => {
         anychart.onDocumentReady(function () {
             // create data
             var data = [{
-                id: "1",
-                name: "Development Life Cycle",
-                actualStart: Date.UTC("2018-01-02"),
-                actualEnd: Date.UTC("2018-06-15"),
-                children: [{
-                        id: "1_1",
-                        name: "Planning",
-                        actualStart: Date.UTC("2018-01-02"),
-                        actualEnd: Date.UTC("2018-01-22"),
-                        connectTo: "1_2",
-                        connectorType: "finish-start",
-                        progressValue: "75%"
-                    },
-                    {
-                        id: "1_2",
-                        name: "Design and Prototyping",
-                        actualStart: Date.UTC("2018-01-23"),
-                        actualEnd: Date.UTC("2018-02-20"),
-                        connectTo: "1_3",
-                        connectorType: "start-finish",
-                        progressValue: "60%"
-                    },
-                    {
-                        id: "1_3",
-                        name: "Evaluation Meeting",
-                        actualStart: Date.UTC("2018-02-23"),
-                        actualEnd: Date.UTC("2018-02-28"),
-                        connectorType: "start-finish",
-                        progressValue: "80%"
-                    },
-                    
-                ]
-            }];
+              id: 1,
+              parent: null,
+              name: "Root",
+              actualStart: Date.UTC(2018, 01, 02),
+              actualEnd: Date.UTC(2018, 06, 15),
+            },
+            {
+              id: 2,
+              parent: 1,
+              name: "Parent 1",
+              actualStart: Date.UTC(2018, 01, 02),
+              actualEnd: Date.UTC(2018, 01, 22),
+              progressValue: "90%"
+            },
+            {
+              id: 3,
+              parent: 2,
+              name: "Child 1–1",
+              actualStart: Date.UTC(2018, 01, 23),
+              actualEnd: Date.UTC(2018, 02, 20),
+              progressValue: "75%"
+            },
+            {
+              id: 4,
+              parent: 2,
+              name: "Child 1–2",
+              actualStart: Date.UTC(2018, 02, 23),
+              actualEnd: Date.UTC(2018, 02, 23),
+              progressValue: "60%"
+            },
+            {
+              id: 5,
+              parent: 1,
+              name: "Parent 2",
+              actualStart: Date.UTC(2018, 02, 26),
+              actualEnd: Date.UTC(2018, 04, 26),
+              progressValue: "80%"
+            },
+            {
+              id: 7,
+              parent: 6,
+              name: "Child 2–1",
+              actualStart: Date.UTC(2018, 04, 29),
+              actualEnd: Date.UTC(2018, 05, 15),
+              progressValue: "30%"
+            },
+          
+            ];
             // create a data tree
             var treeData = anychart.data.tree(data, "as-tree");
         
