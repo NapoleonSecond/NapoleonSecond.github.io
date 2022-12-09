@@ -58,47 +58,47 @@ var getScriptPromisify = (src) => {
               id: 1,
               parent: null,
               name: "Root",
-              actualStart: Date.UTC(2018, 01, 02),
-              actualEnd: Date.UTC(2018, 06, 15),
+              actualStart: Date.UTC(2018, 1, 2),
+              actualEnd: Date.UTC(2018, 6, 15),
             },
             {
               id: 2,
               parent: 1,
               name: "Parent 1",
-              actualStart: Date.UTC(2018, 01, 02),
-              actualEnd: Date.UTC(2018, 01, 22),
+              actualStart: Date.UTC(2018, 1, 2),
+              actualEnd: Date.UTC(2018, 1, 22),
               progressValue: "90%"
             },
             {
               id: 3,
               parent: 2,
               name: "Child 1–1",
-              actualStart: Date.UTC(2018, 01, 23),
-              actualEnd: Date.UTC(2018, 02, 20),
+              actualStart: Date.UTC(2018, 1, 23),
+              actualEnd: Date.UTC(2018, 2, 20),
               progressValue: "75%"
             },
             {
               id: 4,
               parent: 2,
               name: "Child 1–2",
-              actualStart: Date.UTC(2018, 02, 23),
-              actualEnd: Date.UTC(2018, 02, 23),
+              actualStart: Date.UTC(2018, 2, 23),
+              actualEnd: Date.UTC(2018, 2, 23),
               progressValue: "60%"
             },
             {
               id: 5,
               parent: 1,
               name: "Parent 2",
-              actualStart: Date.UTC(2018, 02, 26),
-              actualEnd: Date.UTC(2018, 04, 26),
+              actualStart: Date.UTC(2018, 2, 26),
+              actualEnd: Date.UTC(2018, 4, 26),
               progressValue: "80%"
             },
             {
               id: 7,
               parent: 6,
               name: "Child 2–1",
-              actualStart: Date.UTC(2018, 04, 29),
-              actualEnd: Date.UTC(2018, 05, 15),
+              actualStart: Date.UTC(2018, 4, 29),
+              actualEnd: Date.UTC(2018, 5, 15),
               progressValue: "30%"
             },
           
