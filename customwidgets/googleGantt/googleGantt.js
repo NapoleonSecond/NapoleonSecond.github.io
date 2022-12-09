@@ -74,7 +74,7 @@ var getScriptPromisify = (src) => {
         if ("name" in changedProperties) {
           this.name = changedProperties["name"];
         }
-        
+        console.log(this.myDataBinding.data);
         this.render();
       }
   
