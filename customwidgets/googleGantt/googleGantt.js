@@ -76,6 +76,8 @@ var getScriptPromisify = (src) => {
         }
         
         this.render();
+        console.log("PropertyHasChanged");
+        console.log(this.data);
       }
   
       async render () {

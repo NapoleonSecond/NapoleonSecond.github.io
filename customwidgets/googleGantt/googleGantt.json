@@ -7,6 +7,7 @@
     "name": "google Gantt",
     "newInstancePrefix": "GoogleGantt",
     "description": "A simple Gantt from google",
+    "imports": ["table","chart","datasource"],
     "webcomponents": [
       {
         "kind": "main",
@@ -28,6 +29,9 @@
           "name":{
               "type":"string",
               "default":"new google calendar"
+          },
+          "data":{
+              "type":"Selection[]"
           }
     },
     "methods": {
@@ -41,6 +45,23 @@
           }
         ],
         "body":"this.name = newName;"
+      },
+      "setData":{
+        "description": "The data for this chart",
+        "parameters":[
+          {
+            "name":"theData",
+            "type":"Selection[]",
+            "description": "the data for the chart"
+    
+          }
+        ],
+        "body":"this.data = theData;"
+      },
+      "getData":{
+        "description":"Return data selection from table",
+         "body":"return this.data;",
+         "returnType":"Selection[]"
       }
     },
     "events": {
