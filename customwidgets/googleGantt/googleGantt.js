@@ -86,7 +86,6 @@ var getScriptPromisify = (src) => {
       async render () {
         await getScriptPromisify('https://www.gstatic.com/charts/loader.js')
         
-        console.log(this.myDataBinding.data);
         google.charts.load("current", {packages:["gantt"]});
         google.charts.setOnLoadCallback(this.drawChart);
       }
@@ -110,7 +109,7 @@ var getScriptPromisify = (src) => {
 
         if (this.data != undefined){
           console.log("Data exists");
-          for (let index = 0; index < theData.length; index++){
+          for (let index = 0; index < this.theData.length; index++){
             console.log(this.data[index]);
           }
         }
