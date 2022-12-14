@@ -109,7 +109,7 @@ var getScriptPromisify = (src) => {
 
         if (this.data != undefined){
           console.log("Data exists");
-          for (let index = 0; index < this.data.length(); index++){
+          for (let index = 0; index < this.data.length; index++){
             console.log(this.data[index]);
           }
         }
