@@ -112,11 +112,11 @@ var getScriptPromisify = (src) => {
           for (let index = 0; index < this.data.length; index++){
             console.log(this.data[index]);
 
-            theStartTime = new Date(this.data[index]["START_DATE"]);
-            theEndTime = new Date(this.data[index]["END_DATE"]);
+            //theStartTime = new Date(this.data[index]["START_DATE"]);
+            //theEndTime = new Date(this.data[index]["END_DATE"]);
             
-            originalStartTime = this.data[index]["START_TIME"];
-            originalEndTime = this.data[index]["END_TIME"];
+            //originalStartTime = this.data[index]["START_TIME"];
+            //originalEndTime = this.data[index]["END_TIME"];
 
             data.addRows(
               [
