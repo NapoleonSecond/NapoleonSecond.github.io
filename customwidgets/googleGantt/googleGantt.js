@@ -111,6 +111,17 @@ var getScriptPromisify = (src) => {
           console.log("Data exists");
           for (let index = 0; index < this.data.length; index++){
             console.log(this.data[index]);
+            data.addRows(
+              [
+                index.toString(),
+                this.data[index]["VARIANTE"],
+                new Date(this.data[START_DATE]),
+                new Date(this.data[END_DATE]),
+                null,
+                100,
+                null
+              ]
+            )
           }
         }
         data.addRows([
