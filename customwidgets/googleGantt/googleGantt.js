@@ -74,6 +74,9 @@ var getScriptPromisify = (src) => {
         if ("name" in changedProperties) {
           this.name = changedProperties["name"];
         }
+        if ("data" in changedProperties) {
+          this.data = changedProperties["data"];
+        }
         
         this.render();
         console.log("PropertyHasChanged");
@@ -105,6 +108,9 @@ var getScriptPromisify = (src) => {
         data.addColumn('number', 'Percent complete')
         data.addColumn('string', 'Dependencies');
 
+        if (this.data != undefined){
+          console.log("Data exists");
+        }
         data.addRows([
           ["1",
           "Human Capital Management",
