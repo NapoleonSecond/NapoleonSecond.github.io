@@ -103,7 +103,7 @@ var getScriptPromisify = (src) => {
         data.addColumn("string","Descriptor");
         data.addColumn('date', 'Start Date');
         data.addColumn('date', 'End Date');
-        data.addColumn('number', 'Duration of Hours');
+        //data.addColumn('number', 'Duration of Hours');
         data.addColumn('number', 'Percent complete')
         data.addColumn('string', 'Dependencies');
 
@@ -124,7 +124,6 @@ var getScriptPromisify = (src) => {
                 this.data[index]["VARIANTE"],
                 new Date(this.data[index]["START_DATE"]),
                 new Date(this.data[index]["END_DATE"]),
-                null,
                 100,
                 null
               ]
@@ -136,14 +135,12 @@ var getScriptPromisify = (src) => {
           "Human Capital Management",
           new Date(2022, 9, 31, 16, 19),
           new Date(2022, 9, 31, 16, 48), 
-          this.minutesToMilliSeconds(48-19),
           100, 
           null],
           ["2",
           "INEED",
           new Date(2022, 9, 31, 16, 15),
           new Date(2022, 9, 31, 16, 28), 
-          this.minutesToMilliSeconds(28-15),
           100, 
           null]
         ]);
