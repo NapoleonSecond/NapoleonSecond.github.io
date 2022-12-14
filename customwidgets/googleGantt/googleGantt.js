@@ -118,7 +118,7 @@ var getScriptPromisify = (src) => {
             //originalStartTime = this.data[index]["START_TIME"];
             //originalEndTime = this.data[index]["END_TIME"];
 
-            data.addRows(
+            data.addRow(
               [
                 index.toString(),
                 this.data[index]["VARIANTE"],
