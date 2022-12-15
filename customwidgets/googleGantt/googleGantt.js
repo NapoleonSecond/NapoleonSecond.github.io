@@ -121,15 +121,28 @@ var getScriptPromisify = (src) => {
             var originalStartTimeArray = originalStartTime.split(":");
             var originalEndTimeArray = originalEndTime.split(":");
 
+            theStartTime.setHours(originalStartTimeArray[0]);
+            theStartTime.setMinutes(originalStartTimeArray[1]);
+            theStartTime.setSeconds(originalStartTimeArray[2]);
+
+            theEndTime.setHours(originalEndTimeArray[0]);
+            theEndTime.setMinutes(originalEndTimeArray[1]);
+            theEndTime.setSeconds(originalEndTimeArray[2]);
+
+
             console.log(originalStartTimeArray);
             console.log(originalEndTimeArray);
+
+            
 
             data.addRow(
               [
                 index.toString(),
                 this.data[index]["VARIANTE"],
-                new Date(this.data[index]["START_DATE"]),
-                new Date(this.data[index]["END_DATE"]),
+                //new Date(this.data[index]["START_DATE"]),
+                //new Date(this.data[index]["END_DATE"]),
+                theStartTime,
+                theEndTime,
                 null,
                 100,
                 null
