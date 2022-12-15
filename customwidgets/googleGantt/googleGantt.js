@@ -112,11 +112,17 @@ var getScriptPromisify = (src) => {
           for (let index = 0; index < this.data.length; index++){
             console.log(this.data[index]);
 
-            //theStartTime = new Date(this.data[index]["START_DATE"]);
-            //theEndTime = new Date(this.data[index]["END_DATE"]);
+            var theStartTime = new Date(this.data[index]["START_DATE"]);
+            var theEndTime = new Date(this.data[index]["END_DATE"]);
             
-            //originalStartTime = this.data[index]["START_TIME"];
-            //originalEndTime = this.data[index]["END_TIME"];
+            var originalStartTime = this.data[index]["START_TIME"];
+            var originalEndTime = this.data[index]["END_TIME"];
+
+            var originalStartTimeArray = originalStartTime.split(":");
+            var originalEndTimeArray = originalEndTime.split(":");
+
+            console.log(originalStartTimeArray);
+            console.log(originalEndTimeArray);
 
             data.addRow(
               [
@@ -150,9 +156,10 @@ var getScriptPromisify = (src) => {
         
         var chart = new google.visualization.Gantt(this._chart);
         var options = {
-        height: 275,
+        height: 1200,
         gantt: {
-          defaultStartDate: new Date(2022, 9, 31),
+          //defaultStartDate: new Date(2022, 9, 31),
+          trackHeight :20
         },
         };
 
