@@ -147,15 +147,15 @@ var getScriptPromisify = (src) => {
         data.addRows([
           ["1",
           "Human Capital Management",
-          new Date(2022, 9, 31, 16, 19),
-          new Date(2022, 9, 31, 16, 48), 
+          new Date(2022, 11, 01, 16, 19),
+          new Date(2022, 11, 01, 16, 48), 
           this.minutesToMilliSeconds(48-19),
           100, 
           null],
           ["2",
           "INEED",
-          new Date(2022, 9, 31, 16, 15),
-          new Date(2022, 9, 31, 16, 28), 
+          new Date(2022, 11, 01, 16, 15),
+          new Date(2022, 11, 01, 16, 28), 
           this.minutesToMilliSeconds(28-15),
           100, 
           null]
@@ -165,7 +165,7 @@ var getScriptPromisify = (src) => {
         var options = {
         height: 1200,
         gantt: {
-          //defaultStartDate: new Date(2022, 9, 31),
+          defaultStartDate: new Date(2022, 11, 01),
           trackHeight :20
         },
         };
