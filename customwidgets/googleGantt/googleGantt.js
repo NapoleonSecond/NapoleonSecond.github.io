@@ -165,7 +165,7 @@ var getScriptPromisify = (src) => {
         var options = {
         height: 1200,
         gantt: {
-          defaultStartDate: new Date(2022, 11, 01),
+          //defaultStartDate: new Date(2022, 11, 1),
           trackHeight :20
         },
         };
