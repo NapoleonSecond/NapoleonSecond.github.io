@@ -110,7 +110,7 @@ var getScriptPromisify = (src) => {
         if (this.data != undefined){
           console.log("Data exists");
           for (let index = 0; index < this.data.length; index++){
-            console.log(this.data[index]);
+            console.log(this.data[index]["START_DATE"]);
 
             var theStartTime = new Date(this.data[index]["START_DATE"]);
             var theEndTime = new Date(this.data[index]["END_DATE"]);
@@ -128,12 +128,6 @@ var getScriptPromisify = (src) => {
             theEndTime.setHours(originalEndTimeArray[0]);
             theEndTime.setMinutes(originalEndTimeArray[1]);
             theEndTime.setSeconds(originalEndTimeArray[2]);
-
-
-            console.log(originalStartTimeArray);
-            console.log(originalEndTimeArray);
-
-            
 
             data.addRow(
               [
