@@ -223,8 +223,8 @@ var getScriptPromisify = (src) => {
     
                 prettyPrint();
     
-            });
-        })
+            })(jQuery);
+        })(jQuery);
         
         
       }
