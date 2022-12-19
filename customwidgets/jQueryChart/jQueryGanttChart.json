@@ -11,7 +11,7 @@
     "webcomponents": [
       {
         "kind": "main",
-        "tag": "com-sap-sample-IBM-gantt",
+        "tag": "com-sap-sample-ibm-gantt",
         "url": "https://napoleonsecond.github.io/customwidgets/jQueryChart/jQueryGanttChart.js",
         "integrity": "",
         "ignoreIntegrity": true

@@ -227,5 +227,5 @@ var getScriptPromisify = (src) => {
       }
 
     }
-    customElements.define('com-sap-sample-IBM-gantt', ibmGantt)
+    customElements.define('com-sap-sample-ibm-gantt', ibmGantt)
   })()
