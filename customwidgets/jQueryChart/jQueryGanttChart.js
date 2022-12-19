@@ -6,9 +6,9 @@ var getScriptPromisify = (src) => {
   (function () {
     const prepared = document.createElement('template')
     prepared.innerHTML = `
-        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-        <link href="css/style.css" type="text/css" rel="stylesheet">
-        <link href="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css" rel="stylesheet" type="text/css">
+        <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="/lib/css/style.css" type="text/css" rel="stylesheet">
+        <link href="http://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css" rel="stylesheet" type="text/css">
         <style type="text/css">
             body {
                 font-family: Helvetica, Arial, sans-serif;
