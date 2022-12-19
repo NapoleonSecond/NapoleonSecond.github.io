@@ -94,7 +94,7 @@ var getScriptPromisify = (src) => {
         await getScriptPromisify('https://napoleonsecond.github.io/customwidgets/jQueryChart/lib/js/jquery.fn.gantt.js');
         await getScriptPromisify('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js');
         await getScriptPromisify('https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js');
-        var $ = jQuery;
+        //var $ = jQuery;
         
         (function ($) {
             $(function() {
@@ -223,7 +223,7 @@ var getScriptPromisify = (src) => {
     
                 prettyPrint();
     
-            })(jQuery);
+            });
         })(jQuery);
         
         
