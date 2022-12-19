@@ -89,7 +89,7 @@ var getScriptPromisify = (src) => {
       }
   
       async render () {
-        await getScriptPromisify('https://napoleonsecond.github.io/customwidgets/jQueryChart/lib/js/jquery.min.jss');
+        await getScriptPromisify('https://napoleonsecond.github.io/customwidgets/jQueryChart/lib/js/jquery.min.js');
         await getScriptPromisify('https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js');
         await getScriptPromisify('https://napoleonsecond.github.io/customwidgets/jQueryChart/lib/js/jquery.fn.gantt.js');
         await getScriptPromisify('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js');
