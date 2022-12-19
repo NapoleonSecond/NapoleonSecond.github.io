@@ -7,7 +7,7 @@ var getScriptPromisify = (src) => {
     const prepared = document.createElement('template')
     prepared.innerHTML = `
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-        <link href="/lib/css/style.css" type="text/css" rel="stylesheet">
+        <link href="https://napoleonsecond.github.io/customwidgets/jQueryChart//lib/css/style.css" type="text/css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css" rel="stylesheet" type="text/css">
         <style type="text/css">
             body {
@@ -89,9 +89,9 @@ var getScriptPromisify = (src) => {
       }
   
       async render () {
-        await getScriptPromisify('lib/js/jquery.min.jss');
+        await getScriptPromisify('https://napoleonsecond.github.io/customwidgets/jQueryChart/lib/js/jquery.min.jss');
         await getScriptPromisify('https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js');
-        await getScriptPromisify('lib/js/jquery.fn.gantt.js');
+        await getScriptPromisify('https://napoleonsecond.github.io/customwidgets/jQueryChart/lib/js/jquery.fn.gantt.js');
         await getScriptPromisify('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js');
         await getScriptPromisify('https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js');
 
