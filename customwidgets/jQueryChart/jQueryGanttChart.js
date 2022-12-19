@@ -96,7 +96,7 @@ var getScriptPromisify = (src) => {
         await getScriptPromisify('https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js');
         //var $ = jQuery;
         
-        (function ($) {
+        jQuery( document ).ready(function ($) {
             $(function() {
                 "use strict";
     
