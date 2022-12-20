@@ -29,7 +29,10 @@
           "name":{
               "type":"string",
               "default":"new google calendar"
-          }   
+          },
+          "data":{
+            "type":"Selection[]"
+        }
     },
     "methods": {
         "setName":{
