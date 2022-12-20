@@ -8,9 +8,17 @@ var getScriptPromisify = (src) => {
     const prepared = document.createElement('template')
     prepared.innerHTML = `
         <style>
+          #chart_wrapper {
+          overflow-x: scroll;
+          overflow-y: hidden;
+          width: 900px; 
+          height: 500px;
+        }
         </style>
         <div id="root" style="width: 100%; height: 100%;">
-        <div id="chart_div" style="width: 900px; height: 500px;"></div>
+        <div id="chart_wrapper">
+            <div id="chart_div"></div>
+        </div>
         </div>
       `
     class Googlgantt extends HTMLElement {

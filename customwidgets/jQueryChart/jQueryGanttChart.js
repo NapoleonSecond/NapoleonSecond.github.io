@@ -188,7 +188,7 @@ var getScriptPromisify = (src) => {
                     value.to += offset;
                 }
     
-                $(this._chart).gantt({
+                $('chart_div').gantt({
                     source: demoSource,
                     navigate: "scroll",
                     scale: "weeks",
@@ -210,7 +210,7 @@ var getScriptPromisify = (src) => {
                     }
                 });
     
-                $(this._chart).popover({
+                $('chart_div').popover({
                     selector: ".bar",
                     title: function _getItemText() {
                         return this.textContent;
