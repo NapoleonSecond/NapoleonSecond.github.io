@@ -55,70 +55,54 @@ var getScriptPromisify = (src) => {
           this.name = changedProperties["name"];
         }
         
+        if ("data" in changedProperties) {
+            this.data = changedProperties["data"];
+          }
+          
         this.render();
+        console.log("PropertyHasChanged");
+        console.log(this.data);
       }
   
       async render () {
         await getScriptPromisify('https://napoleonsecond.github.io/customwidgets/jsGanttChart/gantt-master/dist/frappe-gantt.js');
         
 
-        var tasks = [
-			{
-				start: '2018-10-01',
-				end: '2018-10-08',
-				name: 'Redesign website',
-				id: "Task 0",
-				progress: 20
-			},
-			{
-				start: '2018-10-03',
-				end: '2018-10-06',
-				name: 'Write new content',
-				id: "Task 1",
-				progress: 5,
-				dependencies: 'Task 0'
-			},
-			{
-				start: '2018-10-04',
-				end: '2018-10-08',
-				name: 'Apply new styles',
-				id: "Task 2",
-				progress: 10,
-				dependencies: 'Task 1'
-			},
-			{
-				start: '2018-10-08',
-				end: '2018-10-09',
-				name: 'Review',
-				id: "Task 3",
-				progress: 5,
-				dependencies: 'Task 2'
-			},
-			{
-				start: '2018-10-08',
-				end: '2018-10-10',
-				name: 'Deploy',
-				id: "Task 4",
-				progress: 0,
-				dependencies: 'Task 2'
-			},
-			{
-				start: '2018-10-11',
-				end: '2018-10-11',
-				name: 'Go Live!',
-				id: "Task 5",
-				progress: 0,
-				dependencies: 'Task 4',
-				custom_class: 'bar-milestone'
-			},
-			{
-				start: '2014-01-05',
-				end: '2019-10-12',
-				name: 'Long term task',
-				id: "Task 6",
-				progress: 0
-			}
-		]
+        var tasks = []
+        
+        if (this.data != undefined){
+            console.log("Data exists");
+            for (let index = 0; index < this.data.length; index++){
+              console.log(this.data[index]["START_DATE"]);
+  
+              var theStartTime = new Date(this.data[index]["START_DATE"]);
+              var theEndTime = new Date(this.data[index]["END_DATE"]);
+              
+              var originalStartTime = this.data[index]["START_TIME"];
+              var originalEndTime = this.data[index]["END_TIME"];
+  
+              var originalStartTimeArray = originalStartTime.split(":");
+              var originalEndTimeArray = originalEndTime.split(":");
+  
+              theStartTime.setHours(originalStartTimeArray[0]);
+              theStartTime.setMinutes(originalStartTimeArray[1]);
+              theStartTime.setSeconds(originalStartTimeArray[2]);
+  
+              theEndTime.setHours(originalEndTimeArray[0]);
+              theEndTime.setMinutes(originalEndTimeArray[1]);
+              theEndTime.setSeconds(originalEndTimeArray[2]);
+  
+              tasks.push(
+                {
+                    start: theStartTime.toString(),
+				    end: theEndTime.toString(),
+				    name: this.data[index]["VARIANTE"],
+				    id: index.toString(),
+				    progress: 100
+                }
+              )
+            }
+          }
 		var gantt_chart = new Gantt(this._chart, tasks, {
 			on_click: function (task) {
 				console.log(task);
