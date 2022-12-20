@@ -94,8 +94,8 @@ var getScriptPromisify = (src) => {
   
               tasks.push(
                 {
-                    start: theStartTime.toString(),
-				    end: theEndTime.toString(),
+                    start: String.concat(this.data[index]["START_DATE"], " ", originalStartTime),
+				    end:  String.concat(this.data[index]["END_DATE"], " ", originalEndTime),
 				    name: this.data[index]["VARIANTE"],
 				    id: index.toString(),
 				    progress: 100
