@@ -65,7 +65,7 @@ var getScriptPromisify = (src) => {
       }
   
       async render () {
-        await getScriptPromisify('https://napoleonsecond.github.io/customwidgets/jsGanttChart/gantt-master/dist/frappe-gantt.js');
+        await getScriptPromisify('https://napoleonsecond.github.io/customwidgets/jsGanttChart/hour.js');
         
 
         var tasks = []
@@ -102,6 +102,7 @@ var getScriptPromisify = (src) => {
                 }
               )
             }
+            console.log(tasks);
           }
 		var gantt_chart = new Gantt(this._chart, tasks, {
 			on_click: function (task) {
@@ -116,7 +117,7 @@ var getScriptPromisify = (src) => {
 			on_view_change: function(mode) {
 				console.log(mode);
 			},
-			view_mode: 'Quarter Day',
+			view_mode: 'Hour',
 			language: 'en'
 		});
       }
