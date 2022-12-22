@@ -1125,7 +1125,7 @@ var Gantt = (function() {
       setup_options(options) {
         const default_options = {
           header_height: 50,
-          column_width: 30,
+          column_width: 100,
           step: 24,
           view_modes: [...Object.values(VIEW_MODE)],
           bar_height: 20,
