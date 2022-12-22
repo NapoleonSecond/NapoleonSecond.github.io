@@ -761,13 +761,13 @@ var Gantt = (function() {
         const new_start_date = date_utils.add(
           this.gantt.gantt_start,
           x_in_units * this.gantt.options.step,
-          'minute'
+          'hour'
         );
         const width_in_units = bar.getWidth() / this.gantt.options.column_width;
         const new_end_date = date_utils.add(
           new_start_date,
           width_in_units * this.gantt.options.step,
-          'minute'
+          'hour'
         );
   
         return {
@@ -797,10 +797,6 @@ var Gantt = (function() {
           const diff = date_utils.diff(task_start, gantt_start, 'day');
           x = diff * column_width / 30;
         }
-        if (this.gantt.view_is('Hour')) {
-            const diff = date_utils.diff(task_start, gantt_start, 'minute');
-            x = diff / step * column_width;
-          }
         return x;
       }
   
