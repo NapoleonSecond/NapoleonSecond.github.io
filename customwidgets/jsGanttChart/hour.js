@@ -1125,7 +1125,7 @@ var Gantt = (function() {
       setup_options(options) {
         const default_options = {
           header_height: 50,
-          column_width: 100,
+          column_width: 30,
           step: 24,
           view_modes: [...Object.values(VIEW_MODE)],
           bar_height: 20,
@@ -1233,7 +1233,7 @@ var Gantt = (function() {
         this.options.view_mode = view_mode;
         if (view_mode === VIEW_MODE.HOUR) {
           this.options.step = 1;
-          this.options.column_width = 38;
+          this.options.column_width = 100;
         } else if (view_mode === VIEW_MODE.DAY) {
           this.options.step = 24;
           this.options.column_width = 38;
