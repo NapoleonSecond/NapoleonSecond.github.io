@@ -797,6 +797,13 @@ var Gantt = (function() {
           const diff = date_utils.diff(task_start, gantt_start, 'day');
           x = diff * column_width / 30;
         }
+
+        
+        if (this.gantt.view_is('Hour')){
+            const diff = date_utils.diff(task_start, gantt_start, 'minute');
+            x = diff * column_width / 60
+        }
+        
         return x;
       }
   
