@@ -505,10 +505,10 @@ var Gantt = (function() {
         // This is for the hour version ONLY 
         this.duration = date_utils.diff(this.task._end, this.task_start, 'minute')/ 60; //60 minutes in an hour
         console.log(this.duration);
+        console.log(date_utils);
         //This is the original code
         //this.duration = date_utils.diff(this.task._end, this.task._start, 'hour') / this.gantt.options.step;
         this.width = this.gantt.options.column_width * this.duration;
-        console.log(this.width);
         this.progress_width =
           this.gantt.options.column_width *
           this.duration *
