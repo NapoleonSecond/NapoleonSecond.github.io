@@ -503,7 +503,7 @@ var Gantt = (function() {
         this.y = this.compute_y();
         this.corner_radius = this.gantt.options.bar_corner_radius;
         // This is for the hour version ONLY 
-        this.duration = date_utils.diff(this.task._end, this.task._start, 'minute')/ 60; //60 minutes in an hour
+        this.duration = date_utils.diff(this.task._end, this.task._start, 'second')/ 3600; //60 minutes in an hour
         console.log(this.duration);
         console.log(date_utils);
         //This is the original code
