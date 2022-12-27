@@ -14,6 +14,11 @@ var getScriptPromisify = (src) => {
                 overflow-x: scroll;
                 height: 700px;
             }
+            #chart_wrapper {
+              overflow-y: scroll;
+              overflow-x: scroll;
+              height: 700px;
+            }
             .container {
                 width: 80%;
                 margin: 0 auto;
@@ -25,7 +30,9 @@ var getScriptPromisify = (src) => {
         </style>
         <link rel="stylesheet" href="https://napoleonsecond.github.io/customwidgets/jsGanttChart/gantt-master/dist/frappe-gantt.css" />
         <div id="root" style="width: 100%; height: 100%;">
-        <div id="chart_div" style="width: 900px; height: 500px;"></div>
+        <div id="chart_wrapper">
+        <div id="chart_div" style="width: 900px; height: 500px;">
+        </div></div>
         </div>
       `
     class jsGantt extends HTMLElement {
