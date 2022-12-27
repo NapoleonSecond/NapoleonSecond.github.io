@@ -11,6 +11,7 @@ var getScriptPromisify = (src) => {
                 font-family: sans-serif;
                 background: #ccc;
                 overflow-y: scroll;
+                overflow-x: scroll;
                 height: 700px;
             }
             .container {
