@@ -73,32 +73,16 @@ var getScriptPromisify = (src) => {
         if (this.data != undefined){
             console.log("Data exists");
             for (let index = 0; index < this.data.length; index++){
-              console.log(this.data[index]["START_DATE"]);
-  
-              var theStartTime = new Date(this.data[index]["START_DATE"]);
-              var theEndTime = new Date(this.data[index]["END_DATE"]);
-              
+              console.log(this.data[index]["START_DATE"]);             
               var originalStartTime = this.data[index]["START_TIME"];
               var originalEndTime = this.data[index]["END_TIME"];
-  
-              var originalStartTimeArray = originalStartTime.split(":");
-              var originalEndTimeArray = originalEndTime.split(":");
-  
-              theStartTime.setHours(originalStartTimeArray[0]);
-              theStartTime.setMinutes(originalStartTimeArray[1]);
-              theStartTime.setSeconds(originalStartTimeArray[2]);
-  
-              theEndTime.setHours(originalEndTimeArray[0]);
-              theEndTime.setMinutes(originalEndTimeArray[1]);
-              theEndTime.setSeconds(originalEndTimeArray[2]);
-  
               tasks.push(
                 {
                     start: this.data[index]["START_DATE"].concat(" ", originalStartTime),
-				    end:  this.data[index]["END_DATE"].concat( " ", originalEndTime),
-				    name: this.data[index]["VARIANTE"],
-				    id: index.toString(),
-				    progress: 100
+				            end:  this.data[index]["END_DATE"].concat( " ", originalEndTime),
+				            name: this.data[index]["VARIANTE"],
+				            id: index.toString(),
+				            progress: 100
                 }
               )
             }
