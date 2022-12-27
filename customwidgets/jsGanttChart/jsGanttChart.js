@@ -10,6 +10,8 @@ var getScriptPromisify = (src) => {
             body {
                 font-family: sans-serif;
                 background: #ccc;
+                overflow-y: scroll;
+                height: 700px;
             }
             .container {
                 width: 80%;
