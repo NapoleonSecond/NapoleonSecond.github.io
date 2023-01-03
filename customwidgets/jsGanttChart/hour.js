@@ -1748,7 +1748,7 @@ var Gantt = (function() {
           return is_dragging || is_resizing_left || is_resizing_right;
         }
 
-        $.on(this.$container, 'scroll', e => { this.layers.date.setAttribute('transform', 'translate(0,'+ e.currentTarget.scrollTop +')'); }); //STICKY (added)
+        //$.on(this.$container, 'scroll', e => { this.layers.date.setAttribute('transform', 'translate(0,'+ e.currentTarget.scrollTop +')'); }); //STICKY (added)
   
         $.on(this.$svg, 'mousedown', '.bar-wrapper, .handle', (e, element) => {
           const bar_wrapper = $.closest('.bar-wrapper', element);
@@ -1827,7 +1827,33 @@ var Gantt = (function() {
           is_resizing_left = false;
           is_resizing_right = false;
         });
-  
+
+        
+        $.on(this.$container, 'scroll', e => {
+          let elements = document.querySelectorAll('.bar-wrapper');
+          let localBars = [];
+          const ids = [];
+          let dx;
+
+          this.layers.date.setAttribute('transform', 'translate(0,'+ e.currentTarget.scrollTop +')');
+
+          if (x_on_scroll_start) {
+              dx = e.currentTarget.scrollLeft - x_on_scroll_start;
+          }
+          Array.prototype.forEach.call(elements, function(el, i){
+              ids.push(el.getAttribute('data-id'));
+          });
+          if (dx) {
+              localBars = ids.map(id => this.get_bar(id));
+          
+              localBars.forEach(bar => {
+                  bar.update_label_position_on_horizontal_scroll({ x: dx, sx: e.currentTarget.scrollLeft });
+              });
+          }
+          
+          x_on_scroll_start = e.currentTarget.scrollLeft;
+     });
+     
         $.on(this.$svg, 'mouseup', e => {
           this.bar_being_dragged = null;
           bars.forEach(bar => {
