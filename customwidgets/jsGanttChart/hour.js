@@ -1737,6 +1737,7 @@ var Gantt = (function() {
       bind_bar_events() {
         let is_dragging = false;
         let x_on_start = 0;
+        let x_on_scroll_start = 0;
         let y_on_start = 0;
         let is_resizing_left = false;
         let is_resizing_right = false;
@@ -1853,7 +1854,7 @@ var Gantt = (function() {
           
           x_on_scroll_start = e.currentTarget.scrollLeft;
      });
-     
+
         $.on(this.$svg, 'mouseup', e => {
           this.bar_being_dragged = null;
           bars.forEach(bar => {
