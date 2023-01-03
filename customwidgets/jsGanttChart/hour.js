@@ -1354,7 +1354,8 @@ var Gantt = (function() {
   
       setup_layers() {
         this.layers = {};
-        const layers = ['grid', 'date', 'arrow', 'progress', 'bar', 'details'];
+        //const layers = ['grid', 'date', 'arrow', 'progress', 'bar', 'details'];
+        const layers = ['grid', 'arrow', 'progress', 'bar', 'details', 'date'];
         // make group layers
         for (let layer of layers) {
           this.layers[layer] = createSVG('g', {
@@ -1440,7 +1441,7 @@ var Gantt = (function() {
           width: header_width,
           height: header_height,
           class: 'grid-header',
-          append_to: this.layers.grid
+          append_to: this.layers.date
         });
       }
   
@@ -1746,6 +1747,8 @@ var Gantt = (function() {
         function action_in_progress() {
           return is_dragging || is_resizing_left || is_resizing_right;
         }
+
+        $.on(this.$container, 'scroll', e => { this.layers.date.setAttribute('transform', 'translate(0,'+ e.currentTarget.scrollTop +')'); }); //STICKY (added)
   
         $.on(this.$svg, 'mousedown', '.bar-wrapper, .handle', (e, element) => {
           const bar_wrapper = $.closest('.bar-wrapper', element);
