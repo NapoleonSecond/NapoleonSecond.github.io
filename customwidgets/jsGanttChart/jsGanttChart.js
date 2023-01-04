@@ -10,13 +10,10 @@ var getScriptPromisify = (src) => {
             body {
                 font-family: sans-serif;
                 background: #ccc;
-                overflow-y: scroll;
-                overflow-x: scroll;
                 height: 700px;
             }
             #chart_wrapper {
-              overflow-y: scroll;
-              overflow-x: scroll;
+              
               height: 700px;
             }
             .container {

@@ -1,5 +1,7 @@
 .gantt .grid-background {
   fill: none;
+  overflow-y: scroll;
+  overflow-x: scroll;
 }
 .gantt .grid-header {
   fill: #ffffff;
