@@ -602,7 +602,7 @@ var Gantt = (function() {
           x:100,
           y: this.y + this.height / 2,
           innerHTML: this.task.name,
-          class: 'bar-label',
+          class: 'bar-label2',
           append_to: this.bar_group
         });
         // labels get BBox in the next tick
