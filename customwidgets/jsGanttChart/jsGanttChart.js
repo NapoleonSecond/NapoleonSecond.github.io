@@ -13,7 +13,10 @@ var getScriptPromisify = (src) => {
                 height: 700px;
             }
             #chart_wrapper {
-              
+              /*
+              overflow-y: scroll;
+              overflow-x: scroll;
+              */
               height: 700px;
             }
             .container {
