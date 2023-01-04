@@ -599,7 +599,7 @@ var Gantt = (function() {
         });
 
         createSVG('text', {
-          x:0,
+          x:100,
           y: this.y + this.height / 2,
           innerHTML: this.task.name,
           class: 'bar-label',
