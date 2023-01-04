@@ -6,6 +6,7 @@
   stroke: #e0e0e0;
   stroke-width: 1.4;
   position:fixed;
+  top:0;
 }
 .gantt .grid-row {
   fill: #ffffff;
