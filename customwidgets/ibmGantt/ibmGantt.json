@@ -12,7 +12,7 @@
       {
         "kind": "main",
         "tag": "com-sap-sample-ibm-gantt",
-        "url": "https://napoleonsecond.github.io/customwidgets/IBMGantt/ibmGantt.js",
+        "url": "https://napoleonsecond.github.io/customwidgets/ibmgantt/ibmGantt.js",
         "integrity": "",
         "ignoreIntegrity": true
       }
