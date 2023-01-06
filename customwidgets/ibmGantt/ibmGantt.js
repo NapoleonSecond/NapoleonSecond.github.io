@@ -9,7 +9,7 @@ var getScriptPromisify = (src) => {
     
     <head>
     <title>Simple Gantt</title>
-    <link href="https://napoleonsecond.github.io/customwidgets/ibmGantt/dist/ibm-gantt-chart.css" rel="stylesheet" />
+    <link href="https://napoleonsecond.github.io/customwidgets/ibmGantt/dist/ibm-gantt-chart.css"/>
 
     <!--  Page styles  -->
     <style>
@@ -69,6 +69,36 @@ var getScriptPromisify = (src) => {
   
       async render () {
         await getScriptPromisify('https://napoleonsecond.github.io/customwidgets/ibmGantt/dist/ibm-gantt-chart.js');
+        
+
+        var data = [];
+
+        if (this.data != undefined){
+          console.log("Data exists");
+          for (let index = 0; index < this.data.length; index++){
+            console.log(this.data[index]["START_DATE"]);
+            console.log(this.data[index]["VARIANTE"]);             
+            var originalStartTime = this.data[index]["START_TIME"];
+            var originalEndTime = this.data[index]["END_TIME"];
+            if(originalStartTime != NaN && this.data[index]["VARIANTE"] != ""){
+              tasks.push(
+                {
+                  id: index.toString(),
+                  name: this.data[index]["VARIANTE"],
+                  activities: [
+                    {
+                    id: index.toString(),
+                    name: this.data[index]["VARIANTE"],
+                    start: his.data[index]["START_DATE"].concat(" ", originalStartTime),
+                    end:  this.data[index]["END_DATE"].concat( " ", originalEndTime),
+                    }
+                  ]
+                }
+              )
+            } 
+          }
+        }
+        /*
         var data = [
           {
             id: 'NURSES+Anne',
@@ -160,6 +190,7 @@ var getScriptPromisify = (src) => {
             ],
           },
         ];
+        */
         var config = {
           data: {
             // Configures how to fetch resources for the Gantt
@@ -179,6 +210,7 @@ var getScriptPromisify = (src) => {
               end: 'end', // The end of the activity is provided with the end property of the model object
               name: 'name', // The name of the activity is provided with the name property of the model object
             },
+            dateFormat : "YYYY-MM-DD HH:MM:SS"
           },
           // Configure a toolbar associated with the Gantt
           toolbar: [
@@ -197,7 +229,7 @@ var getScriptPromisify = (src) => {
             'zoomIn',
             'zoomOut',
           ],
-          title: 'Simple Gantt', // Title for the Gantt to be displayed in the toolbar
+          title: 'UN Project', // Title for the Gantt to be displayed in the toolbar
         };
         new Gantt(this._chart /* the id of the DOM element to contain the Gantt chart */, config);
       }
