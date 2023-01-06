@@ -78,21 +78,24 @@ var getScriptPromisify = (src) => {
           for (let index = 0; index < this.data.length; index++){         
             var originalStartTime = this.data[index]["START_TIME"];
             var originalEndTime = this.data[index]["END_TIME"];
-            if(originalStartTime != NaN && this.data[index]["VARIANTE"] != ""){
-              dataVals.push(
-                {
-                  id: index.toString(),
-                  name: this.data[index]["VARIANTE"],
-                  activities: [
-                    {
+            if(originalStartTime != NaN && this.data[index]["VARIANTE"] != "" ){
+              if(originalEndTime != "@NullMember" && originalStartTime != "@NullMember" && this.data[index]["START_DATE"] != "@NullMember" && this.data[index]["END_DATE"] != "@NullMember"){
+                dataVals.push(
+                  {
                     id: index.toString(),
                     name: this.data[index]["VARIANTE"],
-                    start: this.data[index]["START_DATE"].concat(" ", originalStartTime),
-                    end:  this.data[index]["END_DATE"].concat( " ", originalEndTime),
-                    }
-                  ]
-                }
-              )
+                    activities: [
+                      {
+                      id: index.toString(),
+                      name: this.data[index]["VARIANTE"],
+                      start: this.data[index]["START_DATE"].concat(" ", originalStartTime),
+                      end:  this.data[index]["END_DATE"].concat( " ", originalEndTime),
+                      }
+                    ]
+                  }
+                )
+              }
+              
             } 
           }
         }
@@ -210,7 +213,7 @@ var getScriptPromisify = (src) => {
               end: 'end', // The end of the activity is provided with the end property of the model object
               name: 'name', // The name of the activity is provided with the name property of the model object
             },
-            dateFormat : "YYYY-MM-DD'T'HH:MM:SS"
+            dateFormat : "YYYY-MM-DD HH:MM:SS"
           },
           // Configure a toolbar associated with the Gantt
           toolbar: [
