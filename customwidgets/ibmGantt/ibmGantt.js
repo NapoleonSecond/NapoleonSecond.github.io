@@ -75,9 +75,7 @@ var getScriptPromisify = (src) => {
 
         if (this.data != undefined){
           console.log("Data exists");
-          for (let index = 0; index < this.data.length; index++){
-            console.log(this.data[index]["START_DATE"]);
-            console.log(this.data[index]["VARIANTE"]);             
+          for (let index = 0; index < this.data.length; index++){         
             var originalStartTime = this.data[index]["START_TIME"];
             var originalEndTime = this.data[index]["END_TIME"];
             if(originalStartTime != NaN && this.data[index]["VARIANTE"] != ""){
@@ -98,6 +96,8 @@ var getScriptPromisify = (src) => {
             } 
           }
         }
+
+        console.log(dataVals);
         /*
         var data = [
           {
