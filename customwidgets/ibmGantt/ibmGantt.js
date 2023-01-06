@@ -89,7 +89,7 @@ var getScriptPromisify = (src) => {
                     {
                     id: index.toString(),
                     name: this.data[index]["VARIANTE"],
-                    start: his.data[index]["START_DATE"].concat(" ", originalStartTime),
+                    start: this.data[index]["START_DATE"].concat(" ", originalStartTime),
                     end:  this.data[index]["END_DATE"].concat( " ", originalEndTime),
                     }
                   ]
