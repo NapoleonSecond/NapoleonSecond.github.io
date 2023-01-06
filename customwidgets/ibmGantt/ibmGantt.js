@@ -79,7 +79,8 @@ var getScriptPromisify = (src) => {
             var originalStartTime = this.data[index]["START_TIME"];
             var originalEndTime = this.data[index]["END_TIME"];
             if(originalStartTime != NaN && this.data[index]["VARIANTE"] != "" ){
-              if(originalEndTime != "@NullMember" && originalStartTime != "@NullMember" && this.data[index]["START_DATE"] != "@NullMember" && this.data[index]["END_DATE"] != "@NullMember"){
+              var valid = originalEndTime != "@NullMember" && originalStartTime != "@NullMember" && this.data[index]["START_DATE"] != "@NullMember" && this.data[index]["END_DATE"] != "@NullMember" && this.data[index]["END_DATE"] != " ";
+              if(valid){
                 dataVals.push(
                   {
                     id: index.toString(),
