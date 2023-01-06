@@ -71,7 +71,7 @@ var getScriptPromisify = (src) => {
         await getScriptPromisify('https://napoleonsecond.github.io/customwidgets/ibmGantt/dist/ibm-gantt-chart.js');
         
 
-        var data = [];
+        var dataVals = [];
 
         if (this.data != undefined){
           console.log("Data exists");
@@ -81,7 +81,7 @@ var getScriptPromisify = (src) => {
             var originalStartTime = this.data[index]["START_TIME"];
             var originalEndTime = this.data[index]["END_TIME"];
             if(originalStartTime != NaN && this.data[index]["VARIANTE"] != ""){
-              data.push(
+              dataVals.push(
                 {
                   id: index.toString(),
                   name: this.data[index]["VARIANTE"],
@@ -195,7 +195,7 @@ var getScriptPromisify = (src) => {
           data: {
             // Configures how to fetch resources for the Gantt
             resources: {
-              data: data, // resources are provided in an array. Instead, we could configure a request to the server.
+              data: dataVals, // resources are provided in an array. Instead, we could configure a request to the server.
               // Activities of the resources are provided along with the 'activities' property of resource objects.
               // Alternatively, they could be listed from the 'data.activities' configuration.
               activities: 'activities',
