@@ -81,7 +81,7 @@ var getScriptPromisify = (src) => {
             var originalStartTime = this.data[index]["START_TIME"];
             var originalEndTime = this.data[index]["END_TIME"];
             if(originalStartTime != NaN && this.data[index]["VARIANTE"] != ""){
-              tasks.push(
+              data.push(
                 {
                   id: index.toString(),
                   name: this.data[index]["VARIANTE"],
