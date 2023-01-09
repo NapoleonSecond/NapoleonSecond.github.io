@@ -32,6 +32,8 @@ var getScriptPromisify = (src) => {
     `
     class IBMGantt extends HTMLElement {
       constructor () {
+        getScriptPromisify('https://napoleonsecond.github.io/customwidgets/ibmGantt/dist/ibm-gantt-chart.js');
+
         super();
 
         this._shadowRoot = this.attachShadow({ mode: 'open' });
@@ -69,7 +71,7 @@ var getScriptPromisify = (src) => {
       }
   
       async render () {
-        await getScriptPromisify('https://napoleonsecond.github.io/customwidgets/ibmGantt/dist/ibm-gantt-chart.js');
+        //await getScriptPromisify('https://napoleonsecond.github.io/customwidgets/ibmGantt/dist/ibm-gantt-chart.js');
         //await getScriptPromisify('https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js');
         //await getScriptPromisify('https://napoleonsecond.github.io/customwidgets/ibmGantt/dist/ibm-gantt-chart.css');
         
