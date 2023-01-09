@@ -242,7 +242,6 @@ var getScriptPromisify = (src) => {
               end: 'end', // The end of the activity is provided with the end property of the model object
               name: 'name', // The name of the activity is provided with the name property of the model object
             },
-            dateFormat : "YYYY-MM-DD HH:MM:SS"
           },
           // Configure a toolbar associated with the Gantt
           toolbar: [
