@@ -101,8 +101,9 @@ var getScriptPromisify = (src) => {
             console.log(this.data[index]["END_DATE"]);
             console.log(originalEndTime);
             console.log(endDate.toISOString())
-            if(originalStartTime != NaN && this.data[index]["VARIANTE"] != "" ){
-              var valid = originalEndTime != "@NullMember" && originalStartTime != "@NullMember" && this.data[index]["START_DATE"] != "@NullMember" && this.data[index]["END_DATE"] != "@NullMember" && this.data[index]["END_DATE"] != " ";
+
+            if(originalStartTime != NaN && this.data[index]["VARIANTE"] != ""){
+              var valid = originalEndTime != "@NullMember" && originalStartTime != "@NullMember" && this.data[index]["START_DATE"] != "@NullMember" && this.data[index]["END_DATE"] != "@NullMember" && this.data[index]["END_DATE"] != " " && this.data[index]["END_DATE"] != "";
               if(valid){
                 dataVals.push(
                   {
