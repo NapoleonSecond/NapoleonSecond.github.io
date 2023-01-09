@@ -97,13 +97,16 @@ var getScriptPromisify = (src) => {
             endDate.setMilliseconds(0);
 
             
-            console.log(startDate.toISOString());
-            console.log(this.data[index]["END_DATE"]);
-            console.log(originalEndTime);
-            console.log(endDate.toISOString())
+            
+            var valid = originalEndTime != "@NullMember" && originalStartTime != "@NullMember" && this.data[index]["START_DATE"] != "@NullMember" && this.data[index]["END_DATE"] != "@NullMember" && this.data[index]["END_DATE"] != " " && this.data[index]["END_DATE"] != "";
 
+            if(valid){
+              console.log(startDate.toISOString());
+              console.log(this.data[index]["END_DATE"]);
+              console.log(originalEndTime);
+              console.log(endDate.toISOString())
+            }
             if(originalStartTime != NaN && this.data[index]["VARIANTE"] != ""){
-              var valid = originalEndTime != "@NullMember" && originalStartTime != "@NullMember" && this.data[index]["START_DATE"] != "@NullMember" && this.data[index]["END_DATE"] != "@NullMember" && this.data[index]["END_DATE"] != " " && this.data[index]["END_DATE"] != "";
               if(valid){
                 dataVals.push(
                   {
