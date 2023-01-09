@@ -29,7 +29,7 @@ var getScriptPromisify = (src) => {
     </head>
     <div id="root" style="width: 100%; height: 100%;">
     <div id="gantt"></div>
-      `
+    `
     class IBMGantt extends HTMLElement {
       constructor () {
         super();
@@ -128,10 +128,7 @@ var getScriptPromisify = (src) => {
         console.log(dataVals);
         */
 
-
-
-        
-        var data2 = [
+        var data = [
           {
             id: 'NURSES+Anne',
             name: 'Anne',
@@ -222,12 +219,11 @@ var getScriptPromisify = (src) => {
             ],
           },
         ];
-        
         var config = {
           data: {
             // Configures how to fetch resources for the Gantt
             resources: {
-              data: data2, // resources are provided in an array. Instead, we could configure a request to the server.
+              data: data, // resources are provided in an array. Instead, we could configure a request to the server.
               // Activities of the resources are provided along with the 'activities' property of resource objects.
               // Alternatively, they could be listed from the 'data.activities' configuration.
               activities: 'activities',
@@ -260,7 +256,7 @@ var getScriptPromisify = (src) => {
             'zoomIn',
             'zoomOut',
           ],
-          title: 'UN Project', // Title for the Gantt to be displayed in the toolbar
+          title: 'Simple Gantt', // Title for the Gantt to be displayed in the toolbar
         };
         new Gantt(this._chart /* the id of the DOM element to contain the Gantt chart */, config);
       }
