@@ -85,8 +85,14 @@ var getScriptPromisify = (src) => {
             const startTime = originalStartTime.split(":");
             const endTime = originalEndTime.split(":");
 
-            console.log(startTime);
-            console.log(endTime);
+            startDate.setHours(startTime[0]);
+            startDate.setMinutes(startTime[1]);
+            startDate.setSeconds(startTime[2]);
+
+
+            endDate.setHours(endTime[0]);
+            endDate.setMinutes(endTime[1]);
+            endDate.setSeconds(endTime[2]);
 
             if(originalStartTime != NaN && this.data[index]["VARIANTE"] != "" ){
               var valid = originalEndTime != "@NullMember" && originalStartTime != "@NullMember" && this.data[index]["START_DATE"] != "@NullMember" && this.data[index]["END_DATE"] != "@NullMember" && this.data[index]["END_DATE"] != " ";
@@ -99,8 +105,8 @@ var getScriptPromisify = (src) => {
                       {
                       id: index.toString(),
                       name: this.data[index]["VARIANTE"],
-                      start: this.data[index]["START_DATE"].concat(" ", originalStartTime),
-                      end:  this.data[index]["END_DATE"].concat( " ", originalEndTime),
+                      start: Date.parse(startDate.toISOString()),
+                      end:  Date.parse(endDate.toISOString()),
                       }
                     ]
                   }
