@@ -115,8 +115,8 @@ var getScriptPromisify = (src) => {
                     name: this.data[index]["VARIANTE"],
                     activities: [
                       {
-                      id: index.toString(),
-                      name: this.data[index]["VARIANTE"],
+                      id: index.toString().concat(" ", "_id"),
+                      name: this.data[index]["VARIANTE"].concat(" ","Task"),
                       start: Date.parse(startDate.toISOString()),
                       end:  Date.parse(endDate.toISOString()),
                       }
