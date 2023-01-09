@@ -227,7 +227,7 @@ var getScriptPromisify = (src) => {
           data: {
             // Configures how to fetch resources for the Gantt
             resources: {
-              data: dataVals, // resources are provided in an array. Instead, we could configure a request to the server.
+              data: data, // resources are provided in an array. Instead, we could configure a request to the server.
               // Activities of the resources are provided along with the 'activities' property of resource objects.
               // Alternatively, they could be listed from the 'data.activities' configuration.
               activities: 'activities',
