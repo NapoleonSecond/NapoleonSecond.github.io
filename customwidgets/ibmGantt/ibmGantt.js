@@ -119,8 +119,8 @@ var getScriptPromisify = (src) => {
                       name: this.data[index]["VARIANTE"].concat(" ","Task"),
                       start: Date.parse(startDate.toISOString()),
                       end:  Date.parse(endDate.toISOString()),
-                      }
-                    ]
+                      },
+                    ],
                   }
                 )
               }
