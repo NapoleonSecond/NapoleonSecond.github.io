@@ -71,7 +71,7 @@ var getScriptPromisify = (src) => {
   
       async render () {
         await getScriptPromisify('https://napoleonsecond.github.io/customwidgets/ibmGantt/dist/ibm-gantt-chart.js');
-        await getScriptPromisify('https://napoleonsecond.github.io/customwidgets/ibmGantt/dist/ibm-gantt-chart.css');
+        //await getScriptPromisify('https://napoleonsecond.github.io/customwidgets/ibmGantt/dist/ibm-gantt-chart.css');
         
 
         var dataVals = [];
