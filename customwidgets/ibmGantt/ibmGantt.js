@@ -88,12 +88,15 @@ var getScriptPromisify = (src) => {
             startDate.setHours(startTime[0]);
             startDate.setMinutes(startTime[1]);
             startDate.setSeconds(startTime[2]);
+            startDate.setMilliseconds(0);
 
 
             endDate.setHours(endTime[0]);
             endDate.setMinutes(endTime[1]);
             endDate.setSeconds(endTime[2]);
+            endDate.setMilliseconds(0);
 
+            
             if(originalStartTime != NaN && this.data[index]["VARIANTE"] != "" ){
               var valid = originalEndTime != "@NullMember" && originalStartTime != "@NullMember" && this.data[index]["START_DATE"] != "@NullMember" && this.data[index]["END_DATE"] != "@NullMember" && this.data[index]["END_DATE"] != " ";
               if(valid){
