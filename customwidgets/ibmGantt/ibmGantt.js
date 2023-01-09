@@ -11,7 +11,6 @@ var getScriptPromisify = (src) => {
     <title>Simple Gantt</title>
     <link href="https://napoleonsecond.github.io/customwidgets/ibmGantt/dist/ibm-gantt-chart.css"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js" rel="script"></script>
 
     <!--  Page styles  -->
     <style>
@@ -71,6 +70,7 @@ var getScriptPromisify = (src) => {
   
       async render () {
         await getScriptPromisify('https://napoleonsecond.github.io/customwidgets/ibmGantt/dist/ibm-gantt-chart.js');
+        await getScriptPromisify('https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js');
         //await getScriptPromisify('https://napoleonsecond.github.io/customwidgets/ibmGantt/dist/ibm-gantt-chart.css');
         
         /*
