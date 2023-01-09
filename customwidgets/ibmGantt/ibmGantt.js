@@ -9,8 +9,7 @@ var getScriptPromisify = (src) => {
     
     <head>
     <title>Simple Gantt</title>
-    <link href="https://napoleonsecond.github.io/customwidgets/ibmGantt/dist/ibm-gantt-chart.css"/>
-    
+    <link href="https://napoleonsecond.github.io/customwidgets/ibmGantt/dist/ibm-gantt-chart.css" rel="stylesheet" />
 
     <!--  Page styles  -->
     <style>
@@ -26,8 +25,8 @@ var getScriptPromisify = (src) => {
         height: 100%;
       }
     </style>
-    </head>
-    <div id="root" style="width: 100%; height: 100%;">
+  </head>
+  <body>
     <div id="gantt"></div>
     `
     class IBMGantt extends HTMLElement {
