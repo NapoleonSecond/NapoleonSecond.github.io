@@ -77,7 +77,7 @@ var getScriptPromisify = (src) => {
         //await getScriptPromisify('https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js');
         //await getScriptPromisify('https://napoleonsecond.github.io/customwidgets/ibmGantt/dist/ibm-gantt-chart.css');
         
-        /*
+        
         var dataVals = [];
 
         if (this.data != undefined){
@@ -130,8 +130,8 @@ var getScriptPromisify = (src) => {
         }
 
         console.log(dataVals);
-        */
-
+        
+        /*
         var data = [
           {
             id: 'NURSES+Anne',
@@ -223,11 +223,12 @@ var getScriptPromisify = (src) => {
             ],
           },
         ];
+        */
         var config = {
           data: {
             // Configures how to fetch resources for the Gantt
             resources: {
-              data: data, // resources are provided in an array. Instead, we could configure a request to the server.
+              data: dataVals, // resources are provided in an array. Instead, we could configure a request to the server.
               // Activities of the resources are provided along with the 'activities' property of resource objects.
               // Alternatively, they could be listed from the 'data.activities' configuration.
               activities: 'activities',
