@@ -96,7 +96,8 @@ var getScriptPromisify = (src) => {
             endDate.setSeconds(endTime[2]);
             endDate.setMilliseconds(0);
 
-            
+            console.log(startDate.toISOString());
+            console.log(endDate.toISOString())
             if(originalStartTime != NaN && this.data[index]["VARIANTE"] != "" ){
               var valid = originalEndTime != "@NullMember" && originalStartTime != "@NullMember" && this.data[index]["START_DATE"] != "@NullMember" && this.data[index]["END_DATE"] != "@NullMember" && this.data[index]["END_DATE"] != " ";
               if(valid){
