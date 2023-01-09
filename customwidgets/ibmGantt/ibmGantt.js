@@ -10,7 +10,7 @@ var getScriptPromisify = (src) => {
     <head>
     <title>Simple Gantt</title>
     <link href="https://napoleonsecond.github.io/customwidgets/ibmGantt/dist/ibm-gantt-chart.css"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet">
+    
 
     <!--  Page styles  -->
     <style>
