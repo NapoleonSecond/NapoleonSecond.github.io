@@ -73,7 +73,7 @@ var getScriptPromisify = (src) => {
         await getScriptPromisify('https://napoleonsecond.github.io/customwidgets/ibmGantt/dist/ibm-gantt-chart.js');
         //await getScriptPromisify('https://napoleonsecond.github.io/customwidgets/ibmGantt/dist/ibm-gantt-chart.css');
         
-
+        /*
         var dataVals = [];
 
         if (this.data != undefined){
@@ -103,14 +103,6 @@ var getScriptPromisify = (src) => {
             
             var valid = originalEndTime != "@NullMember" && originalStartTime != "@NullMember" && this.data[index]["START_DATE"] != "@NullMember" && this.data[index]["END_DATE"] != "@NullMember" && this.data[index]["END_DATE"] != " " && this.data[index]["END_DATE"] != "";
 
-            /*
-            if(valid){
-              console.log(startDate.toISOString());
-              console.log(this.data[index]["END_DATE"]);
-              console.log(originalEndTime);
-              console.log(endDate.toISOString())
-            }
-            */
             if(originalStartTime != NaN && this.data[index]["VARIANTE"] != ""){
               if(valid){
                 dataVals.push(
@@ -134,7 +126,11 @@ var getScriptPromisify = (src) => {
         }
 
         console.log(dataVals);
-        /*
+        */
+
+
+
+        
         var data = [
           {
             id: 'NURSES+Anne',
@@ -226,7 +222,7 @@ var getScriptPromisify = (src) => {
             ],
           },
         ];
-        */
+        
         var config = {
           data: {
             // Configures how to fetch resources for the Gantt
