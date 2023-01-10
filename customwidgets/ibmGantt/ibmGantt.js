@@ -49,7 +49,7 @@ var getScriptPromisify = (src) => {
       }
 
       onCustomWidgetResize (width, height) {
-        this.render();
+        //this.render();
       }
 
       onCustomWidgetBeforeUpdate(changedProperties) {
