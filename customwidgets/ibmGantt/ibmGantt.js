@@ -50,6 +50,7 @@ var getScriptPromisify = (src) => {
 
       onCustomWidgetResize (width, height) {
         //this.render();
+        
       }
 
       onCustomWidgetBeforeUpdate(changedProperties) {
@@ -111,12 +112,12 @@ var getScriptPromisify = (src) => {
               if(valid){
                 dataVals.push(
                   {
-                    id: index.toString(),
+                    id: "TaskNum".concat("+",index.toString()),
                     name: this.data[index]["VARIANTE"],
                     activities: [
                       {
-                      id: index.toString().concat(" ", "_id"),
-                      name: this.data[index]["VARIANTE"].concat(" ","Task"),
+                      id: index.toString().concat("+", "id"),
+                      name: this.data[index]["VARIANTE"].concat("+","Task"),
                       start: Date.parse(startDate.toISOString()),
                       end:  Date.parse(endDate.toISOString()),
                       },
