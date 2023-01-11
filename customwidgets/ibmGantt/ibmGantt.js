@@ -128,6 +128,47 @@ var getScriptPromisify = (src) => {
               
             } 
           }
+          var config = {
+            data: {
+              // Configures how to fetch resources for the Gantt
+              resources: {
+                data: dataVals, // resources are provided in an array. Instead, we could configure a request to the server.
+                // Activities of the resources are provided along with the 'activities' property of resource objects.
+                // Alternatively, they could be listed from the 'data.activities' configuration.
+                activities: 'activities',
+                name: 'name', // The name of the resource is provided with the name property of the resource object.
+                id: 'id', // The id of the resource is provided with the id property of the resource object.
+              },
+              // Configures how to fetch activities for the Gantt
+              // As activities are provided along with the resources, this section only describes how to create
+              // activity Gantt properties from the activity model objects.
+              activities: {
+                start: 'start', // The start of the activity is provided with the start property of the model object
+                end: 'end', // The end of the activity is provided with the end property of the model object
+                name: 'name', // The name of the activity is provided with the name property of the model object
+              },
+            },
+            // Configure a toolbar associated with the Gantt
+            toolbar: [
+              'title',
+              'search',
+              'separator',
+              {
+                type: 'button',
+                text: 'Refresh',
+                fontIcon: 'fa fa-refresh fa-lg',
+                onclick: function(ctx) {
+                  ctx.gantt.draw();
+                },
+              },
+              'fitToContent',
+              'zoomIn',
+              'zoomOut',
+            ],
+            title: 'Simple Gantt', // Title for the Gantt to be displayed in the toolbar
+          };
+          new Gantt(this._chart /* the id of the DOM element to contain the Gantt chart */, config);
+
         }
 
         console.log(dataVals);
@@ -225,46 +266,7 @@ var getScriptPromisify = (src) => {
           },
         ];
         */
-        var config = {
-          data: {
-            // Configures how to fetch resources for the Gantt
-            resources: {
-              data: dataVals, // resources are provided in an array. Instead, we could configure a request to the server.
-              // Activities of the resources are provided along with the 'activities' property of resource objects.
-              // Alternatively, they could be listed from the 'data.activities' configuration.
-              activities: 'activities',
-              name: 'name', // The name of the resource is provided with the name property of the resource object.
-              id: 'id', // The id of the resource is provided with the id property of the resource object.
-            },
-            // Configures how to fetch activities for the Gantt
-            // As activities are provided along with the resources, this section only describes how to create
-            // activity Gantt properties from the activity model objects.
-            activities: {
-              start: 'start', // The start of the activity is provided with the start property of the model object
-              end: 'end', // The end of the activity is provided with the end property of the model object
-              name: 'name', // The name of the activity is provided with the name property of the model object
-            },
-          },
-          // Configure a toolbar associated with the Gantt
-          toolbar: [
-            'title',
-            'search',
-            'separator',
-            {
-              type: 'button',
-              text: 'Refresh',
-              fontIcon: 'fa fa-refresh fa-lg',
-              onclick: function(ctx) {
-                ctx.gantt.draw();
-              },
-            },
-            'fitToContent',
-            'zoomIn',
-            'zoomOut',
-          ],
-          title: 'Simple Gantt', // Title for the Gantt to be displayed in the toolbar
-        };
-        new Gantt(this._chart /* the id of the DOM element to contain the Gantt chart */, config);
+        
       }
 
     }
