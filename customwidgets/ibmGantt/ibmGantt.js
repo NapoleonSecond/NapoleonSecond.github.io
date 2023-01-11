@@ -168,7 +168,6 @@ var getScriptPromisify = (src) => {
             title: 'Simple Gantt', // Title for the Gantt to be displayed in the toolbar
           };
           new Gantt(this._chart /* the id of the DOM element to contain the Gantt chart */, config);
-
         }
 
         console.log(dataVals);
