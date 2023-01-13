@@ -108,11 +108,22 @@ var getScriptPromisify = (src) => {
             var listOfCat = [];
             if(originalStartTime != NaN && this.data[index]["VARIANTE"] != "" && valid){
                 var category = this.data[index]["ZBUS_CAT"];
-                console.log(category);
+                
+                if(!(category in listOfCat)){
+                  listOfCat.push(category);
+                  dataVals.push(
+                    {
+                      id: category,
+                      name: category,
+                    }
+                  );
+                }
+
                 dataVals.push(
                   {
                     id: "TaskNum".concat("+",index.toString()),
                     name: this.data[index]["VARIANTE"],
+                    
                     activities: [
                       {
                       id: index.toString().concat("+", "id"),
@@ -127,6 +138,7 @@ var getScriptPromisify = (src) => {
               
             } 
           }
+          
           var config = {
             data: {
               // Configures how to fetch resources for the Gantt
