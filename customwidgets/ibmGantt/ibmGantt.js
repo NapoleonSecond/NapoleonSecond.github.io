@@ -109,8 +109,9 @@ var getScriptPromisify = (src) => {
             
             if(originalStartTime != NaN && this.data[index]["VARIANTE"] != "" && valid){
                 var category = this.data[index]["ZBUS_CAT"];
+                console.log(listOfCat);
                 
-                if((category in listOfCat) == false){
+                if((category in listOfCat) === false){
                   listOfCat.push(category);
                   dataVals.push(
                     {
