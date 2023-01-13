@@ -105,7 +105,7 @@ var getScriptPromisify = (src) => {
             
             var valid = originalEndTime != "@NullMember" && originalStartTime != "@NullMember" && this.data[index]["START_DATE"] != "@NullMember" && this.data[index]["END_DATE"] != "@NullMember" && this.data[index]["END_DATE"] != " " && this.data[index]["END_DATE"] != "";
 
-            listOfCat = [];
+            var listOfCat = [];
             if(originalStartTime != NaN && this.data[index]["VARIANTE"] != "" && valid){
                 var category = this.data[index]["ZBUS_CAT"];
                 console.log(category);
