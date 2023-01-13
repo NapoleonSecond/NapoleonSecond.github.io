@@ -131,7 +131,6 @@ var getScriptPromisify = (src) => {
                       name: this.data[index]["VARIANTE"].concat("+","Task"),
                       start: Date.parse(startDate.toISOString()),
                       end:  Date.parse(endDate.toISOString()),
-                      parent: category.concat("_ID")
                       },
                     ],
                   }
@@ -151,6 +150,7 @@ var getScriptPromisify = (src) => {
                 activities: 'activities',
                 name: 'name', // The name of the resource is provided with the name property of the resource object.
                 id: 'id', // The id of the resource is provided with the id property of the resource object.
+                parent: 'parent',
               },
               // Configures how to fetch activities for the Gantt
               // As activities are provided along with the resources, this section only describes how to create
