@@ -45,7 +45,6 @@ var getScriptPromisify = (src) => {
   
         this._props = {};
   
-        //this.render();
       }
 
       onCustomWidgetResize (width, height) {
@@ -75,8 +74,6 @@ var getScriptPromisify = (src) => {
 
         
         await getScriptPromisify('https://napoleonsecond.github.io/customwidgets/ibmGantt/dist/ibm-gantt-chart.js');
-        //await getScriptPromisify('https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js');
-        //await getScriptPromisify('https://napoleonsecond.github.io/customwidgets/ibmGantt/dist/ibm-gantt-chart.css');
         
         
         var dataVals = [];
@@ -108,8 +105,10 @@ var getScriptPromisify = (src) => {
             
             var valid = originalEndTime != "@NullMember" && originalStartTime != "@NullMember" && this.data[index]["START_DATE"] != "@NullMember" && this.data[index]["END_DATE"] != "@NullMember" && this.data[index]["END_DATE"] != " " && this.data[index]["END_DATE"] != "";
 
-            if(originalStartTime != NaN && this.data[index]["VARIANTE"] != ""){
-              if(valid){
+            listOfCat = [];
+            if(originalStartTime != NaN && this.data[index]["VARIANTE"] != "" && valid){
+                var category = this.data[index]["ZBUS_CAT"];
+                console.log(category);
                 dataVals.push(
                   {
                     id: "TaskNum".concat("+",index.toString()),
@@ -124,7 +123,7 @@ var getScriptPromisify = (src) => {
                     ],
                   }
                 )
-              }
+              
               
             } 
           }
