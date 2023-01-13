@@ -124,7 +124,7 @@ var getScriptPromisify = (src) => {
                   {
                     id: "TaskNum".concat("+",index.toString()),
                     name: this.data[index]["VARIANTE"],
-                    
+                    parent: category,
                     activities: [
                       {
                       id: index.toString().concat("+", "id"),
