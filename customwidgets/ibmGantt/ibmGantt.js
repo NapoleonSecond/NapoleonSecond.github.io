@@ -114,7 +114,7 @@ var getScriptPromisify = (src) => {
                   listOfCat.push(category);
                   dataVals.push(
                     {
-                      id: category,
+                      id: category.concat("_ID"),
                       name: category,
                     }
                   );
@@ -124,7 +124,7 @@ var getScriptPromisify = (src) => {
                   {
                     id: "TaskNum".concat("+",index.toString()),
                     name: this.data[index]["VARIANTE"],
-                    parent: category,
+                    parent: category.concat("_ID"),
                     activities: [
                       {
                       id: index.toString().concat("+", "id"),
