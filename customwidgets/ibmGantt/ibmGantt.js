@@ -114,6 +114,13 @@ var getScriptPromisify = (src) => {
 
             
             if(originalStartTime != NaN && this.data[index]["VARIANTE"] != "" && valid){
+                var status = this.data[index]["STATUS"];
+
+                if(dataDict[category].has(status)){
+                    dataDict[category][status].push(startDate,endDate);
+                } else {
+                    dataDict[category][status] = [];
+                }
 
                 if(listOfCat.indexOf(category) === -1){
                   listOfCat.push(category);
