@@ -116,14 +116,13 @@ var getScriptPromisify = (src) => {
             if(originalStartTime != NaN && this.data[index]["VARIANTE"] != "" && valid){
                 var status = this.data[index]["STATUS"];
 
-                if(dataDict[category].has(status)){
-                    console.log(status === "Success");
-                    if(status === "Success"){
-                      dataDict[category][status].push(startDate,endDate);
-                    }
-                    //else if it is any other thing; we do the expected start date and expected end date
-                } else {
+                console.log(dataDict[category].has(status));
+                if(!dataDict[category].has(status)){
                     dataDict[category][status] = [];
+                }
+                
+                if(status === "Success"){
+                  dataDict[category][status].push(startDate,endDate);
                 }
 
                 if(listOfCat.indexOf(category) === -1){
