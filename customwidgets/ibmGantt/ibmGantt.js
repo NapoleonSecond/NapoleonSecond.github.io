@@ -117,7 +117,8 @@ var getScriptPromisify = (src) => {
                 var status = this.data[index]["STATUS"];
 
                 if(dataDict[category].has(status)){
-                    if(status == "Success"){
+                    console.log(status === "Success");
+                    if(status === "Success"){
                       dataDict[category][status].push(startDate,endDate);
                     }
                     //else if it is any other thing; we do the expected start date and expected end date
