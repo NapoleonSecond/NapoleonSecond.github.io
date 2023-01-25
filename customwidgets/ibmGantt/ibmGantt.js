@@ -144,8 +144,8 @@ var getScriptPromisify = (src) => {
                       {
                       id: index.toString().concat("+", "id"),
                       name: this.data[index]["VARIANTE"].concat("+","Task"),
-                      start: Date.parse(startDate.toISOString()),
-                      end:  Date.parse(endDate.toISOString()),
+                      start: Date.parse(startDate.toISOString()) + 86400000,
+                      end:  Date.parse(endDate.toISOString()) + 86400000,
                       },
                     ],
                   }
