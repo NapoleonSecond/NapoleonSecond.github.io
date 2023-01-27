@@ -80,6 +80,7 @@ var getScriptPromisify = (src) => {
 
         if (this.data != undefined){
           console.log("Data exists");
+          var listOfCat = [];
 
           for (let index = 0; index < this.data.length; index++){         
             var originalStartTime = this.data[index]["START_TIME"];
@@ -104,13 +105,22 @@ var getScriptPromisify = (src) => {
 
             var category = this.data[index]["ZBUS_CAT"];
 
-
             
             var valid = originalEndTime != "@NullMember" && originalStartTime != "@NullMember" && this.data[index]["START_DATE"] != "@NullMember" && this.data[index]["END_DATE"] != "@NullMember" && this.data[index]["END_DATE"] != " " && this.data[index]["END_DATE"] != "";
 
             
             if(originalStartTime != NaN && this.data[index]["VARIANTE"] != "" && valid){
                 var status = this.data[index]["STATUS"];
+
+                if(listOfCat.indexOf(category) === -1){
+                  listOfCat.push(category);
+                  dataVals.push(
+                    {
+                      id: category.concat("_ID"),
+                      name: category,
+                    }
+                  );
+                }
 
                 dataVals.push(
                   {
@@ -131,7 +141,6 @@ var getScriptPromisify = (src) => {
               
             } 
           }
-          console.log(dataVals);
           
           var config = {
             data: {
