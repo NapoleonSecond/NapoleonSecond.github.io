@@ -80,7 +80,6 @@ var getScriptPromisify = (src) => {
 
         if (this.data != undefined){
           console.log("Data exists");
-          var listOfCat = [];
 
           for (let index = 0; index < this.data.length; index++){         
             var originalStartTime = this.data[index]["START_TIME"];
@@ -132,6 +131,7 @@ var getScriptPromisify = (src) => {
               
             } 
           }
+          console.log(dataVals);
           
           var config = {
             data: {
