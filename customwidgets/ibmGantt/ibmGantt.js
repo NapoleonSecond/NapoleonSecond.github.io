@@ -81,7 +81,6 @@ var getScriptPromisify = (src) => {
         if (this.data != undefined){
           console.log("Data exists");
           var listOfCat = [];
-          let dataDict = new Map();
 
           for (let index = 0; index < this.data.length; index++){         
             var originalStartTime = this.data[index]["START_TIME"];
@@ -106,9 +105,7 @@ var getScriptPromisify = (src) => {
 
             var category = this.data[index]["ZBUS_CAT"];
 
-            if(!dataDict.has(category)){
-              dataDict[category] = new Map();
-            }
+
             
             var valid = originalEndTime != "@NullMember" && originalStartTime != "@NullMember" && this.data[index]["START_DATE"] != "@NullMember" && this.data[index]["END_DATE"] != "@NullMember" && this.data[index]["END_DATE"] != " " && this.data[index]["END_DATE"] != "";
 
@@ -136,7 +133,6 @@ var getScriptPromisify = (src) => {
             } 
           }
           
-          console.log(dataDict);
           var config = {
             data: {
               // Configures how to fetch resources for the Gantt
