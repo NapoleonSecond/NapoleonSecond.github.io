@@ -3,6 +3,8 @@ var getScriptPromisify = (src) => {
       $.getScript(src, resolve)
     })
   }
+const ENDDATE = "CM_END_TIMESTMP"
+const STARTDATE = "CM_START_TIMESTMP"
   (function () {
     const prepared = document.createElement('template')
     prepared.innerHTML = `
@@ -83,18 +85,14 @@ var getScriptPromisify = (src) => {
           var listOfCat = [];
 
           for (let index = 0; index < this.data.length; index++){         
-            var startDate = new Date(this.data[index]["START_DATE"]);
-            var endDate = new Date(this.data[index]["END_DATE"]);
+            var startDate = new Date(this.data[index][STARTDATE]);
+            var endDate = new Date(this.data[index][ENDDATE]);
             startDate.setMilliseconds(0);
             endDate.setMilliseconds(0);
 
             var category = this.data[index]["ZBUS_CAT"];
-
             
-            var valid = originalEndTime != "@NullMember" && originalStartTime != "@NullMember" && this.data[index]["START_DATE"] != "@NullMember" && this.data[index]["END_DATE"] != "@NullMember" && this.data[index]["END_DATE"] != " " && this.data[index]["END_DATE"] != "";
-
-            
-            if(originalStartTime != NaN && this.data[index]["STATUS"] != "" && valid){
+            if(this.data[index]["STATUS"] != ""){
                 var status = this.data[index]["STATUS"];
 
                 if(listOfCat.indexOf(category) === -1){
@@ -110,12 +108,12 @@ var getScriptPromisify = (src) => {
                 dataVals.push(
                   {
                     id: "TaskNum".concat("+",index.toString()),
-                    name: this.data[index]["VARIANTE"],
+                    name: status,
                     parent: category.concat("_ID"),
                     activities: [
                       {
                       id: index.toString().concat("+", "id"),
-                      name: this.data[index]["VARIANTE"].concat("+","Task"),
+                      name: status.concat("+","Task"),
                       start: Date.parse(startDate.toISOString()),
                       end:  Date.parse(endDate.toISOString()),
                       },
