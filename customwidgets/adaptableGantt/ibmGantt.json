@@ -1,0 +1,85 @@
+{
+    "eula": "",
+    "vendor": "SAP",
+    "license": "",
+    "id": "com.sap.sac.ibm.gantt.adaptable",
+    "version": "1.0.0",
+    "name": "newAdaptableIBMGantt",
+    "newInstancePrefix": "ibmgantt_chart_adaptable",
+    "description": "ibm gantt: adaptable",
+    "imports": ["table","chart","datasource"],
+    "webcomponents": [
+      {
+        "kind": "main",
+        "tag": "com-sap-sample-ibm-gantt-adaptable",
+        "url": "https://napoleonsecond.github.io/customwidgets/adaptableGantt/ibmGanttAdaptable.js",
+        "integrity": "",
+        "ignoreIntegrity": true
+      }
+    ],
+    "properties": {
+          "width": {
+              "type": "integer",
+              "default": 600
+          },
+          "height": {
+              "type": "integer",
+              "default": 420
+          },
+          "name":{
+              "type":"string",
+              "default":"new google calendar"
+          },
+          "data":{
+            "type":"Selection[]"
+        }
+    },
+    "methods": {
+        "setName":{
+          "description":"name for the chart",
+          "parameters":[
+            {
+              "name":"newName",
+              "type":"string",
+              "description":"name for the chart"
+            }
+          ],
+          "body":"this.name = newName;"
+        },
+        "setData":{
+          "description": "The data for this chart",
+          "parameters":[
+            {
+              "name":"theData",
+              "type":"Selection[]",
+              "description": "the data for the chart"
+      
+            }
+          ],
+          "body":"this.data = theData;"
+        },
+        "getData":{
+          "description":"Return data selection from table",
+           "body":"return this.data;",
+           "returnType":"Selection[]"
+        }
+      },
+    "events": {
+    },  
+    "dataBindings": {
+		  "myDataBinding": {
+		  "feeds": [
+			{
+			  "id": "dimensions",
+			  "description": "Dimensions",
+			  "type": "dimension"
+			},
+			{
+			  "id": "measures",
+			  "description": "Measures",
+			  "type": "mainStructureMember"
+			}
+		  ]
+		  }
+	  }
+  }
