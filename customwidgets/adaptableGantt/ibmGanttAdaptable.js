@@ -3,10 +3,11 @@ var getScriptPromisify = (src) => {
       $.getScript(src, resolve)
     })
   }
-const ENDDATE = "CM_END_TIMESTMP"
-const STARTDATE = "CM_START_TIMESTMP"
+
   (function () {
     const prepared = document.createElement('template')
+    const ENDDATE = "CM_END_TIMESTMP"
+    const STARTDATE = "CM_START_TIMESTMP"
     prepared.innerHTML = `
     
     <head>
