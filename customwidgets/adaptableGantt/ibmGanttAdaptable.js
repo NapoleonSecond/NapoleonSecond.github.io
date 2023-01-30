@@ -9,7 +9,7 @@ var getScriptPromisify = (src) => {
     
     <head>
     <title>Simple Gantt</title>
-    <link href="https://napoleonsecond.github.io/customwidgets/ibmGanttAdaptable/dist/ibm-gantt-chart.css" rel="stylesheet" />
+    <link href="https://napoleonsecond.github.io/customwidgets/adaptableGantt/dist/ibm-gantt-chart.css" rel="stylesheet" />
 
     <!--  Page styles  -->
     <style>
@@ -73,7 +73,7 @@ var getScriptPromisify = (src) => {
       async render () {
 
         
-        await getScriptPromisify('https://napoleonsecond.github.io/customwidgets/ibmGanttAdaptable/dist/ibm-gantt-chart.js');
+        await getScriptPromisify('https://napoleonsecond.github.io/customwidgets/adaptableGantt/dist/ibm-gantt-chart.js');
         
         
         var dataVals = [];
@@ -83,24 +83,9 @@ var getScriptPromisify = (src) => {
           var listOfCat = [];
 
           for (let index = 0; index < this.data.length; index++){         
-            var originalStartTime = this.data[index]["START_TIME"];
-            var originalEndTime = this.data[index]["END_TIME"];
-
             var startDate = new Date(this.data[index]["START_DATE"]);
             var endDate = new Date(this.data[index]["END_DATE"]);
-
-            const startTime = originalStartTime.split(":");
-            const endTime = originalEndTime.split(":");
-
-            startDate.setHours(startTime[0]);
-            startDate.setMinutes(startTime[1]);
-            startDate.setSeconds(startTime[2]);
             startDate.setMilliseconds(0);
-
-
-            endDate.setHours(endTime[0]);
-            endDate.setMinutes(endTime[1]);
-            endDate.setSeconds(endTime[2]);
             endDate.setMilliseconds(0);
 
             var category = this.data[index]["ZBUS_CAT"];
@@ -109,7 +94,7 @@ var getScriptPromisify = (src) => {
             var valid = originalEndTime != "@NullMember" && originalStartTime != "@NullMember" && this.data[index]["START_DATE"] != "@NullMember" && this.data[index]["END_DATE"] != "@NullMember" && this.data[index]["END_DATE"] != " " && this.data[index]["END_DATE"] != "";
 
             
-            if(originalStartTime != NaN && this.data[index]["VARIANTE"] != "" && valid){
+            if(originalStartTime != NaN && this.data[index]["STATUS"] != "" && valid){
                 var status = this.data[index]["STATUS"];
 
                 if(listOfCat.indexOf(category) === -1){
