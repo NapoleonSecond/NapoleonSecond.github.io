@@ -127,7 +127,7 @@ var getScriptPromisify = (src) => {
             } 
           }
           console.log(dataVals);
-          for (cat in listOfCat){
+          for (let cat in listOfCat){
             var smallestStart = Infinity;
             var largestEnd = 0;
           }
