@@ -80,6 +80,7 @@ var getScriptPromisify = (src) => {
         
         
         var dataVals = [];
+        var catToDate = new Map();
         var listOfCat = [];
 
         if (this.data != undefined){
@@ -105,6 +106,7 @@ var getScriptPromisify = (src) => {
                       name: category,
                     }
                   );
+                  catToDate.set(category,{smallStart:Infinity, largeEnd:0});
                 }
 
                 dataVals.push(
@@ -122,15 +124,13 @@ var getScriptPromisify = (src) => {
                     ],
                   }
                 )
+
+                
               
               
             } 
           }
           console.log(dataVals);
-          for (let cat in listOfCat){
-            var smallestStart = Infinity;
-            var largestEnd = 0;
-          }
           
           var config = {
             data: {
