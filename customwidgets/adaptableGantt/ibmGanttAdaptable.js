@@ -80,10 +80,11 @@ var getScriptPromisify = (src) => {
         
         
         var dataVals = [];
+        var listOfCat = [];
 
         if (this.data != undefined){
           console.log("Data exists");
-          var listOfCat = [];
+          
 
           for (let index = 0; index < this.data.length; index++){         
             var startDate = new Date(this.data[index][STARTDATE]);
@@ -124,6 +125,11 @@ var getScriptPromisify = (src) => {
               
               
             } 
+          }
+          console.log(dataVals);
+          for (cat in listOfCat){
+            var smallestStart = Infinity;
+            var largestEnd = 0;
           }
           
           var config = {
