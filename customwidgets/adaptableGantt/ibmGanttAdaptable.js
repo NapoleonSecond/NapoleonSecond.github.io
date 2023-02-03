@@ -129,17 +129,17 @@ var getScriptPromisify = (src) => {
                 )
                 
                 
-                  /*
-                if(Date.parse(startDate.toISOString()) < catToDate[category]["smallStart"]){
-                  var tempLarg = catToDate[category]["largeEnd"];
-                  catToDate.set(category,{smallStart:Date.parse(startDate).toISOString(), largeEnd:tempLarg});
+                  
+                if(Date.parse(startDate.toISOString()) < catToDate.get(category).get("smallStart")){
+                  var tempLarg = catToDate.get(category).get("largeEnd");
+                  catToDate.get(category).set("smallStart",Date.parse(startDate).toISOString());
                 }
 
-                if(Date.parse(endDate.toISOString()) > catToDate[category][largeEnd]){
-                  var tempSmall = catToDate[category][smallStart];
-                  catToDate.set(category,{smallStart:tempSmall, largeEnd: Date.parse(endDate.toISOString)});
+                if(Date.parse(endDate.toISOString()) > catToDate.get(category).get("largeEnd")){
+                  var tempSmall = catToDate.get(category).get("smallStart");
+                  catToDate.get(category).set("smallStart",Date.parse(endDate).toISOString());
                 }
-                */
+                
                 
               
               
