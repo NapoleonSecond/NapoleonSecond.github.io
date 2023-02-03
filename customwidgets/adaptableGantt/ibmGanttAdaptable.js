@@ -137,7 +137,7 @@ var getScriptPromisify = (src) => {
 
                 if(Date.parse(endDate.toISOString()) > catToDate.get(category).get("largeEnd")){
                   var tempSmall = catToDate.get(category).get("smallStart");
-                  catToDate.get(category).set("smallStart",Date.parse(endDate.toDateString()));
+                  catToDate.get(category).set("largeEnd",Date.parse(endDate.toDateString()));
                 }
                 
                 
