@@ -106,7 +106,10 @@ var getScriptPromisify = (src) => {
                       name: category,
                     }
                   );
-                  catToDate.set(category,{smallStart:Infinity, largeEnd:0});
+                  var tempMap = new Map();
+                  tempMap.set("smallStart",Infinity);
+                  tempMap.set("largeEnd",0);
+                  catToDate.set(category,tempMap);
                 }
 
                 dataVals.push(
