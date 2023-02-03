@@ -146,6 +146,7 @@ var getScriptPromisify = (src) => {
             } 
           }
 
+          /*
           for (const [key,value] of catToDate){
             dataVals.push({
               id:"TaskNum",
@@ -161,6 +162,7 @@ var getScriptPromisify = (src) => {
               ],
             })
           }
+          */
           console.log(catToDate);
           console.log(dataVals);
           
