@@ -132,12 +132,12 @@ var getScriptPromisify = (src) => {
                   
                 if(Date.parse(startDate.toISOString()) < catToDate.get(category).get("smallStart")){
                   var tempLarg = catToDate.get(category).get("largeEnd");
-                  catToDate.get(category).set("smallStart",Date.parse(startDate).toISOString());
+                  catToDate.get(category).set("smallStart",Date.parse(startDate.toISOString()));
                 }
 
                 if(Date.parse(endDate.toISOString()) > catToDate.get(category).get("largeEnd")){
                   var tempSmall = catToDate.get(category).get("smallStart");
-                  catToDate.get(category).set("smallStart",Date.parse(endDate).toISOString());
+                  catToDate.get(category).set("smallStart",Date.parse(endDate.toDateString()));
                 }
                 
                 
@@ -146,7 +146,6 @@ var getScriptPromisify = (src) => {
             } 
           }
           console.log(catToDate);
-          console.log(catToDate.get("INEED").get("smallStart"));
           console.log(dataVals);
           
           var config = {
