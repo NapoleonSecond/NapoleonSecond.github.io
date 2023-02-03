@@ -146,7 +146,7 @@ var getScriptPromisify = (src) => {
             } 
           }
           console.log(catToDate);
-          console.log(catToDate["INEED"]);
+          console.log(catToDate.get("INEED"));
           console.log(dataVals);
           
           var config = {
