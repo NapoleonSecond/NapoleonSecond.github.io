@@ -145,6 +145,22 @@ var getScriptPromisify = (src) => {
               
             } 
           }
+
+          for (const [key,value] of catToDate){
+            dataVals.push({
+              id:"TaskNum",
+              name: "Total",
+              parent: key.concat("_ID"),
+              activities:[
+                {
+                id: "random",
+                name: "Total".concat("_ID"),
+                start: value.get("smallStart"),
+                end: value.get("largeEnd")
+                },
+              ],
+            })
+          }
           console.log(catToDate);
           console.log(dataVals);
           
