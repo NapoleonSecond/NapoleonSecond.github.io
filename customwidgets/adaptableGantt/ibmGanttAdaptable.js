@@ -124,7 +124,8 @@ var getScriptPromisify = (src) => {
                     ],
                   }
                 )
-                console.log(catToDate);
+                
+                
                   /*
                 if(Date.parse(startDate.toISOString()) < catToDate[category]["smallStart"]){
                   var tempLarg = catToDate[category]["largeEnd"];
@@ -141,6 +142,8 @@ var getScriptPromisify = (src) => {
               
             } 
           }
+          console.log(catToDate);
+          console.log(catToDate.get("INEED"));
           console.log(dataVals);
           
           var config = {
