@@ -130,12 +130,12 @@ var getScriptPromisify = (src) => {
                 
                 
                   
-                if(Date.parse(startDate.toISOString()) < catToDate.get(category).get("smallStart")){
+                if(Date.parse(startDate.toISOString()) > catToDate.get(category).get("smallStart")){
                   var tempLarg = catToDate.get(category).get("largeEnd");
                   catToDate.get(category).set("smallStart",Date.parse(startDate.toISOString()));
                 }
 
-                if(Date.parse(endDate.toISOString()) > catToDate.get(category).get("largeEnd")){
+                if(Date.parse(endDate.toISOString()) < catToDate.get(category).get("largeEnd")){
                   var tempSmall = catToDate.get(category).get("smallStart");
                   catToDate.get(category).set("largeEnd",Date.parse(endDate.toDateString()));
                 }
@@ -166,6 +166,11 @@ var getScriptPromisify = (src) => {
           console.log(catToDate);
           console.log(dataVals);
           
+          startDate.setHours(0);
+          startDate.setMinutes(0);
+          endDate.setHours(0);
+          endDate.setMinutes(0);
+
           var config = {
             data: {
               // Configures how to fetch resources for the Gantt
@@ -186,6 +191,10 @@ var getScriptPromisify = (src) => {
                 end: 'end', // The end of the activity is provided with the end property of the model object
                 name: 'name', // The name of the activity is provided with the name property of the model object
               },
+              timeWindow: {
+                start: Date.parse(startDate.toISOString()),
+                end: Date.parse(endDate.toISOString())
+              }
             },
             // Configure a toolbar associated with the Gantt
             toolbar: [
