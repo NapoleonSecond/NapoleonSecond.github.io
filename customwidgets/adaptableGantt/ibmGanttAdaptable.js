@@ -183,6 +183,12 @@ var getScriptPromisify = (src) => {
                 id: 'id', // The id of the resource is provided with the id property of the resource object.
                 parent: 'parent',
               },
+              renderer: {
+                text: function(activity) {
+                  return activity.TASK.NAME;
+              },
+                color : 'automatic',
+              },
               // Configures how to fetch activities for the Gantt
               // As activities are provided along with the resources, this section only describes how to create
               // activity Gantt properties from the activity model objects.
