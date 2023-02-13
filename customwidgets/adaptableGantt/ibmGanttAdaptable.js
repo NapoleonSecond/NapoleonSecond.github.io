@@ -186,10 +186,13 @@ var getScriptPromisify = (src) => {
               palette: ["#6aa84f", "#e69138", "#cc0000", "#bcbcbc", "#000000"],
               renderer: {
                 text: function(activity) {
-                  console.log(activity.TASK.NAME);
                   return activity.TASK.NAME;
                 },
                 color : 'automatic',
+                background: {
+                  values: ["Success","Skipped","Error","Total","IGNORETHIS"],
+                  getValue: "TASK.NAME"
+                }
               },
               // Configures how to fetch activities for the Gantt
               // As activities are provided along with the resources, this section only describes how to create
