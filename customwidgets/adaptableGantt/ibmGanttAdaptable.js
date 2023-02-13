@@ -183,11 +183,12 @@ var getScriptPromisify = (src) => {
                 id: 'id', // The id of the resource is provided with the id property of the resource object.
                 parent: 'parent',
               },
-              palette: ["#6aa84f", "#e69138", "#cc0000", "#bcbcbc", "#000000"],
+              
               renderer: {
                 text: function(activity) {
                   return activity.TASK.NAME;
                 },
+                palette: ["#6aa84f", "#e69138", "#cc0000", "#bcbcbc", "#000000"],
                 color : 'automatic',
                 background: {
                   values: ["Success","Skipped","Error","Total","IGNORETHIS"],
