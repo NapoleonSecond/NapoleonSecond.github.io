@@ -188,9 +188,9 @@ var getScriptPromisify = (src) => {
                 text: function(activity) {
                   return activity.TASK.NAME;
                 },
-                palette: ["#6aa84f", "#e69138", "#cc0000", "#bcbcbc", "#000000"],
                 color : 'automatic',
                 background: {
+                  palette: ["#6aa84f", "#e69138", "#cc0000", "#bcbcbc", "#000000"],
                   values: ["Success","Skipped","Error","Total","IGNORETHIS"],
                   getValue: "TASK.NAME"
                 }
