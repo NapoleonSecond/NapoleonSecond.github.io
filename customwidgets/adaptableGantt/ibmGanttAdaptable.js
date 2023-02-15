@@ -184,7 +184,8 @@ var getScriptPromisify = (src) => {
                 parent: 'parent',
               },
               
-              renderer: {
+              renderer: [
+                {
                 text: function(activity) {
                   return activity.TASK.NAME;
                 },
@@ -194,7 +195,7 @@ var getScriptPromisify = (src) => {
                   values: ["Success","Skipped","Error","Total","IGNORETHIS"],
                   getValue: "TASK.NAME"
                 }
-              },
+              }],
               // Configures how to fetch activities for the Gantt
               // As activities are provided along with the resources, this section only describes how to create
               // activity Gantt properties from the activity model objects.
