@@ -195,7 +195,7 @@ var getScriptPromisify = (src) => {
                 background: {
 
                   getValue: function(activity) {
-                    return activity.NAME;
+                    return activity.TASK.NAME;
                   },
                 }
               }]
