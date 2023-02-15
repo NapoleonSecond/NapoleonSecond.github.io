@@ -193,7 +193,7 @@ var getScriptPromisify = (src) => {
                 background: {
                   palette: ["#6aa84f", "#e69138", "#cc0000", "#bcbcbc", "#000000"],
                   values: ["Success+Task","Skipped+Task","Error+Task","Total+Task","IGNORETHIS+Task"],
-                  getValue: "TASK.NAME"
+                  getValue: "name"
                 }
               }],
               // Configures how to fetch activities for the Gantt
