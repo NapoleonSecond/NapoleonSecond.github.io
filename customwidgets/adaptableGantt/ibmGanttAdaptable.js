@@ -206,7 +206,7 @@ var getScriptPromisify = (src) => {
               },
               color : 'automatic',
               background: {
-                getValue: "row.name",
+                getValue: "TASK.NAME",
               }
             }]
             },
