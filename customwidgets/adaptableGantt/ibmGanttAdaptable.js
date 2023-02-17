@@ -200,10 +200,6 @@ var getScriptPromisify = (src) => {
             timeTable:{
               renderer: 
               [{
-              text: function(activity) {
-                console.log(activity.TASK.NAME);
-                return activity.TASK.NAME;
-              },
               color : 'automatic',
               background: {
                 getValue: "TASK.NAME",
