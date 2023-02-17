@@ -186,19 +186,7 @@ var getScriptPromisify = (src) => {
               },
               //palette: ["#6aa84f", "#e69138", "#cc0000", "#bcbcbc", "#000000"],
               //values: ["Success","Skipped","Error","Total","IGNORETHIS"],
-              timeTable:{
-                renderer: 
-                [{
-                text: function(activity) {
-                  console.log(activity.TASK.NAME);
-                  return activity.TASK.NAME;
-                },
-                color : 'automatic',
-                background: {
-                  getValue: "row.name",
-                }
-              }]
-              },
+             
               
               // Configures how to fetch activities for the Gantt
               // As activities are provided along with the resources, this section only describes how to create
@@ -208,6 +196,19 @@ var getScriptPromisify = (src) => {
                 end: 'end', // The end of the activity is provided with the end property of the model object
                 name: 'name', // The name of the activity is provided with the name property of the model object
               },
+            },
+            timeTable:{
+              renderer: 
+              [{
+              text: function(activity) {
+                console.log(activity.TASK.NAME);
+                return activity.TASK.NAME;
+              },
+              color : 'automatic',
+              background: {
+                getValue: "row.name",
+              }
+            }]
             },
             // Configure a toolbar associated with the Gantt
             toolbar: [
