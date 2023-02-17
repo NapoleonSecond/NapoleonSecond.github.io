@@ -195,8 +195,6 @@ var getScriptPromisify = (src) => {
                 },
                 color : 'automatic',
                 background: {
-                  palette: ["#6aa84f", "#e69138", "#cc0000", "#bcbcbc", "#000000"],
-                  values: ["Success","Skipped","Error","Total","IGNORETHIS"],
                   getValue: "TASK.NAME",
                 }
               }]
