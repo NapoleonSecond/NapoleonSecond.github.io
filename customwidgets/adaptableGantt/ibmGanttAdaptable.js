@@ -189,6 +189,7 @@ var getScriptPromisify = (src) => {
                 renderer: 
                 [{
                 text: function(activity) {
+                  console.log(activity.TASK.NAME);
                   return activity.TASK.NAME;
                 },
                 color : 'automatic',
