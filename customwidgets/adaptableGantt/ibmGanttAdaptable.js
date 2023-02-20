@@ -180,7 +180,7 @@ var getScriptPromisify = (src) => {
                 // Activities of the resources are provided along with the 'activities' property of resource objects.
                 // Alternatively, they could be listed from the 'data.activities' configuration.
                 activities: 'activities',
-                name: 'task', // The name of the resource is provided with the name property of the resource object.
+                name: 'name', // The name of the resource is provided with the name property of the resource object.
                 id: 'id', // The id of the resource is provided with the id property of the resource object.
                 parent: 'parent',
               },
