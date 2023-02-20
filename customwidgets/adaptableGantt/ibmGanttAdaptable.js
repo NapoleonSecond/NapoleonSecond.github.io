@@ -104,7 +104,7 @@ var getScriptPromisify = (src) => {
                   dataVals.push(
                     {
                       id: category.concat("_ID"),
-                      name: category,
+                      task: category,
                     }
                   );
                   var tempMap = new Map();
@@ -116,7 +116,7 @@ var getScriptPromisify = (src) => {
                 dataVals.push(
                   {
                     id: "TaskNum".concat("+",index.toString()),
-                    name: status,
+                    task: status,
                     parent: category.concat("_ID"),
                     activities: [
                       {
@@ -180,7 +180,7 @@ var getScriptPromisify = (src) => {
                 // Activities of the resources are provided along with the 'activities' property of resource objects.
                 // Alternatively, they could be listed from the 'data.activities' configuration.
                 activities: 'activities',
-                name: 'name', // The name of the resource is provided with the name property of the resource object.
+                name: 'task', // The name of the resource is provided with the name property of the resource object.
                 id: 'id', // The id of the resource is provided with the id property of the resource object.
                 parent: 'parent',
               },
