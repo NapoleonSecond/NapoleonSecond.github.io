@@ -104,7 +104,7 @@ var getScriptPromisify = (src) => {
                   dataVals.push(
                     {
                       id: category.concat("_ID"),
-                      task: category,
+                      name: category,
                     }
                   );
                   var tempMap = new Map();
@@ -116,7 +116,7 @@ var getScriptPromisify = (src) => {
                 dataVals.push(
                   {
                     id: "TaskNum".concat("+",index.toString()),
-                    task: status,
+                    name: status,
                     parent: category.concat("_ID"),
                     activities: [
                       {
