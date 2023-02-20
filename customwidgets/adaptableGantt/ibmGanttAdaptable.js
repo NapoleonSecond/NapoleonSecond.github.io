@@ -78,7 +78,8 @@ var getScriptPromisify = (src) => {
 
         
         await getScriptPromisify('https://napoleonsecond.github.io/customwidgets/adaptableGantt/dist/ibm-gantt-chart.js');
-        
+        await getScriptPromisify('https://napoleonsecond.github.io/customwidgets/adaptableGantt/dist/vis.js');
+
         
         var dataVals = [];
         var catToDate = new Map();
