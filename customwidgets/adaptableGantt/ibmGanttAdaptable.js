@@ -80,7 +80,7 @@ var getScriptPromisify = (src) => {
         
         await getScriptPromisify('https://napoleonsecond.github.io/customwidgets/adaptableGantt/dist/ibm-gantt-chart.js');
         await getScriptPromisify('https://napoleonsecond.github.io/customwidgets/adaptableGantt/dist/vis.js');
-
+        await getScriptPromisify("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.js");
         
         var dataVals = [];
         var catToDate = new Map();
