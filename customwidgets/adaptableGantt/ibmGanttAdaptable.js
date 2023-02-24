@@ -15,7 +15,7 @@ var getScriptPromisify = (src) => {
     <link href="https://napoleonsecond.github.io/customwidgets/adaptableGantt/dist/ibm-gantt-chart.css" rel="stylesheet" />
     <link href="https://napoleonsecond.github.io/customwidgets/adaptableGantt/dist/vis.css" rel="stylesheet" />
     <link href="https://napoleonsecond.github.io/customwidgets/adaptableGantt/dist/vis-network.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://napoleonsecond.github.io/customwidgets/adaptableGantt/dist/fonts/font-awesome.min.css">
     <!--  Page styles  -->
     <style>
       html {
@@ -79,9 +79,7 @@ var getScriptPromisify = (src) => {
 
         
         await getScriptPromisify('https://napoleonsecond.github.io/customwidgets/adaptableGantt/dist/ibm-gantt-chart.js');
-        await getScriptPromisify('https://napoleonsecond.github.io/customwidgets/adaptableGantt/dist/vis.js');
-        await getScriptPromisify("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.js");
-        
+        await getScriptPromisify('https://napoleonsecond.github.io/customwidgets/adaptableGantt/dist/vis.js');        
         var dataVals = [];
         var catToDate = new Map();
         var listOfCat = [];
