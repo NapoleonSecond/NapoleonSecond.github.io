@@ -13,9 +13,6 @@ var getScriptPromisify = (src) => {
     <head>
     <title>Simple Gantt</title>
     <link href="https://napoleonsecond.github.io/customwidgets/adaptableGantt/dist/ibm-gantt-chart.css" rel="stylesheet" />
-    <link href="https://napoleonsecond.github.io/customwidgets/adaptableGantt/dist/vis.css" rel="stylesheet" />
-    <link href="https://napoleonsecond.github.io/customwidgets/adaptableGantt/dist/vis-network.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://napoleonsecond.github.io/customwidgets/adaptableGantt/dist/fonts/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.css">
     <!--  Page styles  -->
     <style>
       html {
@@ -32,8 +29,9 @@ var getScriptPromisify = (src) => {
     </style>
   </head>
   <body>
-    <div id="gantt"></div>
+    <div id="gantt">
     <i class="fa fa-address-book" aria-hidden="true"></i>
+    </div>
     `
     class IBMGanttAdaptable extends HTMLElement {
       constructor () {
