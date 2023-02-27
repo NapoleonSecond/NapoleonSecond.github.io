@@ -12,7 +12,7 @@ var getScriptPromisify = (src) => {
     
     <head>
     <title>Simple Gantt</title>
-    <link href="https://napoleonsecond.github.io/customwidgets/adaptableGantt/dist/ibm-gantt-chart.css" rel="stylesheet" />
+    <link href="https://napoleonsecond.github.io/customwidgets/adaptableGantt/ibm-gantt-chart.css" rel="stylesheet" />
     <!--  Page styles  -->
     <style>
       html {
