@@ -2,7 +2,7 @@
 	let template = document.createElement("template");
 	template.innerHTML = `
 	<head> 
-	<link href="https://napoleonsecond.github.io/customwidgets/adaptableGantt/ibm-gantt-chart.css" rel="stylesheet" />
+	<link href="https://napoleonsecond.github.io/customwidgets/C:/Users/I566700/Documents/NapoleonSecond.github.io/customwidgets/adaptableGantt/dist/fonts/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 	</head>
 		<style>
 		</style> 
