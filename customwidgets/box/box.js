@@ -1,6 +1,9 @@
 (function() { 
 	let template = document.createElement("template");
 	template.innerHTML = `
+	<head> 
+	<link href="https://napoleonsecond.github.io/customwidgets/adaptableGantt/ibm-gantt-chart.css" rel="stylesheet" />
+	</head>
 		<style>
 		:host {
 			border-radius: 25px;
@@ -10,6 +13,9 @@
 			display: block;
 		} 
 		</style> 
+	<body>
+	<i class="fa fa-address-book" aria-hidden="true"></i>
+	</body>
 	`;
 
 	class Box extends HTMLElement {
