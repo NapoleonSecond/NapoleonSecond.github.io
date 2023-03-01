@@ -5,16 +5,11 @@
 	<link href="https://napoleonsecond.github.io/customwidgets/adaptableGantt/ibm-gantt-chart.css" rel="stylesheet" />
 	</head>
 		<style>
-		:host {
-			border-radius: 25px;
-			border-width: 4px;
-			border-color: black;
-			border-style: solid;
-			display: block;
-		} 
 		</style> 
 	<body>
+	<div>
 	<i class="fa fa-address-book"></i>
+	</div>
 	</body>
 	`;
 
