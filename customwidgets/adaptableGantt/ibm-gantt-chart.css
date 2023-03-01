@@ -766,7 +766,7 @@
   content: "\f0d9";
 }
 .fa-caret-right:before {
-  content: "\u2586";
+  content: "&#8594";
 }
 .fa-columns:before {
   content: "\f0db";
