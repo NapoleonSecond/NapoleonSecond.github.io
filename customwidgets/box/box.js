@@ -14,7 +14,7 @@
 		} 
 		</style> 
 	<body>
-	<i class="fa fa-address-book" aria-hidden="true"></i>
+	<i class="fa fa-address-book"></i>
 	</body>
 	`;
 
