@@ -32383,20 +32383,20 @@
 					 *
 					 * @return {integer} Current page index (zero based)
 					 *//**
-				  * Set the current page.
-				  *
-				  * Note that if you attempt to show a page which does not exist, DataTables will
-				  * not throw an error, but rather reset the paging.
-				  *
-				  * @param {integer|string} action The paging action to take. This can be one of:
-				  *  * `integer` - The page index to jump to
-				  *  * `string` - An action to take:
-				  *    * `first` - Jump to first page.
-				  *    * `next` - Jump to the next page
-				  *    * `previous` - Jump to previous page
-				  *    * `last` - Jump to the last page.
-				  * @returns {DataTables.Api} this
-				  */
+			   * Set the current page.
+			   *
+			   * Note that if you attempt to show a page which does not exist, DataTables will
+			   * not throw an error, but rather reset the paging.
+			   *
+			   * @param {integer|string} action The paging action to take. This can be one of:
+			   *  * `integer` - The page index to jump to
+			   *  * `string` - An action to take:
+			   *    * `first` - Jump to first page.
+			   *    * `next` - Jump to the next page
+			   *    * `previous` - Jump to previous page
+			   *    * `last` - Jump to the last page.
+			   * @returns {DataTables.Api} this
+			   */
 					_api_register('page()', function (action) {
 						if (action === undefined) {
 							return this.page.info().page; // not an expensive call
@@ -32458,11 +32458,11 @@
 					 * @return {integer} Current page length. Note `-1` indicates that all records
 					 *   are to be shown.
 					 *//**
-				  * Set the current page length.
-				  *
-				  * @param {integer} Page length to set. Use `-1` to show all records.
-				  * @returns {DataTables.Api} this
-				  */
+			   * Set the current page length.
+			   *
+			   * @param {integer} Page length to set. Use `-1` to show all records.
+			   * @returns {DataTables.Api} this
+			   */
 					_api_register('page.len()', function (len) {
 						// Note that we can't call this function 'length()' because `length`
 						// is a Javascript property of functions which defines how many arguments
@@ -32573,12 +32573,12 @@
 					 *
 					 * @return {string} Current Ajax source URL
 					 *//**
-				  * Set the Ajax URL. Note that this will set the URL for all tables in the
-				  * current context.
-				  *
-				  * @param {string} url URL to set.
-				  * @returns {DataTables.Api} this
-				  */
+			   * Set the Ajax URL. Note that this will set the URL for all tables in the
+			   * current context.
+			   *
+			   * @param {string} url URL to set.
+			   * @returns {DataTables.Api} this
+			   */
 					_api_register('ajax.url()', function (url) {
 						var ctx = this.context;
 
@@ -33867,23 +33867,23 @@
 					 *   direction of the sort (`desc` or `asc`) and, optionally, the third is the
 					 *   index of the sorting order from the `column.sorting` initialisation array.
 					 *//**
-				  * Set the ordering for the table.
-				  *
-				  * @param {integer} order Column index to sort upon.
-				  * @param {string} direction Direction of the sort to be applied (`asc` or `desc`)
-				  * @returns {DataTables.Api} this
-				  *//**
-					 * Set the ordering for the table.
-					 *
-					 * @param {array} order 1D array of sorting information to be applied.
-					 * @param {array} [...] Optional additional sorting conditions
-					 * @returns {DataTables.Api} this
-					 *//**
-					* Set the ordering for the table.
-					*
-					* @param {array} order 2D array of sorting information to be applied.
-					* @returns {DataTables.Api} this
-					*/
+			   * Set the ordering for the table.
+			   *
+			   * @param {integer} order Column index to sort upon.
+			   * @param {string} direction Direction of the sort to be applied (`asc` or `desc`)
+			   * @returns {DataTables.Api} this
+			   *//**
+							  * Set the ordering for the table.
+							  *
+							  * @param {array} order 1D array of sorting information to be applied.
+							  * @param {array} [...] Optional additional sorting conditions
+							  * @returns {DataTables.Api} this
+							  *//**
+		  * Set the ordering for the table.
+		  *
+		  * @param {array} order 2D array of sorting information to be applied.
+		  * @returns {DataTables.Api} this
+		  */
 					_api_register('order()', function (order, dir) {
 						var ctx = this.context;
 

@@ -204,6 +204,10 @@ var getScriptPromisify = (src) => {
                 palette: ["#6aa84f", "#e69138", "#cc0000", "#bcbcbc", "#000000","#d66d12"],
                 values: ["Success","Skipped","Error","Total","IGNORETHIS","Not Started"],
                 getValue: "row.name",
+              },
+              tooltipProperties(activity, ctx) {
+                const props = ['Start', new Date(activity.start).format(), 'End', new Date(activity.end).format()];
+                return props;
               }
             }]
             },
