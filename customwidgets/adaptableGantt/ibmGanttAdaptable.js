@@ -206,7 +206,7 @@ var getScriptPromisify = (src) => {
                 getValue: "row.name",
               },
               tooltip(activity, ctx) {
-                var htmlString = "<div>  </div>";
+                var htmlString = "<div style=' background:blue; width:200px; color:white '> Hello World </div>";
                 return htmlString;
               }
             }]
