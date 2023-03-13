@@ -205,9 +205,9 @@ var getScriptPromisify = (src) => {
                 values: ["Success","Skipped","Error","Total","IGNORETHIS","Not Started"],
                 getValue: "row.name",
               },
-              tooltipProperties(activity, ctx) {
-                const props = ['Start', new Date(activity.start).format(), 'End', new Date(activity.end).format()];
-                return props;
+              tooltip(activity, ctx) {
+                var htmlString = "<div>  </div>";
+                return htmlString;
               }
             }]
             },
