@@ -158,10 +158,8 @@ var getScriptPromisify = (src) => {
 
             if(this.data[index]["STATUS"] != ""){
               var status = this.data[index]["STATUS"];
-              if(status != "Total"){
-                break;
-              }
-              if(listOfCat.indexOf(category) === -1){
+              if(listOfCat.indexOf(category) === -1 && status == "Total"){
+                console.log(status);
                 listOfCat.push(category);
                 dataVals.push(
                   {
