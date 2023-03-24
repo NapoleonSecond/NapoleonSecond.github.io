@@ -97,14 +97,14 @@ var getScriptPromisify = (src) => {
             
             if(this.data[index]["STATUS"] != ""){
                 var status = this.data[index]["STATUS"];
-                
+
                 if(listOfCat.indexOf(category) === -1){
                   listOfCat.push(category);
                   dataVals.push(
                     {
                       id: category.concat("_ID"),
                       name: category,
-
+                      
                     }
                   );
                   var tempMap = new Map();
@@ -112,7 +112,6 @@ var getScriptPromisify = (src) => {
                   tempMap.set("largeEnd",0);
                   catToDate.set(category,tempMap);
                 }
-                
 
                 dataVals.push(
                   {
@@ -132,7 +131,7 @@ var getScriptPromisify = (src) => {
                 
                 
                   
-                /*if(Date.parse(startDate.toISOString()) > catToDate.get(category).get("smallStart")){
+                if(Date.parse(startDate.toISOString()) > catToDate.get(category).get("smallStart")){
                   var tempLarg = catToDate.get(category).get("largeEnd");
                   catToDate.get(category).set("smallStart",Date.parse(startDate.toISOString()));
                 }
@@ -140,7 +139,7 @@ var getScriptPromisify = (src) => {
                 if(Date.parse(endDate.toISOString()) < catToDate.get(category).get("largeEnd")){
                   var tempSmall = catToDate.get(category).get("smallStart");
                   catToDate.get(category).set("largeEnd",Date.parse(endDate.toDateString()));
-                }*/
+                }
                 
                 
               
@@ -207,7 +206,7 @@ var getScriptPromisify = (src) => {
                 values: ["Success","Skipped","Error","Total","IGNORETHIS","Not Started"],
                 getValue: "row.name",
               },
-              tooltip : function(activity, ctx) {
+              tooltip(activity, ctx) {
                 var htmlString = '<div style= "background:blue; width:200px;"><p> Hello World </p></div>';
                 return htmlString;
               }
