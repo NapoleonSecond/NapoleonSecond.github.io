@@ -97,7 +97,7 @@ var getScriptPromisify = (src) => {
             
             if(this.data[index]["STATUS"] != ""){
                 var status = this.data[index]["STATUS"];
-                /*
+                
                 if(listOfCat.indexOf(category) === -1){
                   listOfCat.push(category);
                   dataVals.push(
@@ -112,7 +112,7 @@ var getScriptPromisify = (src) => {
                   tempMap.set("largeEnd",0);
                   catToDate.set(category,tempMap);
                 }
-                */
+                
 
                 dataVals.push(
                   {
@@ -148,38 +148,6 @@ var getScriptPromisify = (src) => {
             } 
           }
 
-          for (let index = 0; index < this.data.length; index++){    
-            var startDate = new Date(this.data[index][STARTDATE]);
-            var endDate = new Date(this.data[index][ENDDATE]);
-            startDate.setMilliseconds(0);
-            endDate.setMilliseconds(0);
-
-            var category = this.data[index]["ZBUS_CAT"];
-
-            if(this.data[index]["STATUS"] != ""){
-              var status = this.data[index]["STATUS"];
-              if(listOfCat.indexOf(category) === -1 && status == "Total"){
-                console.log(status);
-                listOfCat.push(category);
-                dataVals.push(
-                  {
-                    id: category.concat("_ID"),
-                    name: category,
-                    activities: [
-                      {
-                        id: index.toString().concat("+", "id"),
-                        name: status.concat("+","Task"),
-                        start: Date.parse(startDate.toISOString()),
-                        end:  Date.parse(endDate.toISOString()),
-                      }
-                    ]
-
-                  }
-                );
-              }
-
-          } 
-        }
           /*
           for (const [key,value] of catToDate){
             dataVals.push({
